@@ -13,5 +13,8 @@
     "turbo": "latest"
   },
   "packageManager": "pnpm@7.15.0",
-  "name": "turborepo-strapi"
+  "name": "turborepo-strapi",
+  "dependencies": {
+    "sass": "^1.62.1"
+  }
 }

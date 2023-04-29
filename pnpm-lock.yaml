@@ -7,7 +7,10 @@ importers:
       eslint: ^7.32.0
       eslint-config-custom: workspace:*
       prettier: ^2.5.1
+      sass: ^1.62.1
       turbo: latest
+    dependencies:
+      sass: 1.62.1
     devDependencies:
       eslint: 7.32.0
       eslint-config-custom: link:packages/eslint-config-custom
@@ -7749,6 +7752,10 @@ packages:
     resolution: {integrity: sha512-eY+Y0qcsB4TZKwgQzLaE/lqYMlKhv5J9dyd2RhhtGhNo2njPXDqU9XPfcNfa3MIDsdtZt5KlkIsirlo4dHsWdQ==}
     dev: false
 
+  /immutable/4.3.0:
+    resolution: {integrity: sha512-0AOCmOip+xgJwEVTQj1EfiDDOkPmuyllDuTuEX+DDXUgapLAsBIfkg3sxCYyCEA8mQqZrrxPUGjcOQ2JS3WLkg==}
+    dev: false
+
   /import-fresh/3.3.0:
     resolution: {integrity: sha512-veYYhQa+D1QBKznvhUHxb8faxlrwUnxseDAbAp457E0wLNio2bOSKnjYDhMj+YiAq61xrMGhQk9iXVk5FzgQMw==}
     engines: {node: '>=6'}
@@ -10842,6 +10849,16 @@ packages:
       is-plain-object: 5.0.0
       parse-srcset: 1.0.2
       postcss: 8.4.23
+    dev: false
+
+  /sass/1.62.1:
+    resolution: {integrity: sha512-NHpxIzN29MXvWiuswfc1W3I0N8SXBd8UR26WntmDlRYf0bSADnwnOjsyMZ3lMezSlArD33Vs3YFhp7dWvL770A==}
+    engines: {node: '>=14.0.0'}
+    hasBin: true
+    dependencies:
+      chokidar: 3.5.3
+      immutable: 4.3.0
+      source-map-js: 1.0.2
     dev: false
 
   /scheduler/0.20.2:
