@@ -1,0 +1,265 @@
+/*!
+ * Title       :   Utility Component
+ * Author      :   Jack Ryan Oracoy
+ * Description :   Style for the Utility component
+ */
+
+@import 'variable';
+@import 'mixin';
+
+/*--------------------------------------------------
+  Screen readers only
+--------------------------------------------------*/
+
+.sr-only {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal !important;
+
+  &.is_focusable:active,
+  &.is_focusable:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip: auto;
+    white-space: normal !important;
+  }
+}
+
+/*--------------------------------------------------
+  Clearfix
+--------------------------------------------------*/
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/*--------------------------------------------------
+  Disyplay
+--------------------------------------------------*/
+
+.inline { display: inline; }
+.block { display: block; }
+.inline-block { display: inline-block; }
+
+/*--------------------------------------------------
+  Hidden
+--------------------------------------------------*/
+
+.hidden {
+  display: none; visibility: hidden;
+
+  @each $breakpoint in map-keys($breakpoints) {
+    @include media-breakpoint-min($breakpoint) {
+      &-#{$breakpoint}-min { display: none; visibility: hidden; }
+    }
+  }
+
+  @each $breakpoint in map-keys($breakpoints) {
+    @include media-breakpoint-max($breakpoint) {
+      &-#{$breakpoint}-max { display: none; visibility: hidden; }
+    }
+  }
+}
+
+/*--------------------------------------------------
+  Float
+--------------------------------------------------*/
+
+.float-left { float: left; }
+.float-right { float: right; }
+.float-none { float: none; }
+
+/*--------------------------------------------------
+  Width and Height
+--------------------------------------------------*/
+
+.width-25 { width: 25%; }
+.width-50 { width: 50%; }
+.width-75 { width: 75%; }
+.width-100 { width: 100%; }
+.max-width-100 { max-width: 100%; }
+.viewport-width-100 { width: 100vw; }
+
+.height-25 { height: 25%; }
+.height-50 { height: 50%; }
+.height-75 { height: 75%; }
+.height-100 { height: 100%; }
+.max-height-100 { max-height: 100%; }
+.viewport-height-100 { height: 100vh; }
+
+/*--------------------------------------------------
+  Padding
+--------------------------------------------------*/
+
+@each $padding in $gap {
+  .pt-#{$padding} { padding-top: #{#{$padding}px}; }
+  .pr-#{$padding} { padding-right: #{#{$padding}px}; }
+  .pb-#{$padding} { padding-bottom: #{#{$padding}px}; }
+  .pl-#{$padding} { padding-left: #{#{$padding}px}; }
+}
+
+@each $breakpoint in map-keys($breakpoints) {
+  @include media-breakpoint-min($breakpoint) {
+    @each $padding in $gap {
+      .pt-#{$breakpoint}-#{$padding} { padding-top: #{#{$padding}px}; }
+      .pr-#{$breakpoint}-#{$padding} { padding-right: #{#{$padding}px}; }
+      .pb-#{$breakpoint}-#{$padding} { padding-bottom: #{#{$padding}px}; }
+      .pl-#{$breakpoint}-#{$padding} { padding-left: #{#{$padding}px}; }
+    }
+  }
+}
+
+/*--------------------------------------------------
+  Margin
+--------------------------------------------------*/
+
+@each $margin in $gap {
+  .mt-#{$margin} { margin-top: #{#{$margin}px}; }
+  .mr-#{$margin} { margin-right: #{#{$margin}px}; }
+  .mb-#{$margin} { margin-bottom: #{#{$margin}px}; }
+  .ml-#{$margin} { margin-left: #{#{$margin}px}; }
+}
+
+@each $breakpoint in map-keys($breakpoints) {
+  @include media-breakpoint-min($breakpoint) {
+    @each $margin in $gap {
+      .mt-#{$breakpoint}-#{$margin} { margin-top: #{#{$margin}px}; }
+      .mr-#{$breakpoint}-#{$margin} { margin-right: #{#{$margin}px}; }
+      .mb-#{$breakpoint}-#{$margin} { margin-bottom: #{#{$margin}px}; }
+      .ml-#{$breakpoint}-#{$margin} { margin-left: #{#{$margin}px}; }
+    }
+  }
+}
+
+/*--------------------------------------------------
+  Typography
+--------------------------------------------------*/
+
+.text-center { text-align: center; }
+.text-justify { text-align: justify; }
+.text-right { text-align: right; }
+.text-left { text-align: left; }
+
+.text-overline { text-decoration: overline; }
+.text-underline { text-decoration: underline; }
+.text-linethrough { text-decoration: line-through; }
+
+.font-normal { font-weight: normal; }
+.font-bold { font-weight: bold; }
+.font-bolder { font-weight: bolder; }
+.font-lighter { font-weight: lighter; }
+
+.font-default { font-size: $font-nm; }
+.font-small { font-size: $font-sm; }
+.font-medium { font-size: $font-md; }
+.font-large { font-size: $font-lg; }
+.font-extra-large { font-size: $font-xl; }
+.font-super-large { font-size: $font-sl; }
+.font-mega-large { font-size: $font-ml; }
+
+@each $breakpoint in map-keys($breakpoints) {
+  @include media-breakpoint-min($breakpoint) {
+    .text-center-#{$breakpoint} { text-align: center; }
+    .text-justify-#{$breakpoint} { text-align: justify; }
+    .text-right-#{$breakpoint} { text-align: right; }
+    .text-left-#{$breakpoint} { text-align: left; }
+
+    .text-overline-#{$breakpoint} { text-decoration: overline; }
+    .text-underline-#{$breakpoint} { text-decoration: underline; }
+    .text-linethrough-#{$breakpoint} { text-decoration: line-through; }
+
+    .font-normal-#{$breakpoint} { font-weight: normal; }
+    .font-bold-#{$breakpoint} { font-weight: bold; }
+    .font-bolder-#{$breakpoint} { font-weight: bolder; }
+    .font-lighter-#{$breakpoint} { font-weight: lighter; }
+
+    .font-default-#{$breakpoint} { font-size: $font-nm; }
+    .font-small-#{$breakpoint} { font-size: $font-sm; }
+    .font-medium-#{$breakpoint} { font-size: $font-md; }
+    .font-large-#{$breakpoint} { font-size: $font-lg; }
+    .font-extra-large-#{$breakpoint} { font-size: $font-xl; }
+    .font-super-large-#{$breakpoint} { font-size: $font-sl; }
+    .font-mega-large-#{$breakpoint} { font-size: $font-ml; }
+  }
+}
+
+/*--------------------------------------------------
+  List
+--------------------------------------------------*/
+
+.list {
+  list-style-type: none;
+
+  &.is_disc { list-style-type: disc; }
+  &.is_square { list-style-type: square; }
+  &.is_circle { list-style-type: circle; }
+}
+
+/*--------------------------------------------------
+  Color
+--------------------------------------------------*/
+
+@each $color, $value in $theme-colors {
+  .color-#{$color} { color: #{$value}; }
+}
+
+@each $color, $value in $colors {
+  .color-#{$color} { color: #{$value}; }
+}
+
+@each $shade, $value in $greys {
+  .color-grey-#{$shade} { color: #{$value}; }
+}
+
+/*--------------------------------------------------
+  Background color
+--------------------------------------------------*/
+
+@each $color, $value in $theme-colors {
+  .bg-#{$color} { background-color: #{$value}; }
+}
+
+@each $color, $value in $colors {
+  .bg-#{$color} { background-color: #{$value}; }
+}
+
+@each $shade, $value in $greys {
+  .bg-grey-#{$shade} { background-color: #{$value}; }
+}
+
+/*--------------------------------------------------
+  Overflow
+--------------------------------------------------*/
+
+.overflow-auto { overflow: auto; }
+.overflow-hidden { overflow: hidden; }
+.overflow-scroll { overflow: scroll; }
+.overflow-visible { overflow: visible; }
+
+.overflow-x-auto { overflow-x: auto; }
+.overflow-x-hidden { overflow-x: hidden; }
+.overflow-x-scroll { overflow-x: scroll; }
+.overflow-x-visible { overflow-x: visible; }
+
+.overflow-y-auto { overflow-y: auto; }
+.overflow-y-hidden { overflow-y: hidden; }
+.overflow-y-scroll { overflow-y: scroll; }
+.overflow-y-visible { overflow-y: visible; }
+
+/*--------------------------------------------------
+  Image
+--------------------------------------------------*/
+
+.img-fluid { max-width: 100%; height: auto; }
+.img-crispt { @include img-render-crisp(); }

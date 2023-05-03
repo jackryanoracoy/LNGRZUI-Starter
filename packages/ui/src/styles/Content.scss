@@ -1,0 +1,72 @@
+/*!
+ * Title       :   Content Component
+ * Author      :   Jack Ryan Oracoy
+ * Description :   Style for the content component
+ */
+
+@import 'variable';
+@import 'mixin';
+
+/*--------------------------------------------------
+  Section
+--------------------------------------------------*/
+
+.section {
+  padding-right: $section-gutter-hor;
+  padding-left: $section-gutter-hor;
+
+  &.is_normal {
+    padding-top: ($section-gutter-ver / 2);
+    padding-bottom: ($section-gutter-ver / 2);
+  }
+
+  &.is_narrow {
+    padding-top: ($section-gutter-ver / 4);
+    padding-bottom: ($section-gutter-ver / 4);
+  }
+
+  &.is_wide {
+    padding-top: $section-gutter-ver;
+    padding-bottom: $section-gutter-ver;
+  }
+
+  &.is_zero { padding: 0; }
+
+  @include media-breakpoint-min(lg) {
+    &.is_normal {
+      padding-top: ($section-gutter-ver);
+      padding-bottom: ($section-gutter-ver);
+    }
+
+    &.is_narrow {
+      padding-top: ($section-gutter-ver / 2);
+      padding-bottom: ($section-gutter-ver / 2);
+    }
+
+    &.is_wide {
+      padding-top: ($section-gutter-ver * 2);
+      padding-bottom: ($section-gutter-ver * 2);
+    }
+  }
+}
+
+/*--------------------------------------------------
+  Article
+--------------------------------------------------*/
+
+.article {
+  &.is_normal { padding-top: ($section-gutter-ver / 2); }
+  &.is_narrow { padding-top: ($section-gutter-ver / 4); }
+  &.is_wide { padding-top: $section-gutter-ver; }
+  &.is_zero { padding: 0; }
+
+  @include media-breakpoint-min(lg) {
+    &.is_normal { padding-top: ($section-gutter-ver ); }
+    &.is_narrow { padding-top: ($section-gutter-ver / 2); }
+    &.is_wide { padding-top: ($section-gutter-ver * 2); }
+  }
+
+  @media print { page-break-inside: avoid; }
+}
+
+

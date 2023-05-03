@@ -1,0 +1,42 @@
+/*!
+ * Title       :   Branding Component
+ * Author      :   Jack Ryan Oracoy
+ * Description :   Style for the Branding component
+ */
+
+@import 'variable';
+@import 'mixin';
+
+/*--------------------------------------------------
+  Branding
+--------------------------------------------------*/
+
+.branding {
+  display: flex;
+  align-items: center;
+  height: $header-height_m;
+  font-size: $font-xl;
+  font-weight: 700;
+  white-space: nowrap;
+
+  &-logo {
+    display: block;
+    width: auto !important;
+    max-width: 100%;
+    max-height: calc(100% - 20px);
+  }
+
+  &-title {
+    color: $white !important;
+    font-size: inherit;
+    text-decoration: none !important;
+    font-weight: inherit;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  @include media-breakpoint-min(lg) {
+    height: $header-height;
+    font-size: $font-sl;
+  }
+}

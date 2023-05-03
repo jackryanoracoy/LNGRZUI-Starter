@@ -1,0 +1,75 @@
+/*!
+ * Title       :   Button Component
+ * Author      :   Jack Ryan Oracoy
+ * Description :   Style for the button component
+ */
+
+@import 'variable';
+@import 'mixin';
+
+/*--------------------------------------------------
+  Button
+--------------------------------------------------*/
+
+.button {
+  padding: 0 15px;
+  color: $dark !important;
+  font-size: $font-nm;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: $white;
+  box-shadow: $z-depth-1;
+  white-space: nowrap;
+  border: none;
+
+  &:hover,
+  &:visited,
+  &:active,
+  &:focus {
+    text-decoration: none;
+  }
+
+  &:hover {
+    box-shadow: $z-depth-2;
+  }
+
+  &.is_disabled {
+    opacity: 0.85;
+    pointer-events: none;
+  }
+
+  &.is_block { display: block; }
+
+  &.is_inline_block { display: block; }
+
+  &.is_small {
+    min-width: $button-height-sm;
+    line-height: $button-height-sm;
+    border-radius: $button-height-sm / 2;
+    padding: 0 20px;
+  }
+
+  &.is_medium {
+    min-width: $button-height-md;
+    line-height: $button-height-md;
+    border-radius: $button-height-md / 2;
+    padding: 0 20px;
+  }
+
+  &.is_large {
+    min-width: $button-height-lg;
+    line-height: $button-height-lg;
+    border-radius: $button-height-lg / 2;
+    padding: 0 20px;
+  }
+
+  &%button-text { color: $white !important; }
+
+  @each $color, $value in $theme-colors {
+    &.is_#{$color} {
+      @extend %button-text;
+      background-color: #{$value};
+    }
+  }
+}
