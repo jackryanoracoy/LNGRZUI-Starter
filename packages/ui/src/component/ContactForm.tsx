@@ -10,9 +10,12 @@ type FormProps = {
     message: string;
   }) => void;
   children: React.ReactNode;
+  className?: string;
 };
 
-export const ContactForm: React.FC<FormProps> = ({ onSubmit, children }) => {
+export const ContactForm: React.FC<FormProps> = ({ onSubmit, children, className }) => {
+  const classNames = className ? `form ${className}` : `form`;
+
   const [formData, setFormData] = useState<{ [key: string]: string }>({
     firstName: '',
     lastName: '',
@@ -39,7 +42,7 @@ export const ContactForm: React.FC<FormProps> = ({ onSubmit, children }) => {
   };
 
   return (
-    <form className='form' onSubmit={handleSubmit}>
+    <form className={classNames} onSubmit={handleSubmit}>
       {React.Children.map(children, (child) => {
         if (React.isValidElement(child)) {
           return React.cloneElement(child, {

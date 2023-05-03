@@ -3,9 +3,12 @@ import '../styles/Tab.scss';
 
 type TabProps = {
   children: React.ReactNode;
+  className?: string;
 };
 
-export const Tab: React.FC<TabProps> = ({ children }) => {
+export const Tab: React.FC<TabProps> = ({ children, className }) => {
+  const classNames = className ? `tab ${className}` : `tab`;
+
   const [activeTab, setActiveTab] = useState(0);
 
   const handleTabClick = (index: number) => {
@@ -15,7 +18,7 @@ export const Tab: React.FC<TabProps> = ({ children }) => {
   const tabs = React.Children.toArray(children);
 
   return (
-    <div className={`tab`}>
+    <div className={classNames}>
       <ul className='tab-link'>
         {tabs.map((tab: any, index: number) => (
           <li

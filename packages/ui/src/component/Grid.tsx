@@ -27,16 +27,23 @@ export const Row: React.FC<GridProps> = ({
 
 type ColProps = {
   children: React.ReactNode;
-  className?: string;
   offset?: ColWidth;
   span?: ColWidth;
+  xs?: ColWidth;
+  sm?: ColWidth;
+  md?: ColWidth;
+  lg?: ColWidth;
+  xl?: ColWidth;
 };
 
 export const Col: React.FC<ColProps> = ({
-  children, className, span = 'auto', offset = 0,
+  children, span, xs = 24, sm = xs, md = sm, lg = md, xl = lg, offset = 0,
 }) => {
+  const classNames = span
+  ? `flex-item-${span} offset-${offset}`
+  : `flex-item-xs-${xs} flex-item-sm-${sm} flex-item-md-${md} flex-item-lg-${lg} flex-item-lg-${xl} offset-${offset}`
   return (
-    <div className={`flex-item-${span} offset-${offset} ${className || ''}`}>
+    <div className={classNames}>
       {children}
     </div>
   );

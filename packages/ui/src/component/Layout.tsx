@@ -12,18 +12,17 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
 };
 
 export const Header: React.FC<LayoutProps> = ({ children, className }) => {
-  return (
-    <header className={`header ${className || ''}`}>
-      <div className='header-content'>{children}</div>
-    </header>
-  )
+  const classNames = className ? `header ${className}` : `header`;
+  return <header className={classNames}>{children}</header>;
 };
 
 export const Main: React.FC<LayoutProps> = ({ children, className }) => {
-  return <main className={`main ${className || ''}`}>{children}</main>;
+  const classNames = className ? `main ${className}` : `main`;
+  return <main className={classNames}>{children}</main>;
 };
 
 export const Footer: React.FC<LayoutProps> = ({ children, className }) => {
-  return <footer className={`footer ${className || ''}`}>{children}</footer>;
+  const classNames = className ? `footer ${className}` : `footer`;
+  return <footer className={classNames}>{children}</footer>;
 };
 

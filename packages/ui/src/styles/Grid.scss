@@ -1,4 +1,4 @@
-/*!
+/*
  * Title       :   Grid Component
  * Author      :   Jack Ryan Oracoy
  * Description :   Style for the grid component
@@ -45,25 +45,6 @@
 
   @each $breakpoint in map-keys($breakpoints) {
     @include media-breakpoint-min($breakpoint) {
-      &.is_wrap-#{$breakpoint} { flex-wrap: wrap; }
-      &.is_nowrap-#{$breakpoint} { flex-wrap: nowrap; }
-      &.is_wrap-reverse-#{$breakpoint} { flex-wrap: wrap-reverse; }
-
-      &.is_justify-flex-start-#{$breakpoint} { justify-content: flex-start; }
-      &.is_justify-flex-end-#{$breakpoint} { justify-content: flex-end; }
-      &.is_justify-center-#{$breakpoint} { justify-content: center; }
-      &.is_justify-space-around-#{$breakpoint} { justify-content: space-around; }
-      &.is_justify-space-between-#{$breakpoint} { justify-content: space-between; }
-      &.is_justify-space-evenly-#{$breakpoint} { justify-content: space-evenly; }
-
-      &.is_align-items-flex-start-#{$breakpoint} { align-items: flex-start; }
-      &.is_align-items-flex-end-#{$breakpoint} { align-items: flex-end; }
-      &.is_align-items-center-#{$breakpoint} { align-items: center; }
-      &.is_align-items-stretch-#{$breakpoint} { align-items: stretch; }
-      &.is_align-items-baseline-#{$breakpoint} { align-items: baseline; }
-
-      &-item-auto-#{$breakpoint} { @include flex-col-width-auto(); }
-
       @for $count from 1 through 24 {
         &-item-#{$breakpoint}-#{$count} { @include flex-col-width($count); }
       }

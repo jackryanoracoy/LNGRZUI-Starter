@@ -1,4 +1,4 @@
-/*!
+/*
  * Title       :   Layout Component
  * Author      :   Jack Ryan Oracoy
  * Description :   Style for the layout component
@@ -16,6 +16,7 @@
   top: 0;
   width: 100%;
   min-width: 240px;
+  background-color: $primary;
   z-index: 9;
 
   &.is_hidden {
@@ -90,7 +91,7 @@
 .main {
   min-height: 100vh;
   padding-top: $header-height_m;
-  background-color: $grey-100;
+  background-color: $grey-200;
 
   @include media-breakpoint-min(lg) {
     padding-top: $header-height + $nav-height;

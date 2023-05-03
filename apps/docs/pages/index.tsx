@@ -1,10 +1,10 @@
-import { Button } from "ui";
+import React from 'react';
+import SectionTab from '../component/SectionTab';
 
-export default function Docs() {
+export default function Index() {
   return (
-    <div>
-      <h1>Docs</h1>
-      <Button />
-    </div>
-  );
+    <>
+      <SectionTab />
+    </>
+  )
 }

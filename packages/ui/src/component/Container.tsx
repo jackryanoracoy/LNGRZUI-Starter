@@ -10,6 +10,9 @@ type ContainerProps = {
 export const Container: React.FC<ContainerProps> = ({
   children, className, fluid,
 }) => {
+  const classNames = className
+    ? `container ${fluid && 'is_fluid' || ''} ${className}`
+    : `container ${fluid && 'is_fluid' || ''}`;
   return (
     <div className={`container ${fluid && 'is_fluid' || ''} ${className || ''}`}>
       {children}

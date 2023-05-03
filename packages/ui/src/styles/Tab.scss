@@ -1,4 +1,4 @@
-/*!
+/*
  * Title       :   Tab Component
  * Author      :   Jack Ryan Oracoy
  * Description :   Style for the tab component
@@ -12,6 +12,7 @@
 --------------------------------------------------*/
 .tab {
   &-link {
+    display: flex;
     margin: 0px;
     padding: 0px;
     list-style: none;
@@ -26,8 +27,8 @@
 
     &-item.active {
       color: $dark;
-      background-color: $grey-100;
-      border-radius: 2px 2px 0 0;
+      background-color: $grey-50;
+      border-radius: $border-radius $border-radius 0 0;
       box-shadow: $z-depth-2;
     }
   }
@@ -36,8 +37,8 @@
     color: $dark;
     position: relative;
     padding: 15px;
-    background-color: $grey-100;
-    border-radius: 0 0 2px 2px;
+    background-color: $grey-50;
+    border-radius: 0 0 $border-radius $border-radius;
     box-shadow: $z-depth-1;
     z-index: 1;
   }

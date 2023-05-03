@@ -1,16 +1,18 @@
 import React, { useState, useEffect } from 'react';
 
 type CarouselProps = {
+  className?: string;
   images: string[];
   autoplay?: boolean;
   interval?: number;
 };
 
-export const Carousel: React.FC<CarouselProps> = ({ images, autoplay, interval }) => {
+export const Carousel: React.FC<CarouselProps> = ({ className, images, autoplay, interval }) => {
   const [index, setIndex] = useState(0);
   const next = () => setIndex((index + 1) % images.length);
   const prev = () => setIndex((index - 1 + images.length) % images.length);
   const dots = (index: number) => setIndex(index);
+  const classNames = className ? `carousel ${className}` : `carousel`;
 
   useEffect(() => {
     const timeout = interval || 5000;
@@ -21,7 +23,7 @@ export const Carousel: React.FC<CarouselProps> = ({ images, autoplay, interval }
   }, [next, interval, autoplay]);
 
   return (
-    <div className="carousel">
+    <div className={classNames}>
       <img className='carousel-image' src={images[index]} alt={`Image ${index}`} />
       <div className='carousel-buttons'>
         <button className='carousel-prev-button' onClick={prev}>&#8592;</button>

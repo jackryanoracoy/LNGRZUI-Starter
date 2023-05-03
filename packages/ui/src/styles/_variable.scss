@@ -1,9 +1,3 @@
-/*!
- * Title       :   SASS Variable
- * Author      :   Jack Ryan Oracoy
- * Description :   SASS Variables
- */
-
 // Colors
 $primary:               #B71C1C               !default;
 $secondary:             #880E4F               !default;
@@ -99,7 +93,7 @@ $greys: map-merge( (
 
 // Breakpoints
 $breakpoints: (
-  "xs":                 410px,
+  "xs":                 0,
   "sm":                 576px,
   "md":                 768px,
   "lg":                 992px,
@@ -135,9 +129,9 @@ $font-sm:               1.2rem                !default;
 $font-md:               1.4rem                !default;
 $font-nm:               1.6rem                !default;
 $font-lg:               1.8rem                !default;
-$font-xl:               2.4rem                !default;
-$font-sl:               2.8rem                !default;
-$font-ml:               3.4rem                !default;
+$font-xl:               2.0rem                !default;
+$font-sl:               2.2rem                !default;
+$font-ml:               2.6rem                !default;
 
 // Line Height
 $line-height-sm:        1.2                   !default;
@@ -163,6 +157,12 @@ $textarea-height:       100px                 !default;
 // Section Gutter
 $section-gutter-ver:    60px                  !default;
 $section-gutter-hor:    10px                  !default;
+
+// Title Gutter
+$title-gutter:          20px                  !default;
+
+// Border Radius
+$border-radius:         4px                   !default;
 
 // Transition
 $transition:            all 300ms ease-in-out 120ms;

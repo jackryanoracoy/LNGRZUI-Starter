@@ -115,9 +115,12 @@ importers:
       '@types/react-dom': ^18.2.0
       eslint: ^7.32.0
       eslint-config-custom: workspace:*
+      highlight.js: ^11.8.0
       react: ^17.0.2
       tsconfig: workspace:*
       typescript: ^4.5.2
+    dependencies:
+      highlight.js: 11.8.0
     devDependencies:
       '@types/react': 18.2.0
       '@types/react-dom': 18.2.1
@@ -7486,6 +7489,11 @@ packages:
 
   /highlight.js/10.7.3:
     resolution: {integrity: sha512-tzcUFauisWKNHaRkN4Wjl/ZA07gENAjFl3J/c480dprkGTg5EQstgaNFqBfUqCq54kZRIEcreTsAgF/m2quD7A==}
+    dev: false
+
+  /highlight.js/11.8.0:
+    resolution: {integrity: sha512-MedQhoqVdr0U6SSnWPzfiadUcDHfN/Wzq25AkXiQv9oiOO/sG0S7XkvpFIqWBl9Yq1UYyYOOVORs5UW2XlPyzg==}
+    engines: {node: '>=12.0.0'}
     dev: false
 
   /history/4.10.1:

@@ -1,21 +1,20 @@
 /*
- * Title       :   Card Component
+ * Title       :   Code Component
  * Author      :   Jack Ryan Oracoy
- * Description :   Style for the card component
+ * Description :   Style for the code component
  */
 
 @import 'variable';
 @import 'mixin';
 
 /*--------------------------------------------------
-  Card
+  Code
 --------------------------------------------------*/
 
-.card {
-  color: $dark !important;
-  background-color: $white;
+.code {
+  color: $grey-200;
+  background-color: $grey-800;
   border-radius: $border-radius;
   box-shadow: $z-depth-1;
-
-  &-content { padding: 20px; }
+  overflow: auto;
 }

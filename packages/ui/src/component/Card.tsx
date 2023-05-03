@@ -9,8 +9,9 @@ type CardProps = {
 export const Card: React.FC<CardProps> = ({
   children, className,
 }) => {
+  const classNames = className ? `card ${className}` : `card`;
   return (
-    <div className={`card ${className || ''}`}>
+    <div className={classNames}>
       <div className='card-content'>{children}</div>
     </div>
   )

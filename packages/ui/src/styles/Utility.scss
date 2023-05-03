@@ -1,4 +1,4 @@
-/*!
+/*
  * Title       :   Utility Component
  * Author      :   Jack Ryan Oracoy
  * Description :   Style for the Utility component
@@ -139,58 +139,6 @@
       .mb-#{$breakpoint}-#{$margin} { margin-bottom: #{#{$margin}px}; }
       .ml-#{$breakpoint}-#{$margin} { margin-left: #{#{$margin}px}; }
     }
-  }
-}
-
-/*--------------------------------------------------
-  Typography
---------------------------------------------------*/
-
-.text-center { text-align: center; }
-.text-justify { text-align: justify; }
-.text-right { text-align: right; }
-.text-left { text-align: left; }
-
-.text-overline { text-decoration: overline; }
-.text-underline { text-decoration: underline; }
-.text-linethrough { text-decoration: line-through; }
-
-.font-normal { font-weight: normal; }
-.font-bold { font-weight: bold; }
-.font-bolder { font-weight: bolder; }
-.font-lighter { font-weight: lighter; }
-
-.font-default { font-size: $font-nm; }
-.font-small { font-size: $font-sm; }
-.font-medium { font-size: $font-md; }
-.font-large { font-size: $font-lg; }
-.font-extra-large { font-size: $font-xl; }
-.font-super-large { font-size: $font-sl; }
-.font-mega-large { font-size: $font-ml; }
-
-@each $breakpoint in map-keys($breakpoints) {
-  @include media-breakpoint-min($breakpoint) {
-    .text-center-#{$breakpoint} { text-align: center; }
-    .text-justify-#{$breakpoint} { text-align: justify; }
-    .text-right-#{$breakpoint} { text-align: right; }
-    .text-left-#{$breakpoint} { text-align: left; }
-
-    .text-overline-#{$breakpoint} { text-decoration: overline; }
-    .text-underline-#{$breakpoint} { text-decoration: underline; }
-    .text-linethrough-#{$breakpoint} { text-decoration: line-through; }
-
-    .font-normal-#{$breakpoint} { font-weight: normal; }
-    .font-bold-#{$breakpoint} { font-weight: bold; }
-    .font-bolder-#{$breakpoint} { font-weight: bolder; }
-    .font-lighter-#{$breakpoint} { font-weight: lighter; }
-
-    .font-default-#{$breakpoint} { font-size: $font-nm; }
-    .font-small-#{$breakpoint} { font-size: $font-sm; }
-    .font-medium-#{$breakpoint} { font-size: $font-md; }
-    .font-large-#{$breakpoint} { font-size: $font-lg; }
-    .font-extra-large-#{$breakpoint} { font-size: $font-xl; }
-    .font-super-large-#{$breakpoint} { font-size: $font-sl; }
-    .font-mega-large-#{$breakpoint} { font-size: $font-ml; }
   }
 }
 
