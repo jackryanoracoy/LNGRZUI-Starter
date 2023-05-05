@@ -20,12 +20,12 @@
     &-item {
       display: inline-block;
       padding: 10px 15px;
-
+      font-size: $font-md;
       background: none;
       cursor: pointer;
     }
 
-    &-item.active {
+    &-item.is_active {
       color: $dark;
       background-color: $grey-50;
       border-radius: $border-radius $border-radius 0 0;

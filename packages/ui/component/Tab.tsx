@@ -1,12 +1,8 @@
 import React, { useState } from 'react';
+import { CommonProps, TabPanelProps } from './Types';
 import '../styles/Tab.scss';
 
-type TabProps = {
-  children: React.ReactNode;
-  className?: string;
-};
-
-export const Tab: React.FC<TabProps> = ({ children, className }) => {
+export const Tab: React.FC<CommonProps> = ({ children, className = '' }) => {
   const classNames = className ? `tab ${className}` : `tab`;
 
   const [activeTab, setActiveTab] = useState(0);
@@ -24,7 +20,7 @@ export const Tab: React.FC<TabProps> = ({ children, className }) => {
           <li
             key={index}
             onClick={() => handleTabClick(index)}
-            className={`tab-link-item ${index === activeTab ? 'active' : ''}`}
+            className={`tab-link-item ${index === activeTab ? 'is_active' : ''}`}
           >
             {tab.props.label}
           </li>
@@ -33,11 +29,6 @@ export const Tab: React.FC<TabProps> = ({ children, className }) => {
       <div className='tab-content'>{tabs[activeTab]}</div>
     </div>
   );
-};
-
-type TabPanelProps = {
-  children: React.ReactNode;
-  label: string;
 };
 
 export const TabPanel: React.FC<TabPanelProps> = ({ children }) => {

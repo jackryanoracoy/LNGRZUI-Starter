@@ -1,13 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { CarouselProps } from './Types';
 
-type CarouselProps = {
-  className?: string;
-  images: string[];
-  autoplay?: boolean;
-  interval?: number;
-};
-
-export const Carousel: React.FC<CarouselProps> = ({ className, images, autoplay, interval }) => {
+export const Carousel: React.FC<CarouselProps> = ({ className = '', images, autoplay, interval }) => {
   const [index, setIndex] = useState(0);
   const next = () => setIndex((index + 1) % images.length);
   const prev = () => setIndex((index - 1 + images.length) % images.length);

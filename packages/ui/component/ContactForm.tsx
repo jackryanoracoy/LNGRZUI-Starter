@@ -1,19 +1,8 @@
 import React, { useState } from 'react';
+import { FormProps, InputProps, TextAreaProps } from './Types';
 import '../styles/Form.scss';
 
-type FormProps = {
-  onSubmit: (data: {
-    firstName: string;
-    lastName: string;
-    email: string;
-    number: string;
-    message: string;
-  }) => void;
-  children: React.ReactNode;
-  className?: string;
-};
-
-export const ContactForm: React.FC<FormProps> = ({ onSubmit, children, className }) => {
+export const ContactForm: React.FC<FormProps> = ({ onSubmit, children, className = '' }) => {
   const classNames = className ? `form ${className}` : `form`;
 
   const [formData, setFormData] = useState<{ [key: string]: string }>({
@@ -56,15 +45,6 @@ export const ContactForm: React.FC<FormProps> = ({ onSubmit, children, className
   );
 };
 
-type InputProps = {
-  name: string;
-  label?: string;
-  type?: string;
-  required?: boolean;
-  value?: string;
-  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
-};
-
 export const ContactInput: React.FC<InputProps> = ({
   name, label, type = 'text', required, value, onChange,
 }) => {
@@ -94,14 +74,6 @@ export const ContactInput: React.FC<InputProps> = ({
       )}
     </div>
   );
-};
-
-type TextAreaProps = {
-  name: string;
-  label?: string;
-  required?: boolean;
-  value?: string;
-  onChange?: (event: React.ChangeEvent<HTMLTextAreaElement>) => void;
 };
 
 export const ContactText: React.FC<TextAreaProps> = ({

@@ -12,16 +12,16 @@
 --------------------------------------------------*/
 
 .button {
-  padding: 0 15px;
-  color: $dark !important;
+  width: auto;
+  margin: 2px 0;
   font-size: $font-nm;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  background-color: $white;
   box-shadow: $z-depth-1;
   white-space: nowrap;
   border: none;
+  cursor: pointer;
 
   &:hover,
   &:visited,
@@ -34,14 +34,19 @@
     box-shadow: $z-depth-2;
   }
 
+  &:disabled,
   &.is_disabled {
-    opacity: 0.85;
+    opacity: 0.75;
+    background-color: $grey-700 !important;
     pointer-events: none;
   }
 
-  &.is_block { display: block; }
+  &.is_block {
+    display: block;
+    width: 100%;
+  }
 
-  &.is_inline_block { display: block; }
+  &.is_inline_block { display: inline-block; }
 
   &.is_small {
     min-width: $button-height-sm;
@@ -64,7 +69,7 @@
     padding: 0 20px;
   }
 
-  &%button-text { color: $white !important; }
+  &%button-text { color: $white; }
 
   @each $color, $value in $theme-colors {
     &.is_#{$color} {

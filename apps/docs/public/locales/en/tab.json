@@ -1,0 +1,28 @@
+{
+  "tab": {
+    "title": "Tab Component",
+    "desc": "The Tab component is a component that allows the user to toggle between multiple tabs of content. It takes in children as its props, which should be one or more TabPanel components. The TabPanel components contain the content that will be displayed when the corresponding tab is selected. The Tab component uses the useState hook to keep track of the currently active tab. When a tab is clicked, the handleTabClick function is called with the index of the clicked tab, and sets the active tab to the index. The Tab component then maps over the TabPanel children and renders them as clickable tabs, with the active tab having a CSS class of 'is_active'. When a tab is clicked, its corresponding TabPanel is displayed below the tabs.",
+    "example-title": "Example",
+    "code-title": "Code",
+    "props-title": "Props",
+    "props-title-properties": "properties",
+    "props-title-type": "Type",
+    "props-title-default": "Default",
+    "props-desc-properties-one": "children",
+    "props-desc-type-one": "React.ReactNode",
+    "props-desc-default-one": "",
+    "props-desc-properties-two": "className",
+    "props-desc-type-two": "string",
+    "props-desc-default-two": "",
+    "props-desc-properties-three": "label",
+    "props-desc-type-three": "string",
+    "props-desc-default-three": "",
+    "tab-title-one": "Tab One",
+    "tab-title-two": "Tab Two",
+    "tab-title-three": "Tab Three",
+    "content-one": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu",
+    "content-two": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta.",
+    "content-three": "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the gre",
+    "sample-code": "import React from 'react';\nimport { Tab, TabPanel, Text } from 'ui';\n\nexport default function App() {\n  return (\n    <Tab>\n      <TabPanel label='Tab One'>\n        <Text type='title'>Tab One Title</Text>\n        <Text type='paragraph'>This is the tab one content.</Text>\n      </TabPanel>\n      <TabPanel label='Tab Two'>\n        <Text type='title'>Tab Two Title</Text>\n        <Text type='paragraph'>This is the tab two content.</Text>\n      </TabPanel>\n      <TabPanel label='Tab Three'>\n        <Text type='title'>Tab Three Title</Text>\n        <Text type='paragraph'>This is the tab three content.</Text>\n      </TabPanel>\n    </Tab>\n  )\n}"
+  }
+}

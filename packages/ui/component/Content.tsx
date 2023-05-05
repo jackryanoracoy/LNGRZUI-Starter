@@ -1,17 +1,10 @@
 import React from 'react';
+import { ContentProps } from './Types';
 import { Text } from './Typography';
 import '../styles/Content.scss';
 
-type ContentProps = {
-  children: React.ReactNode;
-  className?: string;
-  title?: string;
-  type?: 'article' | 'section';
-  padding?: 'normal' | 'wide' | 'narrow' | 'zero';
-};
-
 export const Content: React.FC<ContentProps> = ({
-  children, className, title, type = 'section', padding = 'normal'
+  children, className = '', title, type = 'section', padding = 'normal'
 }) => {
   const Tag = type;
   const classNames = className

@@ -88,15 +88,11 @@
 .width-50 { width: 50%; }
 .width-75 { width: 75%; }
 .width-100 { width: 100%; }
-.max-width-100 { max-width: 100%; }
-.viewport-width-100 { width: 100vw; }
 
 .height-25 { height: 25%; }
 .height-50 { height: 50%; }
 .height-75 { height: 75%; }
 .height-100 { height: 100%; }
-.max-height-100 { max-height: 100%; }
-.viewport-height-100 { height: 100vh; }
 
 /*--------------------------------------------------
   Padding
@@ -140,18 +136,6 @@
       .ml-#{$breakpoint}-#{$margin} { margin-left: #{#{$margin}px}; }
     }
   }
-}
-
-/*--------------------------------------------------
-  List
---------------------------------------------------*/
-
-.list {
-  list-style-type: none;
-
-  &.is_disc { list-style-type: disc; }
-  &.is_square { list-style-type: square; }
-  &.is_circle { list-style-type: circle; }
 }
 
 /*--------------------------------------------------

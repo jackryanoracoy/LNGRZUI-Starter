@@ -1,11 +1,11 @@
 // Colors
-$primary:               #B71C1C               !default;
-$secondary:             #880E4F               !default;
+$primary:               #673AB7               !default;
+$secondary:             #00796B               !default;
 $success:               #4CAF50               !default;
 $warning:               #FF9800               !default;
 $danger:                #F44336               !default;
 $info:                  #00BCD4               !default;
-$light:                 #E0E0E0               !default;
+$light:                 #BDBDBD               !default;
 $dark:                  #212121               !default;
 
 $red:                   #F44336               !default;
@@ -186,5 +186,5 @@ $sans-serif:            -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "
 $monospace:             SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 
 // Default Font Face
-$font-primary:          $noto-sans            !default;
+$font-primary:          $noto-sans-jp         !default;
 $font-secondary:        $open-sans-condensed  !default;
