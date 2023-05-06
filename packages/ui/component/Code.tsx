@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { CodeProps } from './Types';
 import hljs from 'highlight.js';
-import 'highlight.js/styles/github.css';
+import 'highlight.js/styles/lioshi.css';
 import '../styles/Code.scss';
 
 export const Code: React.FC<CodeProps> = ({

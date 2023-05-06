@@ -90,6 +90,10 @@
     }
   }
 
+  &.is_capitalize { text-transform: capitalize; }
+  &.is_uppercase { text-transform: uppercase; }
+  &.is_lowercase { text-transform: lowercase; }
+
   &.is_center { text-align: center; }
   &.is_justify { text-align: justify; }
   &.is_right { text-align: right; }

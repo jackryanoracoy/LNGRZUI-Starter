@@ -1,0 +1,22 @@
+{
+  "card": {
+    "title": "Card | カード コンポーネント",
+    "desc": "Card コンポーネントは、コンテンツ領域を持つカードをレンダリングする再利用可能な UI コンポーネントです。 className (オプション) と children の 2 つの props を受け取ります。 className プロップは追加の CSS クラスをコンポーネントに追加するために使用され、children プロップはカード内のコンテンツをレンダリングするために使用されます。 このカードは、className prop が存在するかどうかに基づいて動的に生成されるクラス カードを含む div 要素にラップされます。 コンテンツ領域は、クラス card-content を持つ別の div 要素でラップされます。 このコンポーネントは、カード スタイルのレイアウトが必要なアプリケーションで使用できます。",
+    "example-title": "EXAMPLE | 例",
+    "code-title": "CODE | コード",
+    "props-title": "PROPS | 小道具",
+    "props-title-properties": "プロパティ",
+    "props-title-type": "タイプ",
+    "props-title-default": "デフォルト",
+    "props-desc-properties-one": "Children",
+    "props-desc-type-one": "React.ReactNode",
+    "props-desc-default-one": "",
+    "props-desc-properties-two": "className",
+    "props-desc-type-two": "string",
+    "props-desc-default-two": "",
+    "content-one": "定レごちふ易数署幕ざ芸野せッづあ写20着ク禁村保ご大前拡助ノ主映第約ッ。以ヲテヘ手者が特索コワヘヌ耕1続ラ退神っへめリ共想省ひやレイ物25処輪沢4自ル必座住し海模もせぎ康生市もす米47更ヨイ描読ケラレ情際後急承め。",
+    "content-two": "しかし、快楽を非難し、苦痛を称賛する人々の生まれつきの過ちがどこから来ているのかを理解していただくために、私は問題全体と、真実の発見者であり、幸福な人生の設計者であった人によって語られたまさにそのことを明らかにします。",
+    "content-three": "定レごちふ易数署幕ざ芸野せッづあ写20着ク禁村保ご大前拡助ノ主映第約ッ。以ヲテヘ手者が特索コワヘヌ耕1続ラ退神っへめリ共想省ひやレイ物25処輪沢4自ル必座住し海模もせぎ康生市もす米47更ヨイ描読ケラレ情際後急承め。",
+    "sample-code": "import React from 'react';\nimport { Row, Col, Card } from 'ui';\n\nexport default function App() {\n  return (\n    <Row gap={10}>\n      <Col md={8}>\n        <Card>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</Card>\n      </Col>\n      <Col md={8}>\n        <Card>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</Card>\n      </Col>\n      <Col md={8}>\n        <Card>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</Card>\n      </Col>\n    </Row>\n  )\n}"
+  }
+}

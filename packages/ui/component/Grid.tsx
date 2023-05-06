@@ -13,11 +13,25 @@ export const Row: React.FC<GridProps> = ({
 };
 
 export const Col: React.FC<ColProps> = ({
-  children, span, xs = 24, sm = xs, md = sm, lg = md, xl = lg, offset = 0,
+  children,
+  span,
+  offset = 0,
+  xs = 24,
+  sm = xs,
+  md = sm,
+  lg = md,
+  xl = lg,
+  oxs = 0,
+  osm = oxs,
+  omd = osm,
+  olg = omd,
+  oxl = olg,
 }) => {
+  const responsiveItem = `flex-item-xs-${xs} flex-item-sm-${sm} flex-item-md-${md} flex-item-lg-${lg} flex-item-lg-${xl}`;
+  const responsiveOffset = `offset-xs-${oxs} offset-sm-${osm} offset-md-${omd} offset-lg-${olg} offset-xl-${oxl}`;
   const classNames = span
   ? `flex-item-${span} offset-${offset}`
-  : `flex-item-xs-${xs} flex-item-sm-${sm} flex-item-md-${md} flex-item-lg-${lg} flex-item-lg-${xl} offset-${offset}`
+  : `${responsiveItem} ${responsiveOffset}`
   return (
     <div className={classNames}>
       {children}

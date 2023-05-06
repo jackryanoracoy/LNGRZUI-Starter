@@ -34,7 +34,7 @@ export default function SectionButton() {
           <Button display='block' onClick={handleClick}>{t('button.block')}</Button>
         </Utility>
         <Utility marginBottom={10}>
-          <Link href={'/about'}><Button>{t('button.internal-link')}</Button></Link>&nbsp;
+          <Link href={'/ja'}><Button>{t('button.internal-link')}</Button></Link>&nbsp;
           <Link href={'https://example.com'} target='_blank'><Button>{t('button.external-link')}</Button></Link>&nbsp;
           <Button disabled>{t('button.disabled')}</Button>&nbsp;
         </Utility>

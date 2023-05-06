@@ -12,76 +12,11 @@
 --------------------------------------------------*/
 
 .header {
-  position: fixed;
-  top: 0;
+  position: relative;
   width: 100%;
   min-width: 240px;
   background-color: $primary;
   z-index: 9;
-
-  &.is_hidden {
-    top: -$header-height_m;
-    transition: $transition;
-  }
-
-  &.is_shown {
-    top: 0;
-  }
-
-  &-content {
-    padding: 0 $section-gutter-hor;
-
-    &:first-child { height: $header-height_m; }
-  }
-
-  &-navigation {
-    max-width: 100%;
-    max-height: 0;
-    transition: $transition;
-    overflow: hidden;
-
-    &.is_shown { max-height: 100vh; }
-  }
-
-  @include media-breakpoint-min(lg) {
-    & {
-      box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
-    }
-
-    &.is_hidden {
-      top: -$header-height;
-    }
-
-    &-content:first-child {
-      height: $header-height;
-    }
-
-    &-branding {
-      width: auto;
-      max-width: 50%;
-    }
-
-    &-branding {
-      width: auto;
-    }
-
-    &-navigation {
-      max-height: 100vh;
-    }
-  }
-
-  @include media-breakpoint-max(lg) {
-    &:not(.is_hidden) {
-      box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
-    }
-  }
-
-  @media print {
-    position: relative;
-    border-bottom: 1px solid $primary;
-
-    &-menu, &-navigation { display: none; }
-  }
 }
 
 /*--------------------------------------------------
@@ -90,12 +25,7 @@
 
 .main {
   min-height: 100vh;
-  padding-top: $header-height_m;
   background-color: $grey-200;
-
-  @include media-breakpoint-min(lg) {
-    padding-top: $header-height + $nav-height;
-  }
 }
 
 /*--------------------------------------------------
@@ -104,66 +34,8 @@
 
 .footer {
   position: relative;
+  background-color: $dark;
   z-index: 1;
-}
-
-/*--------------------------------------------------
-  Section
---------------------------------------------------*/
-
-.section {
-  padding-top: ($section-gutter-ver / 2);
-  padding-bottom: ($section-gutter-ver / 2);
-  padding-right: $section-gutter-hor;
-  padding-left: $section-gutter-hor;
-
-  &.has-padding-wide {
-    padding-top: $section-gutter-ver;
-    padding-bottom: $section-gutter-ver;
-  }
-
-  &.has-padding-narrow {
-    padding-top: ($section-gutter-ver / 4);
-    padding-bottom: ($section-gutter-ver / 4);
-  }
-
-  &.has-padding-none { padding: 0 !important; }
-
-  @include media-breakpoint-min(lg) {
-    padding-top: $section-gutter-ver;
-    padding-bottom: $section-gutter-ver;
-
-    &.has-padding-wide {
-      padding-top: ($section-gutter-ver * 2);
-      padding-bottom: ($section-gutter-ver * 2);
-    }
-
-    &.has-padding-narrow {
-      padding-top: ($section-gutter-ver / 2);
-      padding-bottom: ($section-gutter-ver / 2);
-    }
-  }
-}
-
-/*--------------------------------------------------
-  Article
---------------------------------------------------*/
-
-.article {
-  padding-top: ($section-gutter-ver / 2);
-
-  &.has-padding-wide { padding-top: $section-gutter-ver; }
-  &.has-padding-narrow { padding-top: ($section-gutter-ver / 4); }
-  &.has-padding-none { padding: 0 !important; }
-
-  @include media-breakpoint-min(lg) {
-    padding-top: $section-gutter-ver;
-
-    &.has-padding-wide { padding-top: ($section-gutter-ver * 2); }
-    &.has-padding-narrow { padding-top: ($section-gutter-ver / 2); }
-  }
-
-  @media print { page-break-inside: avoid; }
 }
 
 

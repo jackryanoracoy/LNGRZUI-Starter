@@ -12,31 +12,25 @@
 --------------------------------------------------*/
 
 .branding {
-  display: flex;
-  align-items: center;
   height: $header-height_m;
+  color: $white !important;
   font-size: $font-xl;
   font-weight: 700;
+  line-height: $header-height_m;
+  text-overflow: ellipsis;
+  overflow: hidden;
   white-space: nowrap;
 
-  &-logo {
-    display: block;
-    width: auto !important;
-    max-width: 100%;
-    max-height: calc(100% - 20px);
-  }
-
-  &-title {
-    color: $white !important;
+  & a {
+    color: inherit;
     font-size: inherit;
-    text-decoration: none !important;
     font-weight: inherit;
-    text-overflow: ellipsis;
-    overflow: hidden;
+    text-decoration: none !important;
   }
 
   @include media-breakpoint-min(lg) {
     height: $header-height;
     font-size: $font-sl;
+    line-height: $header-height;
   }
 }

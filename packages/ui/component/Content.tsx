@@ -9,10 +9,10 @@ export const Content: React.FC<ContentProps> = ({
   const Tag = type;
   const classNames = className
     ? `${type} is_${padding} ${className}`
-    : `${type} is_${padding} `;
+    : `${type} is_${padding}`;
   return (
     <Tag className={classNames}>
-      {title ? <Text type={type === 'section' ? 'section' : 'article'}>{title}</Text> : ''}
+      {title ? <Text type={type === 'section' ? 'section' : 'article'} transform='uppercase'>{title}</Text> : ''}
       {children}
     </Tag>
   )

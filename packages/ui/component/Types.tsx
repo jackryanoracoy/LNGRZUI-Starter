@@ -1,7 +1,7 @@
 import React, { ButtonHTMLAttributes } from 'react';
 
 type Padding = 0 | 5 | 10 | 15 | 20 | 25 | 30 | 35 | 40 | 45 | 50;
-type ColWidth = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24;
+type ColWidth = 'auto' | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24;
 type GapWidth =  5 | 10 | 15 | 20 | 25 | 30 | 35 | 40 | 45 | 50 | 55 | 60 | 65 | 70 | 75 | 80 | 85 | 90 | 95 | 100;
 type Variant = 'primary' | 'secondary' | 'light' | 'dark' | 'success' | 'warning' | 'danger' | 'info';
 type BreakPoint = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
@@ -37,6 +37,11 @@ export type ColProps = {
   md?: ColWidth;
   lg?: ColWidth;
   xl?: ColWidth;
+  oxs?: ColWidth;
+  osm?: ColWidth;
+  omd?: ColWidth;
+  olg?: ColWidth;
+  oxl?: ColWidth;
 };
 
 export type ContentProps = {
@@ -53,6 +58,7 @@ export type TypographyProps = {
   href?: string;
   target?: string;
   variant?: Variant;
+  transform?: 'capitalize' | 'uppercase' | 'lowercase',
   type?: 'hero' | 'article' | 'section' | 'title' | 'sr-only' | 'paragraph' | 'code' | 'link';
   size?: 'small' | 'medium' | 'large' | 'extra-large' | 'super-large' | 'mega-large';
   weight?: 'normal' | 'bold' | 'bolder' | 'lighter';
@@ -84,9 +90,9 @@ export type UtilityProps = {
 };
 
 export type BrandingProps = {
-  home?: boolean;
-  children: React.ReactNode;
   className?: string;
+  index?: boolean;
+  title?: any;
 };
 
 export type CarouselProps = {
@@ -130,7 +136,7 @@ export type TabPanelProps = {
   label: string;
 };
 
-export interface CodeProps {
+export type CodeProps = {
   children?: React.ReactNode;
   className?: string;
   language?: string;

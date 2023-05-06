@@ -9,7 +9,7 @@ export default function SectionCard() {
       <Text type='paragraph'>{t('card.desc')}</Text>
 
       <Content type='article' title={t('card.example-title')}>
-        <Row gap={10}>
+        <Row gap={10} align='stretch'>
           <Col md={8}><Card>{t('card.content-one')}</Card></Col>
           <Col md={8}><Card>{t('card.content-two')}</Card></Col>
           <Col md={8}><Card>{t('card.content-three')}</Card></Col>

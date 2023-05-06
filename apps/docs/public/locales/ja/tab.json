@@ -1,0 +1,28 @@
+{
+  "tab": {
+    "title": "TAB | タブ コンポーネント",
+    "desc": "Tab コンポーネントは、ユーザーがコンテンツの複数のタブを切り替えることができるようにするコンポーネントです。 これは、1 つ以上の TabPanel コンポーネントである必要がある props として子を受け取ります。 TabPanel コンポーネントには、対応するタブが選択されたときに表示されるコンテンツが含まれています。 Tab コンポーネントは useState フックを使用して、現在アクティブなタブを追跡します。 タブがクリックされると、クリックされたタブのインデックスを使用して handleTabClick 関数が呼び出され、アクティブなタブがインデックスに設定されます。 次に、Tab コンポーネントは TabPanel の子にマップし、それらをクリック可能なタブとしてレンダリングします。アクティブなタブには「is_active」の CSS クラスがあります。 タブをクリックすると、対応する TabPanel がタブの下に表示されます。",
+    "example-title": "EXAMPLE | 例",
+    "code-title": "CODE | コード",
+    "props-title": "PROPS | 小道具",
+    "props-title-properties": "プロパティ",
+    "props-title-type": "タイプ",
+    "props-title-default": "デフォルト",
+    "props-desc-properties-one": "children",
+    "props-desc-type-one": "React.ReactNode",
+    "props-desc-default-one": "",
+    "props-desc-properties-two": "className",
+    "props-desc-type-two": "string",
+    "props-desc-default-two": "",
+    "props-desc-properties-three": "label",
+    "props-desc-type-three": "string",
+    "props-desc-default-three": "",
+    "tab-title-one": "タブ 1",
+    "tab-title-two": "タブ 2",
+    "tab-title-three": "タブ 3",
+    "content-one": "優れた顧客サービス、顧客サービス プロバイダーを持つことが重要です。 Aenean の幸運には痛みが必要です。 ジャスミンの塊。 仲間と共に、山は羽と大いなる突きを生み、とんでもないねずみが生まれる。",
+    "content-two": "しかし、快楽を非難し、苦痛を称賛する人々の生まれつきの過ちがどこから来ているのかを理解していただくために、私は問題全体と、真実の発見者であり、幸福な人生の設計者であった人によって語られたまさにそのことを明らかにします。",
+    "content-three": "優れた顧客サービス、顧客サービス プロバイダーを持つことが重要です。 Aenean の幸運には痛みが必要です。 ジャスミンの塊。 仲間と共に、山は羽と大いなる突きを生み、とんでもないねずみが生まれる。",
+    "sample-code": "import React from 'react';\nimport { Tab, TabPanel, Text } from 'ui';\n\nexport default function App() {\n  return (\n    <Tab>\n      <TabPanel label='Tab One'>\n        <Text type='title'>Tab One Title</Text>\n        <Text type='paragraph'>This is the tab one content.</Text>\n      </TabPanel>\n      <TabPanel label='Tab Two'>\n        <Text type='title'>Tab Two Title</Text>\n        <Text type='paragraph'>This is the tab two content.</Text>\n      </TabPanel>\n      <TabPanel label='Tab Three'>\n        <Text type='title'>Tab Three Title</Text>\n        <Text type='paragraph'>This is the tab three content.</Text>\n      </TabPanel>\n    </Tab>\n  )\n}"
+  }
+}
