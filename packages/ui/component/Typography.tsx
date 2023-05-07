@@ -5,7 +5,14 @@ import '../styles/Typography.scss';
 export const Text: React.FC<TypographyProps> = ({
   children, className = '', href, target, type = '', variant = '', size = '', weight = '', transform = '', align = '',
 }) => {
-  const TyphographyClassNames = `${className} ${size ? 'is_' + size : ''} ${variant ? 'is_' + variant : ''} ${weight ? 'is_' + weight : ''} ${transform ? 'is_' + transform : ''} ${align ? 'is_' + align : ''}`.replace(/\s+/g, ' ').trim();
+  const TyphographyClassNames = `
+    ${className}
+    ${size ? 'is_' + size : ''}
+    ${variant ? 'is_' + variant : ''}
+    ${weight ? 'is_' + weight : ''}
+    ${transform ? 'is_' + transform : ''}
+    ${align ? 'is_' + align : ''}
+  `.replace(/\s+/g, ' ').trim();
   const classNames = TyphographyClassNames ? `typography ${TyphographyClassNames}` : 'typography';
   switch (type) {
     case 'hero'     : return <h1 className={`${classNames} is_hero`}>{children}</h1>;

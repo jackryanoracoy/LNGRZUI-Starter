@@ -6,10 +6,12 @@ export const Utility: React.FC<UtilityProps> = ({
   children,
   className = '',
   display = '',
+  padding = '',
   paddingTop = '',
   paddingRight = '',
   paddingBottom = '',
   paddingLeft = '',
+  margin = '',
   marginTop = '',
   marginRight = '',
   marginBottom = '',
@@ -29,10 +31,12 @@ export const Utility: React.FC<UtilityProps> = ({
     ${className}
     ${display}
     ${sreenReader ? 'sr-only' : ''}
+    ${padding ? 'pa-' + padding : ''}
     ${paddingTop ? 'pt-' + paddingTop : ''}
     ${paddingRight ? 'pr-' + paddingRight : ''}
     ${paddingBottom ? 'pb-' + paddingBottom : ''}
     ${paddingLeft ? 'pl-' + paddingLeft : ''}
+    ${margin ? 'ma-' + margin : ''}
     ${marginTop ? 'mt-' + marginTop : ''}
     ${marginRight ? 'mr-' + marginRight : ''}
     ${marginBottom ? 'mb-' + marginBottom : ''}

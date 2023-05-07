@@ -99,6 +99,7 @@
 --------------------------------------------------*/
 
 @each $padding in $gap {
+  .pa-#{$padding} { padding: #{#{$padding}px}; }
   .pt-#{$padding} { padding-top: #{#{$padding}px}; }
   .pr-#{$padding} { padding-right: #{#{$padding}px}; }
   .pb-#{$padding} { padding-bottom: #{#{$padding}px}; }
@@ -108,6 +109,7 @@
 @each $breakpoint in map-keys($breakpoints) {
   @include media-breakpoint-min($breakpoint) {
     @each $padding in $gap {
+      .pa-#{$breakpoint}-#{$padding} { padding: #{#{$padding}px}; }
       .pt-#{$breakpoint}-#{$padding} { padding-top: #{#{$padding}px}; }
       .pr-#{$breakpoint}-#{$padding} { padding-right: #{#{$padding}px}; }
       .pb-#{$breakpoint}-#{$padding} { padding-bottom: #{#{$padding}px}; }
@@ -121,6 +123,7 @@
 --------------------------------------------------*/
 
 @each $margin in $gap {
+  .ma-#{$margin} { margin: #{#{$margin}px}; }
   .mt-#{$margin} { margin-top: #{#{$margin}px}; }
   .mr-#{$margin} { margin-right: #{#{$margin}px}; }
   .mb-#{$margin} { margin-bottom: #{#{$margin}px}; }
@@ -130,6 +133,7 @@
 @each $breakpoint in map-keys($breakpoints) {
   @include media-breakpoint-min($breakpoint) {
     @each $margin in $gap {
+      .ma-#{$breakpoint}-#{$margin} { margin: #{#{$margin}px}; }
       .mt-#{$breakpoint}-#{$margin} { margin-top: #{#{$margin}px}; }
       .mr-#{$breakpoint}-#{$margin} { margin-right: #{#{$margin}px}; }
       .mb-#{$breakpoint}-#{$margin} { margin-bottom: #{#{$margin}px}; }

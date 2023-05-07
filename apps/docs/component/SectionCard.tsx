@@ -1,9 +1,9 @@
 import React from 'react';
-import { useTranslation } from 'next-i18next'
+import { useTranslation } from 'next-i18next';
 import { Row, Col, Content, Code, Card, Text, Utility } from 'ui';
 
 export default function SectionCard() {
-  const { t } = useTranslation(['card']);
+  const { t } = useTranslation('card');
   return (
     <Content type='section' title={t('card.title')}>
       <Text type='paragraph'>{t('card.desc')}</Text>

@@ -18,7 +18,7 @@ export type ContainerProps = {
   fluid?: boolean;
 };
 
-export type GridProps = {
+export type RowProps = {
   children: React.ReactNode;
   className?: string;
   gap?: GapWidth;
@@ -71,10 +71,12 @@ export type UtilityProps = {
   sreenReader?: boolean;
   backgroundColor?: string;
   color?: string;
+  padding?: Padding;
   paddingTop?: Padding;
   paddingRight?: Padding;
   paddingBottom?: Padding;
   paddingLeft?: Padding;
+  margin?: Padding;
   marginTop?: Padding;
   marginRight?: Padding;
   marginBottom?: Padding;
