@@ -1,6 +1,13 @@
 {
   "title": "LNGRZUI - ドキュメント",
   "language": "言語",
+
+  "meta": {
+    "title": "LNGRZUI - ドキュメント",
+    "description": "これは、共有 UI ライブラリのドキュメントです。",
+    "keywords": "共有ユーザー インターフェイス ドキュメント、共有 UI ドキュメント、UI ドキュメント",
+    "themecolor": "#C51162"
+  },
   "button": {
     "language": "EN | 英語"
   }

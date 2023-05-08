@@ -1,19 +1,31 @@
 import React from 'react';
 import { Container } from 'ui';
+import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import MetaData from '../component/MetaData';
 import SectionGrid from '../component/SectionGrid';
 import SectionButton from '../component/SectionButton';
 import SectionCard from '../component/SectionCard';
 import SectionTab from '../component/SectionTab';
 
 export default function Index() {
+  const { t } = useTranslation();
   return (
-    <Container fluid={false}>
-      <SectionGrid />
-      <SectionButton />
-      <SectionCard />
-      <SectionTab />
-    </Container>
+    <>
+      <MetaData
+        title={t('meta.title')}
+        keywords={t('meta.keyword')}
+        description={t('meta.description')}
+        themecolor={t('meta.themecolor')}
+      />
+
+      <Container fluid={false}>
+        <SectionGrid />
+        <SectionButton />
+        <SectionCard />
+        <SectionTab />
+      </Container>
+    </>
   )
 }
 
