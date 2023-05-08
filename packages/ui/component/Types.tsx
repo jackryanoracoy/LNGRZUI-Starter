@@ -104,7 +104,22 @@ export type CarouselProps = {
   interval?: number;
 };
 
+export type InputProps = {
+  id: string;
+  label?: string;
+  value: string;
+  placeholder?: string;
+  type?: string;
+};
+
 export type FormProps = {
+  className?: string;
+  onSubmit: (inputs: InputProps[]) => void;
+  initialInputs?: InputProps[];
+  buttonLabel?: string;
+};
+
+export type ContactFormProps = {
   onSubmit: (data: {
     firstName: string;
     lastName: string;
@@ -114,9 +129,10 @@ export type FormProps = {
   }) => void;
   children: React.ReactNode;
   className?: string;
+  input?: string;
 };
 
-export type InputProps = {
+export type ContactInputProps = {
   name: string;
   label?: string;
   type?: string;
@@ -125,7 +141,7 @@ export type InputProps = {
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
-export type TextAreaProps = {
+export type ContactTextAreaProps = {
   name: string;
   label?: string;
   required?: boolean;

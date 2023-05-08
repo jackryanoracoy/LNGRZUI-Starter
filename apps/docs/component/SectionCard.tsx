@@ -23,18 +23,18 @@ export default function SectionCard() {
       <Content type='article' title={t('card.props-title')}>
         <Card>
           <Utility hiddenMax='md' marginBottom={10}>
-            <Row>
+            <Row align='center'>
               <Col xs={24} md={4}><Text type='paragraph' weight='bold'>{t('card.props-title-properties')}</Text></Col>
               <Col xs={24} md={14}><Text type='paragraph' weight='bold'>{t('card.props-title-type')}</Text></Col>
               <Col xs={24} md={6}><Text type='paragraph' weight='bold'>{t('card.props-title-default')}</Text></Col>
             </Row>
           </Utility>
-          <Row>
+          <Row align='center'>
             <Col xs={24} md={4}><Text type='paragraph' size='small' weight='bold'>{t('card.props-desc-properties-one')}</Text></Col>
             <Col xs={24} md={14}><Text type='code' size='small' variant='warning'>{t('card.props-desc-type-one')}</Text></Col>
             <Col xs={24} md={6}><Text type='paragraph' size='small'>{t('card.props-desc-default-one')}</Text></Col>
           </Row>
-          <Row>
+          <Row align='center'>
             <Col xs={24} md={4}><Text type='paragraph' size='small' weight='bold'>{t('card.props-desc-properties-two')}</Text></Col>
             <Col xs={24} md={14}><Text type='code' size='small' variant='secondary'>{t('card.props-desc-type-two')}</Text></Col>
             <Col xs={24} md={6}><Text type='paragraph' size='small'>{t('card.props-desc-default-two')}</Text></Col>

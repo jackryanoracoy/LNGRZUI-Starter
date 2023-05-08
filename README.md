@@ -1,77 +1,28 @@
-# Turborepo starter
+# LNGRZUI Starter
 
-This is an official starter Turborepo.
+LNGRZUI Starter is a repository that contains a collection of reusable UI components that can be used across multiple web applications. The components have been developed with [React.js](https://reactjs.org/) and [TypeScript](https://www.typescriptlang.org/) and are fully customizable to fit the design needs of any web application.
 
-## Using this example
+## Features
 
-Run the following command:
+- A collection of reusable UI components
+- Built with React.js and TypeScript
+- Fully customizable to fit the design needs of any web application
+- Easy to use and integrate into your existing web application
+- Includes documentation on how to use the components
 
-```sh
-npx create-turbo@latest
-```
+## Technologies
 
-## What's inside?
+The LNGRZUI Starter repository is built with the following technologies:
 
-This Turborepo includes the following packages/apps:
-
-### Apps and Packages
-
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `ui`: a stub React component library shared by both `web` and `docs` applications
-- `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `tsconfig`: `tsconfig.json`s used throughout the monorepo
-
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-
-### Build
-
-To build all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm build
-```
-
-### Develop
-
-To develop all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm dev
-```
-
-### Remote Caching
-
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
-
-```
-cd my-turborepo
-npx turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
-
-```
-npx turbo link
-```
+- [Turbo](https://turbo.build/)
+- [React.js](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Next.js](https://nextjs.org/)
+- [Strapi CMS](https://strapi.io/)
 
 ## Useful Links
 
-Learn more about the power of Turborepo:
+This repository is using Turborepo, learn more about the power of Turborepo:
 
 - [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
 - [Caching](https://turbo.build/repo/docs/core-concepts/caching)
@@ -79,3 +30,67 @@ Learn more about the power of Turborepo:
 - [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
 - [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
 - [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+
+## Getting Started
+
+To get started with the LNGRZUI Starter repository, you will need to have Node.js and npm installed on your computer. If you don't have them installed, you can download them from the official Node.js website.
+
+Once you have Node.js and npm installed, you can follow the steps below:
+
+1. Clone the repository using the command below:
+
+```
+git clone https://github.com/jackryanoracoy/LNGRZUI-Starter.git
+```
+
+2. Install the dependencies by running the command below in the root directory of the project:
+
+```
+pnpm install
+```
+
+3. To develop all apps and packages, run the following command:
+
+```
+pnpm dev
+```
+
+5. You can also start the LNGRZUI Documentation independently by running the following command in the `docs` directory:
+
+```
+npm run dev
+```
+
+5. You can also start the Strapi CMS independently by running the following command in the `cms` directory:
+
+```
+npm run dev
+```
+
+6. You can also start the Next.js front-end independently by running the following command in the `front` directory:
+
+```
+npm run dev
+```
+
+7. Open your web browser and go to `http://localhost:3000`, `http://localhost:3001` to view the application.
+
+## Documentation
+
+The LNGRZUI Starter repository comes with documentation on how to use the components. The documentation can be found in the `docs` directory of the project.
+
+## Contributing
+
+Contributions to the LNGRZUI Starter repository are welcome. If you find a bug or would like to suggest a new feature, please open an issue on the repository.
+
+If you would like to contribute code to the repository, please follow the steps below:
+
+1. Fork the repository
+2. Create a new branch for your feature or bug fix
+3. Make your changes and commit them to your branch
+4. Push your changes to your forked repository
+5. Create a pull request on the original repository
+
+## License
+
+The LNGRZUI Starter repository is licensed under the MIT license. Please see the `LICENSE` file for more information.

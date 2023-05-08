@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { FormProps, InputProps, TextAreaProps } from './Types';
+import { ContactFormProps, ContactInputProps, ContactTextAreaProps } from './Types';
 import '../styles/Form.scss';
 
-export const ContactForm: React.FC<FormProps> = ({ onSubmit, children, className = '' }) => {
+export const ContactForm: React.FC<ContactFormProps> = ({ onSubmit, children, className = '' }) => {
   const classNames = className ? `form ${className}` : `form`;
 
   const [formData, setFormData] = useState<{ [key: string]: string }>({
@@ -37,7 +37,7 @@ export const ContactForm: React.FC<FormProps> = ({ onSubmit, children, className
           return React.cloneElement(child, {
             onChange: handleChange,
             value: formData[child.props.name],
-          } as InputProps);
+          } as ContactInputProps);
         }
         return child;
       })}
@@ -45,7 +45,7 @@ export const ContactForm: React.FC<FormProps> = ({ onSubmit, children, className
   );
 };
 
-export const ContactInput: React.FC<InputProps> = ({
+export const ContactInput: React.FC<ContactInputProps> = ({
   name, label, type = 'text', required, value, onChange,
 }) => {
   const [isValidPhone, setIsValidPhone] = useState(true);
@@ -76,7 +76,7 @@ export const ContactInput: React.FC<InputProps> = ({
   );
 };
 
-export const ContactText: React.FC<TextAreaProps> = ({
+export const ContactText: React.FC<ContactTextAreaProps> = ({
   name, label, required, value, onChange,
 }) => {
   return (

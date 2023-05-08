@@ -5,6 +5,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import MetaData from '../component/MetaData';
 import SectionGrid from '../component/SectionGrid';
 import SectionButton from '../component/SectionButton';
+import SectionForm from '../component/SectionForm';
 import SectionCard from '../component/SectionCard';
 import SectionTab from '../component/SectionTab';
 
@@ -22,6 +23,7 @@ export default function Index() {
       <Container fluid={false}>
         <SectionGrid />
         <SectionButton />
+        <SectionForm />
         <SectionCard />
         <SectionTab />
       </Container>
@@ -33,7 +35,7 @@ export async function getStaticProps({ locale }) {
   return {
     props: {
       ...(await serverSideTranslations(locale, [
-        'common', 'grid', 'button', 'tab', 'card',
+        'common', 'grid', 'button', 'form', 'tab', 'card',
       ])),
       // Will be passed to the page component as props
     },

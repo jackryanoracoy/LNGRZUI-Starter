@@ -32,23 +32,23 @@ export default function SectionTab() {
       <Content type='article' title={t('tab.props-title')}>
         <Card>
           <Utility hiddenMax='md' marginBottom={10}>
-            <Row>
+            <Row align='center'>
               <Col xs={24} md={4}><Text type='paragraph' weight='bold'>{t('tab.props-title-properties')}</Text></Col>
               <Col xs={24} md={14}><Text type='paragraph' weight='bold'>{t('tab.props-title-type')}</Text></Col>
               <Col xs={24} md={6}><Text type='paragraph' weight='bold'>{t('tab.props-title-default')}</Text></Col>
             </Row>
           </Utility>
-          <Row>
+          <Row align='center'>
             <Col xs={24} md={4}><Text type='paragraph' size='small' weight='bold'>{t('tab.props-desc-properties-one')}</Text></Col>
             <Col xs={24} md={14}><Text type='code' size='small' variant='warning'>{t('tab.props-desc-type-one')}</Text></Col>
             <Col xs={24} md={6}><Text type='paragraph' size='small'>{t('tab.props-desc-default-one')}</Text></Col>
           </Row>
-          <Row>
+          <Row align='center'>
             <Col xs={24} md={4}><Text type='paragraph' size='small' weight='bold'>{t('tab.props-desc-properties-two')}</Text></Col>
             <Col xs={24} md={14}><Text type='code' size='small' variant='secondary'>{t('tab.props-desc-type-two')}</Text></Col>
             <Col xs={24} md={6}><Text type='paragraph' size='small'>{t('tab.props-desc-default-two')}</Text></Col>
           </Row>
-          <Row>
+          <Row align='center'>
             <Col xs={24} md={4}><Text type='paragraph' size='small' weight='bold'>{t('tab.props-desc-properties-three')}</Text></Col>
             <Col xs={24} md={14}><Text type='code' size='small' variant='secondary'>{t('tab.props-desc-type-three')}</Text></Col>
             <Col xs={24} md={6}><Text type='paragraph' size='small'>{t('tab.props-desc-default-three')}</Text></Col>

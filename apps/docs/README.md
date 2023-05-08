@@ -1,30 +1,40 @@
+# LNGRZUI Documentation
+
+The LNGRZUI Documentation is the documentation website for the UI Library, which is a collection of reusable components for building user interfaces.
+
 ## Getting Started
 
-First, run the development server:
+To run the LNGRZUI Documentation on your local machine, follow these steps:
 
-```bash
-yarn dev
-```
+1. Clone the repository to your local machine.
+2. Install the dependencies by running `npm install`.
+3. Start the development server by running `npm run dev`.
+4. Open the app in your browser by navigating to `http://localhost:3001`.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- Browse a collection of reusable UI components.
+- See live previews of components and their various options and configurations.
+- Read documentation on each component's API, usage, and customization.
+- Get started quickly by copying code snippets directly from the documentation.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Technologies
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+The LNGRZUI Documentation is built with the following technologies:
 
-## Learn More
+- [Next.js](https://nextjs.org/) - A React-based framework for building server-rendered websites.
+- [TypeScript](https://www.typescriptlang.org/) - A statically-typed superset of JavaScript.
 
-To learn more about Next.js, take a look at the following resources:
+## Contributing
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn/foundations/about-nextjs) - an interactive Next.js tutorial.
+Contributions to the LNGRZUI Documentation and the UI Library are welcome! To contribute, please follow these steps:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. Fork the repository.
+2. Make your changes.
+3. Submit a pull request.
 
-## Deploy on Vercel
+Please be sure to follow the [contributing guidelines](CONTRIBUTING.md) and the [code of conduct](CODE_OF_CONDUCT.md).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_source=github.com&utm_medium=referral&utm_campaign=turborepo-readme) from the creators of Next.js.
+## License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The LNGRZUI Documentation and the UI Library are licensed under the [MIT License](LICENSE.md).

@@ -1,6 +1,12 @@
-import Head from 'next/head'
+import Head from 'next/head';
+import { MetaDataProps } from './Types';
 
-export default function MetaData({ title, keywords, description, themecolor }) {
+export default function MetaData({
+  title = 'LNGRZUI - Documentation',
+  description = 'This is the documentation of the shared UI library',
+  keywords = 'shared user interface documentation, shared ui documentation, ui documentation',
+  themecolor = '#C51162',
+}: MetaDataProps) {
   return (
     <Head>
       <meta charSet="utf-8" />
@@ -27,11 +33,4 @@ export default function MetaData({ title, keywords, description, themecolor }) {
       <meta name="msapplication-config" content="/browserconfig.xml" />
     </Head>
   )
-}
-
-MetaData.defaultProps = {
-  title: 'LNGRZUI - Documentation',
-  description: 'This is the documentation of the shared UI library',
-  keywords: 'shared user interface documentation, shared ui documentation, ui documentation',
-  themecolor: '#C51162',
 }
