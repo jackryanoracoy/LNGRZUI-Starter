@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { CarouselProps } from './Types';
+import { CarouselProps } from './ComponentTypes';
 
 export const Carousel: React.FC<CarouselProps> = ({ className = '', images, autoplay, interval }) => {
   const [index, setIndex] = useState(0);

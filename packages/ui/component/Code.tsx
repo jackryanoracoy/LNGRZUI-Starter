@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { CodeProps } from './Types';
+import { CodeProps } from './ComponentTypes';
 import hljs from 'highlight.js';
 import 'highlight.js/styles/lioshi.css';
 import '../styles/Code.scss';

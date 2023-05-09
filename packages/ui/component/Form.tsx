@@ -1,44 +1,51 @@
 import React, { useState } from 'react';
-import { FormProps, InputProps } from './Types';
+import { FormProps } from './ComponentTypes';
 import { Button } from './Button';
 import '../styles/Form.scss';
 
 export const Form: React.FC<FormProps> = ({
-  className, onSubmit, initialInputs = [], buttonLabel = 'Submit'
+  className, onSubmit, inputs, textAreas = [], submitButtonLabel = 'Submit'
 }) => {
   const classNames = className ? `form ${className}` : `form`;
-  const [inputs, setInputs] = useState<InputProps[]>(initialInputs);
-  const handleChange = (id: string, value: string) => {
-    setInputs(inputs.map(input => input.id === id ? { ...input, value } : input));
-  };
+  const [formData, setFormData] = useState<{ [key: string]: string }>({});
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    onSubmit(inputs);
+    onSubmit(formData);
   };
-
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = event.target;
+    setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
+  };
   return (
     <form className={classNames} onSubmit={handleSubmit}>
-      {inputs.map(({ id, label, value, type = 'text', placeholder = label }) => (
-        <div key={id}>
-          <label htmlFor={id}>{label}</label>
-          {type === 'textarea' ? (
-            <textarea
-              id={id}
-              value={value}
-              onChange={event => handleChange(id, event.target.value)}
-            />
-          ) : (
-            <input
-              id={id}
-              type={type}
-              value={value}
-              placeholder={placeholder}
-              onChange={event => handleChange(id, event.target.value)}
-            />
-          )}
+      {inputs.map((input) => (
+        <div key={input.name}>
+          <label htmlFor={input.name}>{input.label}</label>
+          <input
+            type={input.type}
+            id={input.name}
+            name={input.name}
+            required={input.required}
+            value={formData[input.name] ?? ''}
+            onChange={handleChange}
+            placeholder={input.placeholder}
+          />
         </div>
       ))}
-      <Button type="submit">{buttonLabel}</Button>
+      {textAreas.map((textArea) => (
+        <div key={textArea.name}>
+          <label htmlFor={textArea.name}>{textArea.label}</label>
+          <textarea
+            id={textArea.name}
+            name={textArea.name}
+            required={textArea.required}
+            value={formData[textArea.name] ?? ''}
+            onChange={handleChange}
+            placeholder={textArea.placeholder}
+          />
+        </div>
+      ))}
+      <Button type="submit">{submitButtonLabel}</Button>
     </form>
   );
 };

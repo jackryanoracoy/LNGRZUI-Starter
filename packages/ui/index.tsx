@@ -9,7 +9,6 @@ export * from "./component/Code";
 export * from "./component/Button";
 export * from "./component/Tab";
 export * from "./component/Carousel";
-export * from "./component/ContactForm";
 export * from "./component/Form";
 export * from "./component/Utility";
 

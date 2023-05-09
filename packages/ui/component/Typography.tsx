@@ -1,5 +1,5 @@
 import React from 'react';
-import { TypographyProps } from './Types';
+import { TypographyProps } from './ComponentTypes';
 import '../styles/Typography.scss';
 
 export const Text: React.FC<TypographyProps> = ({

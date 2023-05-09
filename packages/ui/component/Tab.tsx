@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { CommonProps, TabPanelProps } from './Types';
+import { CommonProps, TabPanelProps } from './ComponentTypes';
 import '../styles/Tab.scss';
 
 export const Tab: React.FC<CommonProps> = ({ children, className = '' }) => {

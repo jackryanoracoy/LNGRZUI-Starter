@@ -1,5 +1,5 @@
 import React from 'react';
-import { ContainerProps } from './Types';
+import { ContainerProps } from './ComponentTypes';
 import '../styles/Container.scss';
 
 export const Container: React.FC<ContainerProps> = ({

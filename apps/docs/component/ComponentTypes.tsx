@@ -4,8 +4,3 @@ export interface MetaDataProps {
   keywords?: string;
   themecolor?: string;
 }
-
-export type InputProps = {
-  id: string;
-  value: string;
-}

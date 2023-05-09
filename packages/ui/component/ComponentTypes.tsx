@@ -7,9 +7,36 @@ type Variant = 'primary' | 'secondary' | 'light' | 'dark' | 'success' | 'warning
 type BreakPoint = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 type Overflow = 'auto' | 'hidden' | 'scroll' | 'visible';
 
+type InputProps = {
+  name: string;
+  label: string;
+  type: string;
+  placeholder: string;
+  value: string;
+  required?: boolean;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+};
+
+type TextAreaProps = {
+  name: string;
+  label: string;
+  placeholder: string;
+  value: string;
+  required?: boolean;
+  onChange?: (event: React.ChangeEvent<HTMLTextAreaElement>) => void;
+};
+
 export type CommonProps = {
   children: React.ReactNode;
   className?: string;
+};
+
+export type FormProps = {
+  className?: string;
+  onSubmit: (data: { [key: string]: string }) => void;
+  inputs: InputProps[];
+  textAreas?: TextAreaProps[];
+  submitButtonLabel: string;
 };
 
 export type ContainerProps = {
@@ -102,51 +129,6 @@ export type CarouselProps = {
   images: string[];
   autoplay?: boolean;
   interval?: number;
-};
-
-export type InputProps = {
-  id: string;
-  label?: string;
-  value: string;
-  placeholder?: string;
-  type?: string;
-};
-
-export type FormProps = {
-  className?: string;
-  onSubmit: (inputs: InputProps[]) => void;
-  initialInputs?: InputProps[];
-  buttonLabel?: string;
-};
-
-export type ContactFormProps = {
-  onSubmit: (data: {
-    firstName: string;
-    lastName: string;
-    email: string;
-    number: string;
-    message: string;
-  }) => void;
-  children: React.ReactNode;
-  className?: string;
-  input?: string;
-};
-
-export type ContactInputProps = {
-  name: string;
-  label?: string;
-  type?: string;
-  required?: boolean;
-  value?: string;
-  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
-};
-
-export type ContactTextAreaProps = {
-  name: string;
-  label?: string;
-  required?: boolean;
-  value?: string;
-  onChange?: (event: React.ChangeEvent<HTMLTextAreaElement>) => void;
 };
 
 export type TabPanelProps = {

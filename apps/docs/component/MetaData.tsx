@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { MetaDataProps } from './Types';
+import { MetaDataProps } from './ComponentTypes';
 
 export default function MetaData({
   title = 'LNGRZUI - Documentation',

@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrandingProps } from './Types';
+import { BrandingProps } from './ComponentTypes';
 import '../styles/Branding.scss';
 
 export const Branding: React.FC<BrandingProps> = ({

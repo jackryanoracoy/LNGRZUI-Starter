@@ -1,5 +1,5 @@
 import React from 'react';
-import { RowProps, ColProps } from './Types';
+import { RowProps, ColProps } from './ComponentTypes';
 import '../styles/Grid.scss';
 
 export const Row: React.FC<RowProps> = ({

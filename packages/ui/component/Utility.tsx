@@ -1,5 +1,5 @@
 import React from 'react';
-import { UtilityProps } from './Types';
+import { UtilityProps } from './ComponentTypes';
 import '../styles/Utility.scss';
 
 export const Utility: React.FC<UtilityProps> = ({

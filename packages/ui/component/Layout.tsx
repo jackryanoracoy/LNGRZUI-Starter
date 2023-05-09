@@ -1,5 +1,5 @@
 import React from 'react';
-import { CommonProps } from './Types';
+import { CommonProps } from './ComponentTypes';
 import '../styles/Global.scss';
 import '../styles/Layout.scss';
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ContentProps } from './Types';
+import { ContentProps } from './ComponentTypes';
 import { Text } from './Typography';
 import '../styles/Content.scss';
 

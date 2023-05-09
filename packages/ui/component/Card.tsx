@@ -1,5 +1,5 @@
 import React from 'react';
-import { CommonProps } from './Types';
+import { CommonProps } from './ComponentTypes';
 import '../styles/Card.scss';
 
 export const Card: React.FC<CommonProps> = ({
