@@ -3,8 +3,8 @@ import { Container } from 'ui';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Loading from '../component/Loading';
+import MetaData from '../component/MetaData';
 
-const MetaData = lazy(() => import('../component/MetaData'));
 const SectionGrid = lazy(() => import('../component/SectionGrid'));
 const SectionButton = lazy(() => import('../component/SectionButton'));
 const SectionForm = lazy(() => import('../component/SectionForm'));
