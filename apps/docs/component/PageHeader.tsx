@@ -16,7 +16,7 @@ export default function PageHeader() {
   return (
     <Utility paddingLeft={10} paddingRight={10}>
       <Row align='center' wrap='nowrap'>
-        <Col xs={12}>
+        <Col xs={14} md='auto'>
           <Branding index={home} title={<Link href='/'>{t('title')}</Link>} />
         </Col>
         <Col xs='auto' oxs='auto'>
