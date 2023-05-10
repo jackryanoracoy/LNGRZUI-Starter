@@ -18,7 +18,6 @@ The LNGRZUI Starter repository is built with the following technologies:
 - [React.js](https://reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Next.js](https://nextjs.org/)
-- [Strapi CMS](https://strapi.io/)
 
 ## Useful Links
 
@@ -55,13 +54,7 @@ pnpm install
 pnpm dev
 ```
 
-5. You can also start the LNGRZUI Documentation independently by running the following command in the `docs` directory:
-
-```
-npm run dev
-```
-
-5. You can also start the Strapi CMS independently by running the following command in the `cms` directory:
+4. You can also start the LNGRZUI Documentation independently by running the following command in the `docs` directory:
 
 ```
 npm run dev
