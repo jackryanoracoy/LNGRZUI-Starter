@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { Container } from 'ui';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import MetaData from '../component/MetaData';
-import SectionGrid from '../component/SectionGrid';
-import SectionButton from '../component/SectionButton';
-import SectionForm from '../component/SectionForm';
-import SectionCard from '../component/SectionCard';
-import SectionTab from '../component/SectionTab';
+import Loading from '../component/Loading';
+
+const MetaData = lazy(() => import('../component/MetaData'));
+const SectionGrid = lazy(() => import('../component/SectionGrid'));
+const SectionButton = lazy(() => import('../component/SectionButton'));
+const SectionForm = lazy(() => import('../component/SectionForm'));
+const SectionCard = lazy(() => import('../component/SectionCard'));
+const SectionTab = lazy(() => import('../component/SectionTab'));
 
 export default function Index() {
   const { t } = useTranslation();
@@ -21,11 +23,13 @@ export default function Index() {
       />
 
       <Container fluid={false}>
-        <SectionGrid />
-        <SectionButton />
-        <SectionForm />
-        <SectionCard />
-        <SectionTab />
+        <Suspense fallback={<Loading />}>
+          <SectionGrid />
+          <SectionButton />
+          <SectionForm />
+          <SectionCard />
+          <SectionTab />
+        </Suspense>
       </Container>
     </>
   )
