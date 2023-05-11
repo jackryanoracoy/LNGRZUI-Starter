@@ -12,11 +12,17 @@
 --------------------------------------------------*/
 
 .header {
-  position: relative;
+  position: fixed;
   width: 100%;
+  height: $header-height_m;
   min-width: 240px;
   background-color: $primary;
+  box-shadow: $z-depth-2;
   z-index: 9;
+
+  @include media-breakpoint-min(lg) {
+    height: $header-height;
+  }
 }
 
 /*--------------------------------------------------
@@ -26,6 +32,21 @@
 .main {
   min-height: 100vh;
   background-color: $grey-200;
+  padding-top: $header-height_m;
+
+  @include media-breakpoint-min(lg) {
+    padding-top: $header-height;
+  }
+}
+
+/*--------------------------------------------------
+  Site Sider
+--------------------------------------------------*/
+
+.aside {
+  min-height: 100%;
+  background-color: $grey-300;
+  z-index: 1;
 }
 
 /*--------------------------------------------------
