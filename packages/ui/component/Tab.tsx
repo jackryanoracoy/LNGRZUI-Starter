@@ -1,17 +1,16 @@
 import React, { useState } from 'react';
-import { CommonProps, TabPanelProps } from './ComponentTypes';
+import { TabProps, TabPanelProps } from './ComponentTypes';
 import '../styles/Tab.scss';
 
-export const Tab: React.FC<CommonProps> = ({ children, className = '' }) => {
-  const classNames = className ? `tab ${className}` : `tab`;
-
+export const Tab: React.FC<TabProps> = ({
+  children, className = '',
+}) => {
+  const classNames = className ? `tab ${className}` : 'tab';
   const [activeTab, setActiveTab] = useState(0);
-
+  const tabs = React.Children.toArray(children);
   const handleTabClick = (index: number) => {
     setActiveTab(index);
   };
-
-  const tabs = React.Children.toArray(children);
 
   return (
     <div className={classNames}>

@@ -26,6 +26,10 @@ type TextAreaProps = {
   onChange?: (event: React.ChangeEvent<HTMLTextAreaElement>) => void;
 };
 
+export type ChildrenProps = {
+  children: React.ReactNode;
+};
+
 export type CommonProps = {
   children: React.ReactNode;
   className?: string;
@@ -131,10 +135,15 @@ export type CarouselProps = {
   interval?: number;
 };
 
-export type TabPanelProps = {
+export type TabProps = {
   children: React.ReactNode;
-  label: string;
+  className?: string;
 };
+
+export type TabPanelProps = {
+  children?: React.ReactNode;
+  label?: string;
+}
 
 export type CodeProps = {
   children?: React.ReactNode;
@@ -146,4 +155,17 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: Variant;
   display?: 'inline-block' | 'block';
   size?: 'small' | 'medium' | 'large';
+}
+
+export type SearchProps = {
+  onSearch: (value: string) => void;
+  className?: string;
+  placeholder?: string;
+};
+
+export type PaperProps = {
+  children: React.ReactNode;
+  header?: React.ReactNode;
+  className?: string;
+  sticky?: boolean;
 }

@@ -6,7 +6,7 @@ import '../styles/Form.scss';
 export const Form: React.FC<FormProps> = ({
   className, onSubmit, inputs, textAreas = [], submitButtonLabel = 'Submit'
 }) => {
-  const classNames = className ? `form ${className}` : `form`;
+  const classNames = className ? `form ${className}` : 'form';
   const [formData, setFormData] = useState<{ [key: string]: string }>({});
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();

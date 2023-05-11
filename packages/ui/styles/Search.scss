@@ -1,72 +1,38 @@
 /*
- * Title       :   Form Component
+ * Title       :   Search Component
  * Author      :   Jack Ryan Oracoy
- * Description :   Style for the form component
+ * Description :   Style for the search component
  */
 
 @import 'variable';
 @import 'mixin';
 
 /*--------------------------------------------------
-  Form
+  Search
 --------------------------------------------------*/
 
-.form {
+.search {
   position: relative;
 
-  & label {
-    display: block;
-    margin-bottom: 5px;
-    font-size: $font-md;
-  }
-
-  & > div { margin-bottom: 20px; }
-
-  & textarea {
-    max-width: 100%;
-    height: $textarea-height;
-    min-height: $input-height;
-    resize: vertical;
-  }
-
-  & input,
-  & textarea {
+  & input {
     width: 100%;
-  }
-
-  & input[type=checkbox] {
-    width: 10px;
-    height: 10px;
-    vertical-align: middle;
-  }
-
-  & input[type=text],
-  & input[type=email],
-  & input[type=tel],
-  & input[type=number] {
     height: $input-height;
-  }
-
-  & textarea,
-  & input[type=text],
-  & input[type=email],
-  & input[type=tel],
-  & input[type=number] {
-    padding: 5px 10px;
+    padding: 0 20px;
     color: inherit;
     font-size: $font-md;
     font-family: inherit;
     font-weight: inherit;
     line-height: $line-height-nm;
-    background-color: $grey-300;
-    border: 1px solid $grey-300;
-    border-radius: $border-radius;
+    background-color: $grey-200;
+    border: 1px solid $grey-200;
+    border-radius: $input-height / 2;
     box-shadow: none;
     transition: $transition;
 
     &:focus {
       background-color: $grey-50;
       border: 1px solid $grey-50;
+      border-radius: $border-radius;
       box-shadow: $z-depth-1;
     }
   }
@@ -89,10 +55,7 @@
   & button,
   & textarea,
   & input[type=text],
-  & input[type=email],
   & input[type=button],
-  & input[type=tel],
-  & input[type=number],
   & input[type=submit] {
     outline: none;
     -moz-appearance: none;

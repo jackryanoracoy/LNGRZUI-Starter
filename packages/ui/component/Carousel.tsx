@@ -6,7 +6,7 @@ export const Carousel: React.FC<CarouselProps> = ({ className = '', images, auto
   const next = () => setIndex((index + 1) % images.length);
   const prev = () => setIndex((index - 1 + images.length) % images.length);
   const dots = (index: number) => setIndex(index);
-  const classNames = className ? `carousel ${className}` : `carousel`;
+  const classNames = className ? `carousel ${className}` : 'carousel';
 
   useEffect(() => {
     const timeout = interval || 5000;
