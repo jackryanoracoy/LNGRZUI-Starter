@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { MetaDataProps } from './ComponentTypes';
 
-export default function MetaData({
+export default function ContentMeta({
   title = 'LNGRZUI - Documentation',
   description = 'This is the documentation of the shared UI library',
   keywords = 'shared user interface documentation, shared ui documentation, ui documentation',

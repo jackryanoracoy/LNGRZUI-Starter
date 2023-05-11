@@ -17,19 +17,34 @@
     padding: 0px;
     list-style: none;
 
+    &.is_sticky {
+      position: sticky;
+      top: $header-height_m;
+
+      @include media-breakpoint-min(lg) {
+        top: $header-height;
+      }
+    }
+
     &-item {
       display: inline-block;
       padding: 10px 15px;
+      color: inherit;
       font-size: $font-md;
-      background: none;
+      background-color: $grey-50;
+      opacity: 0.5;
+      transition: $transition;
       cursor: pointer;
     }
 
+    &-item:hover { opacity: 0.75; }
+
     &-item.is_active {
       color: $dark;
-      background-color: $grey-50;
       border-radius: $border-radius $border-radius 0 0;
       box-shadow: $z-depth-2;
+      opacity: 1;
+      z-index: 1;
     }
   }
 

@@ -14,6 +14,7 @@
 .button {
   width: auto;
   margin: 2px 0;
+  padding: 0 20px;
   font-size: $font-nm;
   text-align: center;
   text-decoration: none;
@@ -52,21 +53,18 @@
     min-width: $button-height-sm;
     line-height: $button-height-sm;
     border-radius: $button-height-sm / 2;
-    padding: 0 20px;
   }
 
   &.is_medium {
     min-width: $button-height-md;
     line-height: $button-height-md;
     border-radius: $button-height-md / 2;
-    padding: 0 20px;
   }
 
   &.is_large {
     min-width: $button-height-lg;
     line-height: $button-height-lg;
     border-radius: $button-height-lg / 2;
-    padding: 0 20px;
   }
 
   &%button-text { color: $white; }

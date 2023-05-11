@@ -1,0 +1,37 @@
+/*
+ * Title       :   Paper Component
+ * Author      :   Jack Ryan Oracoy
+ * Description :   Style for the paper component
+ */
+
+@import 'variable';
+@import 'mixin';
+
+/*--------------------------------------------------
+  Paper
+--------------------------------------------------*/
+
+.paper {
+  color: $dark !important;
+  border-radius: $border-radius;
+
+  &-header {
+    padding: 20px;
+    background-color: $grey-50;
+    border-bottom: 1px solid $grey-200;
+
+    &.is_sticky {
+      position: sticky;
+      top: $header-height_m;
+
+      @include media-breakpoint-min(lg) {
+        top: $header-height;
+      }
+    }
+  }
+
+  &-content {
+    padding: 20px;
+    background-color: $grey-50;
+  }
+}

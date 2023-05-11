@@ -1,0 +1,170 @@
+[
+  {
+    "id": 1,
+    "slug": "start",
+    "en": {
+      "title": "Getting Started",
+      "content": "Learn how to get started with the components library."
+    },
+    "ja": {
+      "title": "はじめに",
+      "content": "コンポーネントライブラリの使い方について学びます。"
+    }
+  },
+  {
+    "id": 2,
+    "slug": "container",
+    "en": {
+      "title": "Container",
+      "content": "Learn about the container component for structuring your content."
+    },
+    "ja": {
+      "title": "コンテナ",
+      "content": "コンテンツの構造化に使用するコンテナコンポーネントについて学びます。"
+    }
+  },
+  {
+    "id": 3,
+    "slug": "layout",
+    "en": {
+      "title": "Layout",
+      "content": "Explore different layout options for your application."
+    },
+    "ja": {
+      "title": "レイアウト",
+      "content": "アプリケーションの異なるレイアウトオプションを探索します。"
+    }
+  },
+  {
+    "id": 4,
+    "slug": "grid",
+    "en": {
+      "title": "Grid",
+      "content": "Understand how to create responsive grid layouts."
+    },
+    "ja": {
+      "title": "グリッド",
+      "content": "レスポンシブなグリッドレイアウトの作成方法を理解します。"
+    }
+  },
+  {
+    "id": 5,
+    "slug": "typography",
+    "en": {
+      "title": "Typography",
+      "content": "Learn about the typography styles and options available."
+    },
+    "ja": {
+      "title": "タイポグラフィ",
+      "content": "タイポグラフィのスタイルとオプションについて学びます。"
+    }
+  },
+  {
+    "id": 6,
+    "slug": "content",
+    "en": {
+      "title": "Content",
+      "content": "Understand how to create structured content sections."
+    },
+    "ja": {
+      "title": "コンテンツ",
+      "content": "構造化されたコンテンツセクションの作成方法を理解します。"
+    }
+  },
+  {
+    "id": 7,
+    "slug": "card",
+    "en": {
+      "title": "Card",
+      "content": "Explore how to create stylish and customizable cards."
+    },
+    "ja": {
+      "title": "カード",
+      "content": "スタイリッシュでカスタマイズ可能なカードの作成方法を探求します。"
+    }
+  },
+  {
+    "id": 8,
+    "slug": "button",
+    "en": {
+      "title": "Button",
+      "content": "Discover how to create and customize buttons with different styles and functionalities."
+    },
+    "ja": {
+      "title": "ボタン",
+      "content": "異なるスタイルと機能を持つボタンの作成とカスタマイズ方法を学びます。"
+    }
+  },
+  {
+    "id": 9,
+    "slug": "form",
+    "en": {
+      "title": "Form",
+      "content": "Learn how to create forms and handle user input."
+    },
+    "ja": {
+      "title": "フォーム",
+      "content": "フォームの作成とユーザー入力の処理方法を学びます。"
+    }
+  },
+  {
+    "id": 10,
+    "slug": "search",
+    "en": {
+      "title": "Search",
+      "content": "Learn how to implement search functionality in your application."
+    },
+    "ja": {
+      "title": "検索",
+      "content": "アプリケーション内での検索機能の実装方法を学びます。"
+    }
+  },
+  {
+    "id": 11,
+    "slug": "tab",
+    "en": {
+      "title": "Tab",
+      "content": "Explore how to create tabbed navigation and content sections."
+    },
+    "ja": {
+      "title": "タブ",
+      "content": "タブ付きのナビゲーションやコンテンツセクションの作成方法を探求します。"
+    }
+  },
+  {
+    "id": 12,
+    "slug": "code",
+    "en": {
+      "title": "Code",
+      "content": "Discover how to display and highlight code snippets."
+    },
+    "ja": {
+      "title": "コード",
+      "content": "コードの表示とハイライトの方法について学びます。"
+    }
+  },
+  {
+    "id": 13,
+    "slug": "carousel",
+    "en": {
+      "title": "Carousel",
+      "content": "Learn how to create captivating carousels with our Carousel tutorial. "
+    },
+    "ja": {
+      "title": "カルーセル",
+      "content": "キャルーセルのチュートリアルでは、魅力的なキャルーセルを作成する方法を学びます。"
+    }
+  },
+  {
+    "id": 14,
+    "slug": "utility",
+    "en": {
+      "title": "Utility",
+      "content": "Discover various utility components for common tasks and functionalities."
+    },
+    "ja": {
+      "title": "ユーティリティ",
+      "content": "一般的なタスクや機能に使用するさまざまなユーティリティコンポーネントを探索します。"
+    }
+  }
+]

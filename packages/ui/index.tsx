@@ -5,10 +5,12 @@ export * from "./component/Branding";
 export * from "./component/Typography";
 export * from "./component/Grid";
 export * from "./component/Card";
+export * from "./component/Paper";
 export * from "./component/Code";
 export * from "./component/Button";
 export * from "./component/Tab";
 export * from "./component/Carousel";
 export * from "./component/Form";
+export * from "./component/Search";
 export * from "./component/Utility";
 

@@ -7,7 +7,7 @@ import '../styles/Code.scss';
 export const Code: React.FC<CodeProps> = ({
   children, className = '', language
 }) => {
-  const classNames = className ? `code ${className}` : `code`;
+  const classNames = className ? `code ${className}` : 'code';
   const codeEl = useRef(null);
 
   useEffect(() => {
