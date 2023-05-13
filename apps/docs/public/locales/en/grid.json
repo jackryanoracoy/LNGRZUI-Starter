@@ -1,7 +1,17 @@
 {
-  "grid": {
-    "title": "Grid Component",
-    "desc": "The Grid Component exports two React functional components: `Row` and `Col`. These components are part of a grid system, allowing developers to create flexible layouts using a 24-column grid. The `Row` component takes in several props that define the layout of the row, such as `align`, `justify`, and `wrap`. It renders a div with a `flex` display and applies the appropriate CSS classes based on the props passed in. The `Col` component takes in several props, including `span` and `offset`, which define how many columns a column should span and the number of columns it should be offset. It also takes in responsive props, such as `xs`, `sm`, `md`, `lg`, and `xl`, which define the number of columns a column should span at different screen sizes. The component then applies the appropriate CSS classes based on the props passed in.",
+  "title": "Grid",
+  "description": "Understand how to create responsive grid layouts.",
+  "meta": {
+    "title": "LNGRZUI | Grid Documentation",
+    "description": "Understand how to create responsive grid layouts.",
+    "keywords": "component library, reusable components, documentation, application development, UI toolkit",
+    "themecolor": "#C51162"
+  },
+  "content": {
+    "overview-title": "Overview",
+    "overview-desc": "The Grid component offers a flexible and responsive grid system for organizing and aligning content on a web page. This page outlines the features and capabilities of the Grid component, including defining grid layouts, responsive behavior, and column alignment. It empowers developers to create dynamic and visually appealing grid-based layouts.",
+    "how-to-title": "How To Use",
+    "how-to-desc": "Import the Grid component into your project and define the desired grid structure by specifying the number of columns, rows, and their respective sizes. Utilize the provided props to control the responsiveness and alignment of the grid. Refer to the documentation for specific usage examples and guidance.",
     "example-title": "Example",
     "code-title": "Code",
     "props-title": "Props",

@@ -1,7 +1,17 @@
 {
-  "form": {
-    "title": "Form Component",
-    "desc": "The Form component is a reusable form that allows users to input information and submit it. It includes customizable input fields, including text areas, and a submit button with customizable label text. It also includes error handling and validation.",
+  "title": "Form",
+  "description": "Learn how to create forms and handle user input.",
+  "meta": {
+    "title": "LNGRZUI | Form Documentation",
+    "description": "Learn how to create forms and handle user input.",
+    "keywords": "component library, reusable components, documentation, application development, UI toolkit",
+    "themecolor": "#C51162"
+  },
+  "content": {
+    "overview-title": "Overview",
+    "overview-desc": "The Form component simplifies the process of creating and managing forms within a web application. This page explains how to utilize the Form component to build user-friendly and interactive forms. It covers form validation, input fields, and submission handling, providing developers with a comprehensive understanding of form implementation.",
+    "how-to-title": "How to Use",
+    "how-to-desc": "Import the Form component into your project and define the structure of your form using the provided form elements. Implement form validation by setting up appropriate rules and validation messages. Handle form submission and interact with form data using event handlers. Refer to the documentation for detailed usage instructions and examples.",
     "example-title": "Example",
     "code-title": "Code",
     "props-title": "Props",

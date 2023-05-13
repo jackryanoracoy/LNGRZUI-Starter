@@ -2,10 +2,7 @@ import Head from 'next/head';
 import { MetaDataProps } from './ComponentTypes';
 
 export default function ContentMeta({
-  title = 'LNGRZUI - Documentation',
-  description = 'This is the documentation of the shared UI library',
-  keywords = 'shared user interface documentation, shared ui documentation, ui documentation',
-  themecolor = '#C51162',
+  title, description, keywords, themecolor
 }: MetaDataProps) {
   return (
     <Head>
@@ -19,7 +16,7 @@ export default function ContentMeta({
       <meta name="theme-color" content={themecolor} />
       <link rel="mask-icon" href="/app-icon/safari-pinned-tab.svg" color={themecolor} />
 
-      <title>{title} - {description}</title>
+      <title>{title}</title>
       <meta name='keywords' content={keywords} />
       <meta name='description' content={description} />
 

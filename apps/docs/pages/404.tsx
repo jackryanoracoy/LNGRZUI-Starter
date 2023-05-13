@@ -6,10 +6,10 @@ import Loading from '../component/Loading';
 import pagesData from '../public/pages-data.json';
 
 const ContentMeta = dynamic(() => import('../component/ContentMeta'), { loading: () => <Loading /> });
-const ContentSearch = dynamic(() => import('../component/ContentSearch'), { loading: () => <Loading /> });
+const ContentError = dynamic(() => import('../component/ContentError'), { loading: () => <Loading /> });
 
-export default function Index() {
-  const { t } = useTranslation('search');
+export default function PageNotFound({ statusCode }) {
+  const { t } = useTranslation('404');
   return (
     <>
       <ContentMeta
@@ -19,13 +19,17 @@ export default function Index() {
         themecolor={t('meta.themecolor')}
       />
 
-      <ContentSearch pagesData={pagesData} />
+      <ContentError pagesData={pagesData} statusCode={statusCode} />
     </>
   )
 }
 
 export async function getStaticProps({ locale }) {
   return {
-    props: {...(await serverSideTranslations(locale, ['common', 'search']))},
-  }
+    props: {
+      ...(await serverSideTranslations(locale, ['common', '404'])),
+      statusCode: 404,
+    },
+  };
 }
+

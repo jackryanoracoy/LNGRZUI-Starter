@@ -1,14 +1,21 @@
 import React from 'react';
-import { CommonProps } from './ComponentTypes';
+import { CardProps, ChildrenProps } from './ComponentTypes';
 import '../styles/Card.scss';
 
-export const Card: React.FC<CommonProps> = ({
-  children, className = '',
+export const Card: React.FC<CardProps> = ({
+  children, className = '', header
 }) => {
   const classNames = className ? `card ${className}` : 'card';
   return (
     <div className={classNames}>
-      <div className='card-content'>{children}</div>
+      {header ? <div className='card-header'>{header}</div> : ''}
+      <PaperContent>{children}</PaperContent>
     </div>
   )
+}
+
+const PaperContent: React.FC<ChildrenProps> = ({
+  children
+}) => {
+  return <div className='card-content'>{children}</div>
 }

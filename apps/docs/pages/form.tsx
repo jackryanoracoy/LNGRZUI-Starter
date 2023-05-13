@@ -8,14 +8,14 @@ const ContentMeta = dynamic(() => import('../component/ContentMeta'), { loading:
 const ContentForm = dynamic(() => import('../component/ContentForm'), { loading: () => <Loading /> });
 
 export default function Form() {
-  const { t } = useTranslation();
+  const { t } = useTranslation('form');
   return (
     <>
       <ContentMeta
-        title={t('form.meta-title')}
-        keywords={t('form.meta-keyword')}
-        description={t('form.meta-description')}
-        themecolor={t('form.meta-themecolor')}
+        title={t('meta.title')}
+        keywords={t('meta.keyword')}
+        description={t('meta.description')}
+        themecolor={t('meta.themecolor')}
       />
 
       <ContentForm />

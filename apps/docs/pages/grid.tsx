@@ -8,14 +8,14 @@ const ContentMeta = dynamic(() => import('../component/ContentMeta'), { loading:
 const ContentGrid = dynamic(() => import('../component/ContentGrid'), { loading: () => <Loading /> });
 
 export default function Grid() {
-  const { t } = useTranslation();
+  const { t } = useTranslation('grid');
   return (
     <>
       <ContentMeta
-        title={t('grid.meta-title')}
-        keywords={t('grid.meta-keyword')}
-        description={t('grid.meta-description')}
-        themecolor={t('grid.meta-themecolor')}
+        title={t('meta.title')}
+        keywords={t('meta.keyword')}
+        description={t('meta.description')}
+        themecolor={t('meta.themecolor')}
       />
 
       <ContentGrid />

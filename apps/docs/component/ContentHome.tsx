@@ -24,31 +24,25 @@ export default function ContentStart({ pagesData }) {
   useEffect(() => handleSearch(''), []);
   return (
     <Container>
-      <Content type='section' title={t('home.title')}>
-        <Text type='paragraph'>{t('home.desc')}</Text>
-
-        <Content type='article' title={t('home.topic-title')}>
-          <Paper
-            sticky
-            header={ <Search onSearch={handleSearch} placeholder={t('home.search-placeholder')} /> }
-          >
-
-            {searchResults.length > 0 ? (
-              <Row gap={10} align='stretch'>
-                {searchResults.map((result) => (
-                  <Col sm={12} md={8} lg={6} key={result.id}>
-                    <Card>
-                      <Text type='title'><Link href={result.slug}>{result[language].title}</Link></Text>
-                      <Text type='paragraph' size='medium'>{result[language].content}</Text>
-                    </Card>
-                  </Col>
-                ))}
-              </Row>
-            ) : (
-              <Card><Text type='paragraph' align='center'>{t('home.no-data')}</Text></Card>
-            )}
-          </Paper>
-        </Content>
+      <Content type='section' title={t('content.docs-title')}>
+        <Paper
+          sticky
+          header={ <Search onSearch={handleSearch} placeholder={t('content.search-placeholder')} /> }
+        >
+          {searchResults.length > 0 ? (
+            <Row gap={10} align='stretch'>
+              {searchResults.map((result) => (
+                <Col sm={12} md={8} lg={6} key={result.id}>
+                  <Card header={<Text type='title'><Link href={result.slug}>{result[language].title}</Link></Text>}>
+                    <Text type='paragraph' size='medium'>{result[language].content}</Text>
+                  </Card>
+                </Col>
+              ))}
+            </Row>
+          ) : (
+            <Text type='paragraph' align='center'>{t('content.no-data')}</Text>
+          )}
+        </Paper>
       </Content>
     </Container>
   )

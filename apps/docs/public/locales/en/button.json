@@ -1,7 +1,17 @@
 {
-  "button": {
-    "title": "Button Component",
-    "desc": "This is a Button component that is built using React. It has customizable properties such as className, display, size, and variant. It also accepts any additional props that can be used on a regular HTML button element. The component renders a button element with the provided props and styles it according to the specified variant, size, and display type. The children prop represents the text or other elements to be displayed inside the button.",
+  "title": "Button",
+  "description": "Discover how to create and customize buttons with different styles and functionalities.",
+  "meta": {
+    "title": "LNGRZUI | Button Documentation",
+    "description": "Discover how to create and customize buttons with different styles and functionalities.",
+    "keywords": "component library, reusable components, documentation, application development, UI toolkit",
+    "themecolor": "#C51162"
+  },
+  "content": {
+    "overview-title": "Overview",
+    "overview-desc": "Buttons are essential user interface elements used for triggering actions or navigation within a web application. This page provides an overview of the Button component, including its variations, styling options, and event handling capabilities. It equips developers with the knowledge to create interactive and visually appealing buttons for their projects.",
+    "how-to-title": "How To Use",
+    "how-to-desc": "To utilize the Button component, import it into your project and use it within your desired context. Customize the appearance and behavior of the button by applying appropriate props such as size, color, and onClick event handler. Refer to the documentation for specific usage examples and detailed guidance.",
     "example-title": "Example",
     "code-title": "Code",
     "props-title": "Props",

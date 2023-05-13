@@ -22,63 +22,84 @@ export default function SectionSearch({ pagesData }: PagesDataProps) {
     return results;
   };
 
-
   useEffect(() => handleSearch(''), []);
 
   return (
-    <Container>
-      <Content type='section' title={t('search.title')}>
-        <Text type='paragraph'>{t('search.desc')}</Text>
+    <>
+      <Utility backgroundColor='grey-100'>
+        <Container>
+          <Content type='section'>
+            <Text type='hero' variant='primary' transform='uppercase'>{t('title')}</Text>
+            <Text type='paragraph'>{t('description')}</Text>
+          </Content>
+        </Container>
+      </Utility>
+      <Container>
+        <Content type='section' title={t('content.overview-title')}>
+          <Text type='paragraph'>{t('content.overview-desc')}</Text>
 
-        <Content type='article' title={t('search.example-title')}>
-          <Paper
-            sticky
-            header={ <Search onSearch={handleSearch} placeholder={t('search.search-placeholder')} /> }
-          >
-
-            {searchResults.length > 0 ? (
+          <Content type='article' title={t('content.example-title')}>
+            <Paper
+              sticky
+              header={ <Search onSearch={handleSearch} placeholder={t('content.search-placeholder')} /> }
+            >
+              {searchResults.length > 0 ? (
               <Row gap={10} align='stretch'>
                 {searchResults.map((result) => (
                   <Col sm={12} md={8} lg={6} key={result.id}>
-                    <Card>
-                      <Text type='title'><Link href={result.slug}>{result[language].title}</Link></Text>
+                    <Card header={<Text type='title'><Link href={result.slug}>{result[language].title}</Link></Text>}>
                       <Text type='paragraph' size='medium'>{result[language].content}</Text>
                     </Card>
                   </Col>
                 ))}
               </Row>
             ) : (
-              <Card><Text type='paragraph' align='center'>{t('search.no-data')}</Text></Card>
+              <Text type='paragraph' align='center'>{t('content.no-data')}</Text>
             )}
-          </Paper>
+            </Paper>
+          </Content>
         </Content>
+      </Container>
+      <Container>
+        <Content type='section' title={t('content.how-to-title')}>
+          <Text type='paragraph'>{t('content.how-to-desc')}</Text>
 
-        <Content type='article' title={t('search.code-title')}>
-          <Code>{t('search.sample-code').trim()}</Code>
-        </Content>
+          <Content type='article' title={t('content.code-title')}>
+            <Code>{t('content.sample-code').trim()}</Code>
+          </Content>
 
-        <Content type='article' title={t('search.props-title')}>
-          <Card>
-            <Utility hiddenMax='md' marginBottom={10}>
+          <Content type='article' title={t('content.props-title')}>
+            <Paper
+              header={
+                <>
+                  <Utility hiddenMin='md'>
+                    <Text size='small' type='paragraph' weight='bold'>{t('content.props-title-properties')}, {t('content.props-title-type')}, {t('content.props-title-default')}</Text>
+                  </Utility>
+                  <Utility hiddenMax='md'>
+                    <Row align='center'>
+                      <Col xs={24} md={4}><Text type='title'>{t('content.props-title-properties')}</Text></Col>
+                      <Col xs={24} md={14}><Text type='title'>{t('content.props-title-type')}</Text></Col>
+                      <Col xs={24} md={6}><Text type='title'>{t('content.props-title-default')}</Text></Col>
+                    </Row>
+                  </Utility>
+                </>
+              }
+            >
               <Row align='center'>
-                <Col xs={24} md={4}><Text type='paragraph' weight='bold'>{t('search.props-title-properties')}</Text></Col>
-                <Col xs={24} md={14}><Text type='paragraph' weight='bold'>{t('search.props-title-type')}</Text></Col>
-                <Col xs={24} md={6}><Text type='paragraph' weight='bold'>{t('search.props-title-default')}</Text></Col>
+                <Col xs={24} md={4}><Text type='paragraph' size='small' weight='bold'>{t('content.props-desc-properties-one')}</Text></Col>
+                <Col xs={24} md={14}><Text type='code' size='small' variant='warning'>{t('content.props-desc-type-one')}</Text></Col>
+                <Col xs={24} md={6}><Text type='paragraph' size='small'>{t('content.props-desc-default-one')}</Text></Col>
               </Row>
-            </Utility>
-            <Row align='center'>
-              <Col xs={24} md={4}><Text type='paragraph' size='small' weight='bold'>{t('search.props-desc-properties-one')}</Text></Col>
-              <Col xs={24} md={14}><Text type='code' size='small' variant='warning'>{t('search.props-desc-type-one')}</Text></Col>
-              <Col xs={24} md={6}><Text type='paragraph' size='small'>{t('search.props-desc-default-one')}</Text></Col>
-            </Row>
-            <Row align='center'>
-              <Col xs={24} md={4}><Text type='paragraph' size='small' weight='bold'>{t('search.props-desc-properties-two')}</Text></Col>
-              <Col xs={24} md={14}><Text type='code' size='small' variant='secondary'>{t('search.props-desc-type-two')}</Text></Col>
-              <Col xs={24} md={6}><Text type='paragraph' size='small'>{t('search.props-desc-default-two')}</Text></Col>
-            </Row>
-          </Card>
+              <hr />
+              <Row align='center'>
+                <Col xs={24} md={4}><Text type='paragraph' size='small' weight='bold'>{t('content.props-desc-properties-two')}</Text></Col>
+                <Col xs={24} md={14}><Text type='code' size='small' variant='secondary'>{t('content.props-desc-type-two')}</Text></Col>
+                <Col xs={24} md={6}><Text type='paragraph' size='small'>{t('content.props-desc-default-two')}</Text></Col>
+              </Row>
+            </Paper>
+          </Content>
         </Content>
-      </Content>
-    </Container>
+      </Container>
+    </>
   )
 }
