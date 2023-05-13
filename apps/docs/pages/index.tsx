@@ -9,14 +9,14 @@ const ContentMeta = dynamic(() => import('../component/ContentMeta'), { loading:
 const ContentHome = dynamic(() => import('../component/ContentHome'), { loading: () => <Loading /> });
 
 export default function Index() {
-  const { t } = useTranslation();
+  const { t } = useTranslation('home');
   return (
     <>
       <ContentMeta
-        title={t('home.meta-title')}
-        keywords={t('home.meta-keyword')}
-        description={t('home.meta-description')}
-        themecolor={t('home.meta.themecolor')}
+        title={t('meta.title')}
+        keywords={t('meta.keyword')}
+        description={t('meta.description')}
+        themecolor={t('meta.themecolor')}
       />
 
       <ContentHome pagesData={pagesData} />

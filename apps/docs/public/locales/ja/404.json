@@ -1,0 +1,15 @@
+{
+  "title": "エラー",
+  "description": "ページが見つかりません",
+  "meta": {
+    "title": "LNGRZUI | 404",
+    "description": "ページが見つかりません",
+    "keywords": "コンポーネント ライブラリ、再利用可能なコンポーネント、ドキュメント、アプリケーション開発、UI ツールキット",
+    "themecolor": "#C51162"
+  },
+  "content": {
+    "docs-title": "他のドキュメントを参照",
+    "search-placeholder": "ドキュメントを検索...",
+    "no-data": "データなし"
+  }
+}

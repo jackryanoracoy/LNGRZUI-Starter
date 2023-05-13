@@ -1,7 +1,17 @@
 {
-  "tab": {
-    "title": "Tab Component",
-    "desc": "The Tab component is a component that allows the user to toggle between multiple tabs of content. It takes in children as its props, which should be one or more TabPanel components. The TabPanel components contain the content that will be displayed when the corresponding tab is selected. The Tab component uses the useState hook to keep track of the currently active tab. When a tab is clicked, the handleTabClick function is called with the index of the clicked tab, and sets the active tab to the index. The Tab component then maps over the TabPanel children and renders them as clickable tabs, with the active tab having a CSS class of 'is_active'. When a tab is clicked, its corresponding TabPanel is displayed below the tabs.",
+  "title": "Tab",
+  "description": "Explore how to create tabbed navigation and content sections.",
+  "meta": {
+    "title": "LNGRZUI | Tab Documentation",
+    "description": "",
+    "keywords": "component library, reusable components, documentation, application development, UI toolkit",
+    "themecolor": "#C51162"
+  },
+  "content": {
+    "overview-title": "Overview",
+    "overview-desc": "Tabs provide a convenient way to organize and navigate between different sections or views within a web application. This page introduces the Tab component and explains how to create tab-based navigation interfaces. It covers tab configuration, content rendering, and event handling, enabling developers to implement effective tabbed interfaces.",
+    "how-to-title": "How To Use",
+    "how-to-desc": "Import the Tab component, define the tabs and their associated content, handle tab selection events, and update the displayed content based on the selected tab.",
     "example-title": "Example",
     "code-title": "Code",
     "props-title": "Props",

@@ -9,7 +9,7 @@ export const Paper: React.FC<PaperProps> = ({
   const headerClassNames = sticky ? 'paper-header is_sticky' : 'paper-header';
   return (
     <div className={classNames}>
-      <div className={headerClassNames}>{header}</div>
+      {header ? <div className={headerClassNames}>{header}</div> : ''}
       <PaperContent>{children}</PaperContent>
     </div>
   )

@@ -1,48 +1,69 @@
 import React from 'react';
 import { useTranslation } from 'next-i18next';
-import { Container, Row, Col, Content, Code, Card, Text, Utility } from 'ui';
+import { Container, Row, Col, Content, Code, Paper, Card, Text, Utility } from 'ui';
 
 export default function SectionCard() {
   const { t } = useTranslation('card');
   return (
-    <Container>
-      <Content type='section' title={t('card.title')}>
-        <Text type='paragraph'>{t('card.desc')}</Text>
+    <>
+      <Utility backgroundColor='grey-100'>
+        <Container>
+          <Content type='section'>
+            <Text type='hero' variant='primary' transform='uppercase'>{t('title')}</Text>
+            <Text type='paragraph'>{t('description')}</Text>
+          </Content>
+        </Container>
+      </Utility>
+      <Container>
+        <Content type='section' title={t('content.overview-title')}>
+          <Text type='paragraph'>{t('content.overview-desc')}</Text>
 
-        <Content type='article' title={t('card.example-title')}>
-          <Row gap={10} align='stretch'>
-            <Col md={8}><Card>{t('card.content-one')}</Card></Col>
-            <Col md={8}><Card>{t('card.content-two')}</Card></Col>
-            <Col md={8}><Card>{t('card.content-three')}</Card></Col>
-          </Row>
-        </Content>
-
-        <Content type='article' title={t('card.code-title')}>
-          <Code>{t('card.sample-code').trim()}</Code>
-        </Content>
-
-        <Content type='article' title={t('card.props-title')}>
-          <Card>
-            <Utility hiddenMax='md' marginBottom={10}>
-              <Row align='center'>
-                <Col xs={24} md={4}><Text type='paragraph' weight='bold'>{t('card.props-title-properties')}</Text></Col>
-                <Col xs={24} md={14}><Text type='paragraph' weight='bold'>{t('card.props-title-type')}</Text></Col>
-                <Col xs={24} md={6}><Text type='paragraph' weight='bold'>{t('card.props-title-default')}</Text></Col>
+          <Content type='article' title={t('content.example-title')}>
+            <Paper>
+              <Row gap={10} align='stretch'>
+                <Col md={8}><Card>{t('content.content-one')}</Card></Col>
+                <Col md={8}><Card>{t('content.content-two')}</Card></Col>
+                <Col md={8}><Card>{t('content.content-three')}</Card></Col>
               </Row>
-            </Utility>
-            <Row align='center'>
-              <Col xs={24} md={4}><Text type='paragraph' size='small' weight='bold'>{t('card.props-desc-properties-one')}</Text></Col>
-              <Col xs={24} md={14}><Text type='code' size='small' variant='warning'>{t('card.props-desc-type-one')}</Text></Col>
-              <Col xs={24} md={6}><Text type='paragraph' size='small'>{t('card.props-desc-default-one')}</Text></Col>
-            </Row>
-            <Row align='center'>
-              <Col xs={24} md={4}><Text type='paragraph' size='small' weight='bold'>{t('card.props-desc-properties-two')}</Text></Col>
-              <Col xs={24} md={14}><Text type='code' size='small' variant='secondary'>{t('card.props-desc-type-two')}</Text></Col>
-              <Col xs={24} md={6}><Text type='paragraph' size='small'>{t('card.props-desc-default-two')}</Text></Col>
-            </Row>
-          </Card>
+            </Paper>
+          </Content>
         </Content>
-      </Content>
-    </Container>
+      </Container>
+      <Container>
+        <Content type='section' title={t('content.how-to-title')}>
+          <Text type='paragraph'>{t('content.how-to-desc')}</Text>
+
+          <Content type='article' title={t('content.code-title')}>
+            <Code>{t('content.sample-code').trim()}</Code>
+          </Content>
+
+          <Content type='article' title={t('content.props-title')}>
+            <Paper
+              header={
+                <Utility hiddenMax='md'>
+                  <Row align='center'>
+                    <Col xs={24} md={4}><Text type='title'>{t('content.props-title-properties')}</Text></Col>
+                    <Col xs={24} md={14}><Text type='title'>{t('content.props-title-type')}</Text></Col>
+                    <Col xs={24} md={6}><Text type='title'>{t('content.props-title-default')}</Text></Col>
+                  </Row>
+                </Utility>
+              }
+            >
+              <Row align='center'>
+                <Col xs={24} md={4}><Text type='paragraph' size='small' weight='bold'>{t('content.props-desc-properties-one')}</Text></Col>
+                <Col xs={24} md={14}><Text type='code' size='small' variant='warning'>{t('content.props-desc-type-one')}</Text></Col>
+                <Col xs={24} md={6}><Text type='paragraph' size='small'>{t('content.props-desc-default-one')}</Text></Col>
+              </Row>
+              <hr />
+              <Row align='center'>
+                <Col xs={24} md={4}><Text type='paragraph' size='small' weight='bold'>{t('content.props-desc-properties-two')}</Text></Col>
+                <Col xs={24} md={14}><Text type='code' size='small' variant='secondary'>{t('content.props-desc-type-two')}</Text></Col>
+                <Col xs={24} md={6}><Text type='paragraph' size='small'>{t('content.props-desc-default-two')}</Text></Col>
+              </Row>
+            </Paper>
+          </Content>
+        </Content>
+      </Container>
+    </>
   )
 }

@@ -1,7 +1,17 @@
 {
-  "card": {
-    "title": "Card Component",
-    "desc": "The Card component is a reusable UI component that renders a card with a content area. It receives two props: className (optional) and children. The className prop is used to add additional CSS classes to the component, while the children prop is used to render the content inside the card. The card is wrapped in a div element with the class card, which is generated dynamically based on whether the className prop is present or not. The content area is wrapped in another div element with the class card-content. This component can be used in any application where a card-style layout is required.",
+  "title": "Card",
+  "description": "Explore how to create stylish and customizable cards.",
+  "meta": {
+    "title": "LNGRZUI | Card Documentation",
+    "description": "Explore how to create stylish and customizable cards.",
+    "keywords": "component library, reusable components, documentation, application development, UI toolkit",
+    "themecolor": "#C51162"
+  },
+  "content": {
+    "overview-title": "Overview",
+    "overview-desc": "The Card component is a versatile container that can be used to display various types of content in a structured and visually appealing manner. This page explains the different features and customization options available for the Card component, allowing developers to create stylish and functional cards for their projects.",
+    "how-to-title": "How to Use",
+    "how-to-desc": "To use the Card component, simply import it into your project and place the desired content within the Card tags. You can customize the appearance and layout of the Card using the available props such as color, size, and content alignment. Refer to the documentation for detailed usage instructions and examples.",
     "example-title": "Example",
     "code-title": "Code",
     "props-title": "Props",

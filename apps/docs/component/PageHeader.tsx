@@ -13,14 +13,18 @@ export default function PageHeader() {
     router.push(router.pathname, router.asPath, { locale: targetLocale });
   };
 
+  const titleNamespace = home ? 'home' : router.pathname.replace('/', '');
+  const titleKey = 'title';
+  const titleTranslation = t(`${titleNamespace}:${titleKey}`);
+
   return (
     <Utility paddingLeft={10} paddingRight={10}>
       <Row align='center' wrap='nowrap'>
         <Col xs={14} md='auto'>
-          <Branding index={home} title={<Link href='/'>{t('title')}</Link>} />
+          <Branding index={home} title={<Link href='/'>{t('brand-name')} - {titleTranslation}</Link>} />
         </Col>
         <Col xs='auto' oxs='auto'>
-          <Button onClick={handleClick} variant='secondary'>{t('button.language')}</Button>
+          <Button onClick={handleClick} variant='secondary'>{t('language-button')}</Button>
         </Col>
       </Row>
     </Utility>

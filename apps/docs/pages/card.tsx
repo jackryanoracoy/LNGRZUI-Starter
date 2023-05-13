@@ -8,7 +8,7 @@ const ContentMeta = dynamic(() => import('../component/ContentMeta'), { loading:
 const ContentCard = dynamic(() => import('../component/ContentCard'), { loading: () => <Loading /> });
 
 export default function Index() {
-  const { t } = useTranslation();
+  const { t } = useTranslation('card');
   return (
     <>
       <ContentMeta

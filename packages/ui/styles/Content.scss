@@ -33,6 +33,9 @@
   &.is_zero { padding: 0; }
 
   @include media-breakpoint-min(lg) {
+    padding-right: ($section-gutter-hor * 2);
+    padding-left: ($section-gutter-hor * 2);
+
     &.is_normal {
       padding-top: ($section-gutter-ver);
       padding-bottom: ($section-gutter-ver);

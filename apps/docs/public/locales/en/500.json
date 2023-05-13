@@ -1,0 +1,15 @@
+{
+  "title": "Error",
+  "description": "Internal Server Error",
+  "meta": {
+    "title": "LNGRZUI | 500",
+    "description": "Internal Server Error",
+    "keywords": "component library, reusable components, documentation, application development, UI toolkit",
+    "themecolor": "#C51162"
+  },
+  "content": {
+    "docs-title": "See Other Documentations",
+    "search-placeholder": "Search documentations...",
+    "no-data": "No Data"
+  }
+}

@@ -163,6 +163,12 @@ export type SearchProps = {
   placeholder?: string;
 };
 
+export type CardProps = {
+  children: React.ReactNode;
+  header?: React.ReactNode;
+  className?: string;
+}
+
 export type PaperProps = {
   children: React.ReactNode;
   header?: React.ReactNode;

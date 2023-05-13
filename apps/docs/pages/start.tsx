@@ -12,10 +12,10 @@ export default function Start() {
   return (
     <>
       <ContentMeta
-        title={t('start.meta-title')}
-        keywords={t('start.meta-keyword')}
-        description={t('start.meta-description')}
-        themecolor={t('start.meta.themecolor')}
+        title={t('meta.title')}
+        keywords={t('meta.keyword')}
+        description={t('meta.description')}
+        themecolor={t('meta.themecolor')}
       />
 
       <ContentStart />

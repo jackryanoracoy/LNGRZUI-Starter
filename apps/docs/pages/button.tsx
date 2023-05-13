@@ -8,14 +8,14 @@ const ContentMeta = dynamic(() => import('../component/ContentMeta'), { loading:
 const ContentButton = dynamic(() => import('../component/ContentButton'), { loading: () => <Loading /> });
 
 export default function Button() {
-  const { t } = useTranslation();
+  const { t } = useTranslation('button');
   return (
     <>
       <ContentMeta
-        title={t('button.meta-title')}
-        keywords={t('button.meta-keyword')}
-        description={t('button.meta-description')}
-        themecolor={t('button.meta-themecolor')}
+        title={t('meta.title')}
+        keywords={t('meta.keyword')}
+        description={t('meta.description')}
+        themecolor={t('meta.themecolor')}
       />
 
       <ContentButton />

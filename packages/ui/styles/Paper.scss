@@ -13,6 +13,7 @@
 
 .paper {
   color: $dark !important;
+  background-color: $grey-50;
   border-radius: $border-radius;
 
   &-header {
@@ -30,8 +31,5 @@
     }
   }
 
-  &-content {
-    padding: 20px;
-    background-color: $grey-50;
-  }
+  &-content { padding: 20px; }
 }
