@@ -11,17 +11,17 @@
   Paper
 --------------------------------------------------*/
 
-.paper {
+.#{$pre}paper {
   color: $dark !important;
   background-color: $grey-50;
   border-radius: $border-radius;
 
   &-header {
-    padding: 20px;
+    padding: $title-gutter;
     background-color: $grey-50;
     border-bottom: 1px solid $grey-200;
 
-    &.is_sticky {
+    &.#{$mpre}sticky {
       position: sticky;
       top: $header-height_m;
 
@@ -31,5 +31,5 @@
     }
   }
 
-  &-content { padding: 20px; }
+  &-content { padding: $content-gutter; }
 }

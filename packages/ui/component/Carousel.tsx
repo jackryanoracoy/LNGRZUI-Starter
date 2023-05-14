@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { pre, mpre } from '../prefixConfig';
 import { CarouselProps } from './ComponentTypes';
 
 export const Carousel: React.FC<CarouselProps> = ({ className = '', images, autoplay, interval }) => {
@@ -6,7 +7,7 @@ export const Carousel: React.FC<CarouselProps> = ({ className = '', images, auto
   const next = () => setIndex((index + 1) % images.length);
   const prev = () => setIndex((index - 1 + images.length) % images.length);
   const dots = (index: number) => setIndex(index);
-  const classNames = className ? `carousel ${className}` : 'carousel';
+  const classNames = className ? `${pre}carousel ${className}` : `${pre}carousel`;
 
   useEffect(() => {
     const timeout = interval || 5000;
@@ -18,16 +19,16 @@ export const Carousel: React.FC<CarouselProps> = ({ className = '', images, auto
 
   return (
     <div className={classNames}>
-      <img className='carousel-image' src={images[index]} alt={`Image ${index}`} />
-      <div className='carousel-buttons'>
-        <button className='carousel-prev-button' onClick={prev}>&#8592;</button>
-        <button className='carousel-next-button' onClick={next}>&#8594;</button>
+      <img className={`${pre}carousel-image`} src={images[index]} alt={`Image ${index}`} />
+      <div className={`${pre}carousel-buttons`}>
+        <button className={`${pre}carousel-prev-button`} onClick={prev}>&#8592;</button>
+        <button className={`${pre}carousel-next-button`} onClick={next}>&#8594;</button>
       </div>
-      <div className='carousel-dots'>
+      <div className={`${pre}carousel-dots`}>
         {images.map((_, index) => (
           <span
             key={index}
-            className={`carousel-dot ${index === index ? 'carousel-dot is_active' : ''}`}
+            className={`${pre}carousel-dot ${index === index ? `${pre}carousel-dot ${mpre}active` : ''}`}
             onClick={() => dots(index)}
           />
         ))}

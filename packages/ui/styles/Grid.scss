@@ -11,41 +11,41 @@
   Flex
 --------------------------------------------------*/
 
-.flex {
+.#{$pre}flex {
   display: flex;
 
-  &.is_wrap { flex-wrap: wrap; }
-  &.is_nowrap { flex-wrap: nowrap; }
-  &.is_wrap-reverse { flex-wrap: wrap-reverse; }
+  &.#{$mpre}wrap { flex-wrap: wrap; }
+  &.#{$mpre}nowrap { flex-wrap: nowrap; }
+  &.#{$mpre}wrap-reverse { flex-wrap: wrap-reverse; }
 
-  &.is_direction-row { flex-direction: row; }
-  &.is_direction-row-reverse { flex-direction: row-reverse; }
+  &.#{$mpre}direction-row { flex-direction: row; }
+  &.#{$mpre}direction-row-reverse { flex-direction: row-reverse; }
 
-  &.is_direction-column { flex-direction: column; }
-  &.is_direction-column-reverse { flex-direction: column-reverse; }
+  &.#{$mpre}direction-column { flex-direction: column; }
+  &.#{$mpre}direction-column-reverse { flex-direction: column-reverse; }
 
-  &.is_justify-flex-start { justify-content: flex-start; }
-  &.is_justify-flex-end { justify-content: flex-end; }
-  &.is_justify-center { justify-content: center; }
-  &.is_justify-space-around { justify-content: space-around; }
-  &.is_justify-space-between { justify-content: space-between; }
-  &.is_justify-space-evenly { justify-content: space-evenly; }
+  &.#{$mpre}justify-flex-start { justify-content: flex-start; }
+  &.#{$mpre}justify-flex-end { justify-content: flex-end; }
+  &.#{$mpre}justify-center { justify-content: center; }
+  &.#{$mpre}justify-space-around { justify-content: space-around; }
+  &.#{$mpre}justify-space-between { justify-content: space-between; }
+  &.#{$mpre}justify-space-evenly { justify-content: space-evenly; }
 
-  &.is_align-items-flex-start { align-items: flex-start; }
-  &.is_align-items-flex-end { align-items: flex-end; }
-  &.is_align-items-center { align-items: center; }
-  &.is_align-items-stretch { align-items: stretch; }
-  &.is_align-items-baseline { align-items: baseline; }
+  &.#{$mpre}align-items-flex-start { align-items: flex-start; }
+  &.#{$mpre}align-items-flex-end { align-items: flex-end; }
+  &.#{$mpre}align-items-center { align-items: center; }
+  &.#{$mpre}align-items-stretch { align-items: stretch; }
+  &.#{$mpre}align-items-baseline { align-items: baseline; }
 
   &-item-auto { @include flex-col-width-auto(); }
 
-  @for $count from 1 through 24 {
+  @for $count from 1 through $column-count {
     &-item-#{$count} { @include flex-col-width($count); }
   }
 
   @each $breakpoint in map-keys($breakpoints) {
     @include media-breakpoint-min($breakpoint) {
-      @for $count from 1 through 24 {
+      @for $count from 1 through $column-count {
         &-item-#{$breakpoint}-auto { @include flex-col-width-auto(); }
         &-item-#{$breakpoint}-#{$count} { @include flex-col-width($count); }
       }
@@ -60,7 +60,7 @@
 @for $count from 0 to 100 {
   $gap: $count * 5;
 
-  .gap-#{$gap} {
+  .#{$pre}gap-#{$gap} {
     margin: calc(#{-#{$gap}px} / 2);
 
     & > div { padding: calc(#{#{$gap}px} / 2); }
@@ -68,7 +68,7 @@
 
   @each $breakpoint in map-keys($breakpoints) {
     @include media-breakpoint-min($breakpoint) {
-      .gap-#{$breakpoint}-#{$gap} {
+      .#{$pre}gap-#{$breakpoint}-#{$gap} {
         margin: calc(#{-#{$gap}px} / 2);
 
         & > div { padding: calc(#{#{$gap}px} / 2); }
@@ -81,19 +81,19 @@
   Offset
 --------------------------------------------------*/
 
-.offset-0 { margin-left: 0; }
-.offset-auto { margin-left: auto; }
+.#{$pre}offset-0 { margin-left: 0; }
+.#{$pre}offset-auto { margin-left: auto; }
 
 @for $count from 1 through 24 {
-  .offset-#{$count} { @include offset($count); }
+  .#{$pre}offset-#{$count} { @include offset($count); }
 }
 
 @each $breakpoint in map-keys($breakpoints) {
   @include media-breakpoint-min($breakpoint) {
     @for $count from 1 through 24 {
-      .offset-#{$breakpoint}-0 { margin-left: 0; }
-      .offset-#{$breakpoint}-auto { margin-left: auto; }
-      .offset-#{$breakpoint}-#{$count} { @include offset($count); }
+      .#{$pre}offset-#{$breakpoint}-0 { margin-left: 0; }
+      .#{$pre}offset-#{$breakpoint}-auto { margin-left: auto; }
+      .#{$pre}offset-#{$breakpoint}-#{$count} { @include offset($count); }
     }
   }
 }

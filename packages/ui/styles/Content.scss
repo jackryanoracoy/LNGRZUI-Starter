@@ -11,42 +11,42 @@
   Section
 --------------------------------------------------*/
 
-.section {
+.#{$pre}section {
   padding-right: $section-gutter-hor;
   padding-left: $section-gutter-hor;
 
-  &.is_normal {
+  &.#{$mpre}normal {
     padding-top: ($section-gutter-ver / 2);
     padding-bottom: ($section-gutter-ver / 2);
   }
 
-  &.is_narrow {
+  &.#{$mpre}narrow {
     padding-top: ($section-gutter-ver / 4);
     padding-bottom: ($section-gutter-ver / 4);
   }
 
-  &.is_wide {
+  &.#{$mpre}wide {
     padding-top: $section-gutter-ver;
     padding-bottom: $section-gutter-ver;
   }
 
-  &.is_zero { padding: 0; }
+  &.#{$mpre}zero { padding: 0; }
 
   @include media-breakpoint-min(lg) {
     padding-right: ($section-gutter-hor * 2);
     padding-left: ($section-gutter-hor * 2);
 
-    &.is_normal {
+    &.#{$mpre}normal {
       padding-top: ($section-gutter-ver);
       padding-bottom: ($section-gutter-ver);
     }
 
-    &.is_narrow {
+    &.#{$mpre}narrow {
       padding-top: ($section-gutter-ver / 2);
       padding-bottom: ($section-gutter-ver / 2);
     }
 
-    &.is_wide {
+    &.#{$mpre}wide {
       padding-top: ($section-gutter-ver * 2);
       padding-bottom: ($section-gutter-ver * 2);
     }
@@ -57,16 +57,16 @@
   Article
 --------------------------------------------------*/
 
-.article {
-  &.is_normal { padding-top: ($section-gutter-ver / 2); }
-  &.is_narrow { padding-top: ($section-gutter-ver / 4); }
-  &.is_wide { padding-top: $section-gutter-ver; }
-  &.is_zero { padding: 0; }
+.#{$pre}article {
+  &.#{$mpre}normal { padding-top: ($section-gutter-ver / 2); }
+  &.#{$mpre}narrow { padding-top: ($section-gutter-ver / 4); }
+  &.#{$mpre}wide { padding-top: $section-gutter-ver; }
+  &.#{$mpre}zero { padding: 0; }
 
   @include media-breakpoint-min(lg) {
-    &.is_normal { padding-top: ($section-gutter-ver ); }
-    &.is_narrow { padding-top: ($section-gutter-ver / 2); }
-    &.is_wide { padding-top: ($section-gutter-ver * 2); }
+    &.#{$mpre}normal { padding-top: ($section-gutter-ver ); }
+    &.#{$mpre}narrow { padding-top: ($section-gutter-ver / 2); }
+    &.#{$mpre}wide { padding-top: ($section-gutter-ver * 2); }
   }
 
   @media print { page-break-inside: avoid; }

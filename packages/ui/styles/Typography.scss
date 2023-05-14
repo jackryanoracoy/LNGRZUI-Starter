@@ -11,8 +11,8 @@
   Heading
 --------------------------------------------------*/
 
-.typography {
-  &.is_hero {
+.#{$pre}typography {
+  &.#{$mpre}hero {
     line-height: $font-sl;
     margin-bottom: $title-gutter;
     font-size: $font-sl;
@@ -22,7 +22,7 @@
     }
   }
 
-  &.is_section {
+  &.#{$mpre}section {
     line-height: $font-xl;
     margin-bottom: $title-gutter;
     font-size: $font-xl;
@@ -32,7 +32,7 @@
     }
   }
 
-  &.is_article {
+  &.#{$mpre}article {
     line-height: $font-nm;
     margin-bottom: $title-gutter;
     font-size: $font-nm;
@@ -43,21 +43,21 @@
     }
   }
 
-  &.is_title {
+  &.#{$mpre}title {
     line-height: $font-nm;
     font-size: $font-nm;
   }
 
-  &.is_paragraph {
+  &.#{$mpre}paragraph {
     font-size: $font-nm;
   }
 
-  &.is_link {
+  &.#{$mpre}link {
     color: $info !important;
     font-size: $font-nm;
   }
 
-  &.is_code {
+  &.#{$mpre}code {
     margin: 0 1px;
     padding: 1px 2px;
     background: rgba($color: $grey-500, $alpha: 0.2);
@@ -66,7 +66,7 @@
     font-size: $font-nm;
   }
 
-  &.is_sr-only {
+  &.#{$mpre}sr-only {
     border: 0;
     clip: rect(1px, 1px, 1px, 1px);
     clip-path: inset(50%);
@@ -78,8 +78,8 @@
     width: 1px;
     word-wrap: normal !important;
 
-    &.is_focusable:active,
-    &.is_focusable:focus {
+    &.#{$mpre}focusable:active,
+    &.#{$mpre}focusable:focus {
       position: static;
       width: auto;
       height: auto;
@@ -89,28 +89,28 @@
     }
   }
 
-  &.is_capitalize { text-transform: capitalize; }
-  &.is_uppercase { text-transform: uppercase; }
-  &.is_lowercase { text-transform: lowercase; }
+  &.#{$mpre}capitalize { text-transform: capitalize; }
+  &.#{$mpre}uppercase { text-transform: uppercase; }
+  &.#{$mpre}lowercase { text-transform: lowercase; }
 
-  &.is_center { text-align: center; }
-  &.is_justify { text-align: justify; }
-  &.is_right { text-align: right; }
-  &.is_left { text-align: left; }
+  &.#{$mpre}center { text-align: center; }
+  &.#{$mpre}justify { text-align: justify; }
+  &.#{$mpre}right { text-align: right; }
+  &.#{$mpre}left { text-align: left; }
 
-  &.is_small { font-size: $font-sm; }
-  &.is_medium { font-size: $font-md; }
-  &.is_large { font-size: $font-lg; }
-  &.is_extra-large { font-size: $font-xl; }
-  &.is_super-large { font-size: $font-sl; }
-  &.is_mega-large { font-size: $font-ml; }
+  &.#{$mpre}small { font-size: $font-sm; }
+  &.#{$mpre}medium { font-size: $font-md; }
+  &.#{$mpre}large { font-size: $font-lg; }
+  &.#{$mpre}extra-large { font-size: $font-xl; }
+  &.#{$mpre}super-large { font-size: $font-sl; }
+  &.#{$mpre}mega-large { font-size: $font-ml; }
 
-  &.is_normal { font-weight: normal; }
-  &.is_bold { font-weight: bold; }
-  &.is_bolder { font-weight: bolder; }
-  &.is_lighter { font-weight: lighter; }
+  &.#{$mpre}normal { font-weight: normal; }
+  &.#{$mpre}bold { font-weight: bold; }
+  &.#{$mpre}bolder { font-weight: bolder; }
+  &.#{$mpre}lighter { font-weight: lighter; }
 
   @each $color, $value in $theme-colors {
-    &.is_#{$color} { color: #{$value}; }
+    &.#{$mpre}#{$color} { color: #{$value}; }
   }
 }

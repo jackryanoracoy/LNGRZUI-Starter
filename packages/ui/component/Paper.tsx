@@ -1,12 +1,13 @@
 import React from 'react';
+import { pre, mpre } from '../prefixConfig';
 import { PaperProps, ChildrenProps } from './ComponentTypes';
 import '../styles/Paper.scss';
 
 export const Paper: React.FC<PaperProps> = ({
   children, className = '', header, sticky
 }) => {
-  const classNames = className ? `paper ${className}` : 'paper';
-  const headerClassNames = sticky ? 'paper-header is_sticky' : 'paper-header';
+  const classNames = className ? `${pre}paper ${className}` : `${pre}paper`;
+  const headerClassNames = sticky ? `${pre}paper-header ${mpre}sticky` : `${pre}paper-header`;
   return (
     <div className={classNames}>
       {header ? <div className={headerClassNames}>{header}</div> : ''}
@@ -18,5 +19,5 @@ export const Paper: React.FC<PaperProps> = ({
 const PaperContent: React.FC<ChildrenProps> = ({
   children
 }) => {
-  return <div className='paper-content'>{children}</div>
+  return <div className={`${pre}paper-content`}>{children}</div>
 }

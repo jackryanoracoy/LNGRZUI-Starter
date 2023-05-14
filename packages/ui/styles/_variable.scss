@@ -161,11 +161,20 @@ $section-gutter-hor:    10px                  !default;
 // Title Gutter
 $title-gutter:          20px                  !default;
 
+// Content Gutter
+$content-gutter:        20px                  !default;
+
 // Border Radius
 $border-radius:         4px                   !default;
 
+// Border
+$border:                1px solid rgba($color: $grey-200, $alpha: 1.0);
+
+// input background
+$input-background:      rgba($color: $grey-200, $alpha: 1.0);
+
 // Transition
-$transition:            all 300ms ease-in-out 120ms;
+$transition:            all 300ms linear 120ms;
 
 // Box Shadow
 $z-depth-1:             0 2px 2px 0 rgba(0, 0, 0, 0.1),
@@ -188,3 +197,9 @@ $monospace:             SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mon
 // Default Font Face
 $font-primary:          $noto-sans-jp         !default;
 $font-secondary:        $open-sans-condensed  !default;
+
+// Prefix
+$pre:                   'lngrzui-'            !default;
+
+// Modifier Prefix
+$mpre:                  'is_'                 !default;
