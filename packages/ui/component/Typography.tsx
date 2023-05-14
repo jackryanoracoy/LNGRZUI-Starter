@@ -4,8 +4,9 @@ import { TypographyProps } from './ComponentTypes';
 import '../styles/Typography.scss';
 
 export const Text: React.FC<TypographyProps> = ({
-  children, className = '', href, target, type = '', variant = '', size = '', weight = '', transform = '', align = '',
+  children, index, className = '', href, target, type = '', variant = '', size = '', weight = '', transform = '', align = '',
 }) => {
+  const Tag = index ? 'h4' : 'h1';
   const TyphographyClassNames = `
     ${className}
     ${size ? `${mpre}${size}` : ''}
@@ -16,7 +17,7 @@ export const Text: React.FC<TypographyProps> = ({
   `.replace(/\s+/g, ' ').trim();
   const classNames = TyphographyClassNames ? `${pre}typography ${TyphographyClassNames}` : `${pre}typography`;
   switch (type) {
-    case 'hero'     : return <h1 className={`${classNames} ${mpre}hero`}>{children}</h1>;
+    case 'hero'     : return <Tag className={`${classNames} ${mpre}hero`}>{children}</Tag>;
     case 'section'  : return <h2 className={`${classNames} ${mpre}section`}>{children}</h2>;
     case 'article'  : return <h3 className={`${classNames} ${mpre}article`}>{children}</h3>;
     case 'title'    : return <h4 className={`${classNames} ${mpre}title`}>{children}</h4>;

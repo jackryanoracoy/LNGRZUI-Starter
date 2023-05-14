@@ -1,0 +1,37 @@
+{
+  "title": "Paper",
+  "description": "Explore how to create stylish and customizable papers.",
+  "meta": {
+    "title": "LNGRZUI | Paper Documentation",
+    "description": "Explore how to create stylish and customizable papers.",
+    "keywords": "component library, reusable components, documentation, application development, UI toolkit",
+    "themecolor": "#C51162"
+  },
+  "content": {
+    "overview-title": "Overview",
+    "overview-desc": "The Paper component is a versatile container that can be used to display various types of content in a structured and visually appealing manner. This page explains the different features and customization options available for the Paper component, allowing developers to create stylish and functional papers for their projects.",
+    "how-to-title": "How to Use",
+    "how-to-desc": "To use the Paper component, simply import it into your project and place the desired content within the Paper tags. You can customize the appearance and layout of the Paper using the available props such as color, size, and content alignment. Refer to the documentation for detailed usage instructions and examples.",
+    "example-title": "Example",
+    "code-title": "Code",
+    "props-title": "Props",
+    "props-title-properties": "Properties",
+    "props-title-type": "Type",
+    "props-title-default": "Default",
+    "props-desc-properties-one": "Children",
+    "props-desc-type-one": "React.ReactNode",
+    "props-desc-default-one": "",
+    "props-desc-properties-two": "className",
+    "props-desc-type-two": "string",
+    "props-desc-default-two": "",
+    "props-desc-properties-three": "header",
+    "props-desc-type-three": "React.ReactNode",
+    "props-desc-default-three": "",
+    "props-desc-properties-four": "sticky",
+    "props-desc-type-four": "boolean",
+    "props-desc-default-four": "false",
+    "title-one": "Title",
+    "content-one": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,",
+    "sample-code": "import React from 'react';\nimport { Paper } from 'ui';\n\nexport default function App() {\n  return (\n    <Paper sticky header='Title'>Content</Paper>\n  )\n}"
+  }
+}

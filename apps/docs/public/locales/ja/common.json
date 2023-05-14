@@ -9,8 +9,8 @@
     "themecolor": "#C51162"
   },
   "footer": {
-    "docs-version": "ドキュメントのバージョン:",
-    "ui-version": "ライブラリのバージョン:",
+    "docs-version": "APP v",
+    "ui-version": "UI v",
     "language": "言語"
   }
 }

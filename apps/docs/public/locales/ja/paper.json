@@ -1,0 +1,37 @@
+{
+  "title": "紙",
+  "description": "スタイリッシュでカスタマイズ可能な紙を作成する方法を学びましょう。",
+  "meta": {
+    "title": "LNGRZUI | 紙 コンポーネント",
+    "description": "スタイリッシュでカスタマイズ可能な紙を作成する方法を学びましょう。",
+    "keywords": "コンポーネント ライブラリ、再利用可能なコンポーネント、ドキュメント、アプリケーション開発、UI ツールキット",
+    "themecolor": "#C51162"
+  },
+  "content": {
+    "overview-title": "OVERVIEW | 概要",
+    "overview-desc": "Card コンポーネントは、構造化された視覚的に魅力的な方法でさまざまなタイプのコンテンツを表示するために使用できる多用途のコンテナです。 このページでは、開発者がプロジェクト用にスタイリッシュで機能的な紙を作成できるようにする、紙 コンポーネントで使用できるさまざまな機能とカスタマイズ オプションについて説明します。",
+    "how-to-title": "HOW TO USE | 使い方",
+    "how-to-desc": "Card コンポーネントを使用するには、それをプロジェクトにインポートし、目的のコンテンツを Card タグ内に配置するだけです。 色、サイズ、コンテンツの配置などの利用可能なプロパティを使用して、紙の外観とレイアウトをカスタマイズできます。 詳細な使用手順と例については、ドキュメントを参照してください。",
+    "example-title": "EXAMPLE | 例",
+    "code-title": "CODE | コード",
+    "props-title": "PROPS | 小道具",
+    "props-title-properties": "プロパティ",
+    "props-title-type": "タイプ",
+    "props-title-default": "デフォルト",
+    "props-desc-properties-one": "Children",
+    "props-desc-type-one": "React.ReactNode",
+    "props-desc-default-one": "",
+    "props-desc-properties-two": "className",
+    "props-desc-type-two": "string",
+    "props-desc-default-two": "",
+    "props-desc-properties-three": "header",
+    "props-desc-type-three": "React.ReactNode",
+    "props-desc-default-three": "",
+    "props-desc-properties-four": "sticky",
+    "props-desc-type-four": "boolean",
+    "props-desc-default-four": "false",
+    "title-one": "タイトル",
+    "content-one": "優れた顧客サービス、顧客サービスプロバイダーを持つことが重要です。 アエネアンの幸運には痛みが必要だ。 ジャスミンの塊。 仲間たちと一緒に、山は羽と大きな推進力を生み、とんでもないネズミが生まれます。 それまでは、猫が何匹いるか、猫がいるかどうか、子供のサッカー、誰が値段を付けるか、サラダを食べるか。 誰にとっても大きな影響はありません。 足だけ、フリンギラ、アリケ、外陰部のニーズ、アーチまで。 なぜなら、正義においては、ロンカスは髪のように、生命の毒から逃れるために、正義だからです。 足が柔らかいサッカーボールなど存在しません。 完成したキーボード。 明日はプロテイン。 生きている要素は常に除外されます。 ",
+    "sample-code": "import React from 'react';\nimport { Paper } from 'ui';\n\nexport default function App() {\n  return (\n    <Paper sticky header='Title'>Content</Paper>\n  )\n}"
+  }
+}
