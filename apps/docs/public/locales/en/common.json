@@ -9,8 +9,8 @@
     "themecolor": "#C51162"
   },
   "footer": {
-    "docs-version": "Docs Version:",
-    "ui-version": "Library Version:",
+    "docs-version": "APP v",
+    "ui-version": "UI v",
     "language": "Language"
   }
 }

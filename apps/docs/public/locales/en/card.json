@@ -24,9 +24,14 @@
     "props-desc-properties-two": "className",
     "props-desc-type-two": "string",
     "props-desc-default-two": "",
+    "props-desc-properties-three": "header",
+    "props-desc-type-three": "React.ReactNode",
+    "props-desc-default-three": "",
+    "title-one": "First Title",
+    "title-two": "Second Title",
     "content-one": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu",
     "content-two": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta.",
     "content-three": "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the gre",
-    "sample-code": "import React from 'react';\nimport { Row, Col, Card } from 'ui';\n\nexport default function App() {\n  return (\n    <Row gap={10}>\n      <Col md={8}>\n        <Card>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</Card>\n      </Col>\n      <Col md={8}>\n        <Card>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</Card>\n      </Col>\n      <Col md={8}>\n        <Card>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</Card>\n      </Col>\n    </Row>\n  )\n}"
+    "sample-code": "import React from 'react';\nimport { Row, Col, Card } from 'ui';\n\nexport default function App() {\n  return (\n    <Row gap={10}>\n      <Col md={8}>\n        <Card header='Title'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</Card>\n      </Col>\n      <Col md={8}>\n        <Card header='Title'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</Card>\n      </Col>\n      <Col md={8}>\n        <Card>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</Card>\n      </Col>\n    </Row>\n  )\n}"
   }
 }

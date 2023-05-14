@@ -73,6 +73,18 @@
   },
   {
     "id": 7,
+    "slug": "paper",
+    "en": {
+      "title": "Paper",
+      "content": "Explore how to create stylish and customizable papers."
+    },
+    "ja": {
+      "title": "紙",
+      "content": "スタイリッシュでカスタマイズ可能な紙の作成方法を探求します。"
+    }
+  },
+  {
+    "id": 8,
     "slug": "card",
     "en": {
       "title": "Card",
@@ -84,7 +96,7 @@
     }
   },
   {
-    "id": 8,
+    "id": 9,
     "slug": "button",
     "en": {
       "title": "Button",
@@ -96,7 +108,7 @@
     }
   },
   {
-    "id": 9,
+    "id": 10,
     "slug": "form",
     "en": {
       "title": "Form",
@@ -108,7 +120,7 @@
     }
   },
   {
-    "id": 10,
+    "id": 11,
     "slug": "search",
     "en": {
       "title": "Search",
@@ -120,7 +132,7 @@
     }
   },
   {
-    "id": 11,
+    "id": 12,
     "slug": "tab",
     "en": {
       "title": "Tab",
@@ -132,7 +144,7 @@
     }
   },
   {
-    "id": 12,
+    "id": 13,
     "slug": "code",
     "en": {
       "title": "Code",
@@ -144,7 +156,7 @@
     }
   },
   {
-    "id": 13,
+    "id": 14,
     "slug": "carousel",
     "en": {
       "title": "Carousel",
@@ -156,7 +168,7 @@
     }
   },
   {
-    "id": 14,
+    "id": 15,
     "slug": "utility",
     "en": {
       "title": "Utility",

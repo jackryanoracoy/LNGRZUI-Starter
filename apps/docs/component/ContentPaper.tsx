@@ -2,8 +2,8 @@ import React from 'react';
 import { useTranslation } from 'next-i18next';
 import { Container, Row, Col, Content, Code, Paper, Card, Text, Utility } from 'ui';
 
-export default function SectionCard() {
-  const { t } = useTranslation('card');
+export default function SectionPaper() {
+  const { t } = useTranslation('paper');
   return (
     <>
       <Utility backgroundColor='grey-100'>
@@ -19,13 +19,7 @@ export default function SectionCard() {
           <Text type='paragraph'>{t('content.overview-desc')}</Text>
 
           <Content type='article' title={t('content.example-title')}>
-            <Paper>
-              <Row gap={10} align='stretch'>
-                <Col md={8}><Card header={<Text type='title'>{t('content.title-one')}</Text>}>{t('content.content-one')}</Card></Col>
-                <Col md={8}><Card header={<Text type='title'>{t('content.title-two')}</Text>}>{t('content.content-two')}</Card></Col>
-                <Col md={8}><Card>{t('content.content-three')}</Card></Col>
-              </Row>
-            </Paper>
+            <Paper sticky header={<Text type='title'>{t('content.title-one')}</Text>}>{t('content.content-one')}</Paper>
           </Content>
         </Content>
       </Container>
@@ -65,6 +59,12 @@ export default function SectionCard() {
                 <Col xs={24} md={4}><Text type='paragraph' size='small' weight='bold'>{t('content.props-desc-properties-three')}</Text></Col>
                 <Col xs={24} md={14}><Text type='code' size='small' variant='warning'>{t('content.props-desc-type-three')}</Text></Col>
                 <Col xs={24} md={6}><Text type='paragraph' size='small'>{t('content.props-desc-default-three')}</Text></Col>
+              </Row>
+              <hr />
+              <Row align='center'>
+                <Col xs={24} md={4}><Text type='paragraph' size='small' weight='bold'>{t('content.props-desc-properties-four')}</Text></Col>
+                <Col xs={24} md={14}><Text type='code' size='small' variant='secondary'>{t('content.props-desc-type-four')}</Text></Col>
+                <Col xs={24} md={6}><Text type='paragraph' size='small'>{t('content.props-desc-default-four')}</Text></Col>
               </Row>
             </Paper>
           </Content>

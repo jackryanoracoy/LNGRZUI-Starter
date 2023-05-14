@@ -85,6 +85,7 @@ export type ContentProps = {
 
 export type TypographyProps = {
   children: React.ReactNode;
+  index?: boolean;
   className?: string;
   href?: string;
   target?: string;
