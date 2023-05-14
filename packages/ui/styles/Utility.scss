@@ -11,7 +11,7 @@
   Screen readers only
 --------------------------------------------------*/
 
-.sr-only {
+.#{$pre}sr-only {
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
   clip-path: inset(50%);
@@ -23,8 +23,8 @@
   width: 1px;
   word-wrap: normal !important;
 
-  &.is_focusable:active,
-  &.is_focusable:focus {
+  &.#{$mpre}focusable:active,
+  &.#{$mpre}focusable:focus {
     position: static;
     width: auto;
     height: auto;
@@ -38,7 +38,7 @@
   Clearfix
 --------------------------------------------------*/
 
-.clearfix::after {
+.#{$pre}clearfix::after {
   content: "";
   display: block;
   clear: both;
@@ -48,15 +48,15 @@
   Disyplay
 --------------------------------------------------*/
 
-.inline { display: inline; }
-.block { display: block; }
-.inline-block { display: inline-block; }
+.#{$pre}inline { display: inline; }
+.#{$pre}block { display: block; }
+.#{$pre}inline-block { display: inline-block; }
 
 /*--------------------------------------------------
   Hidden
 --------------------------------------------------*/
 
-.hidden {
+.#{$pre}hidden {
   display: none; visibility: hidden;
 
   @each $breakpoint in map-keys($breakpoints) {
@@ -76,44 +76,44 @@
   Float
 --------------------------------------------------*/
 
-.float-left { float: left; }
-.float-right { float: right; }
-.float-none { float: none; }
+.#{$pre}float-left { float: left; }
+.#{$pre}float-right { float: right; }
+.#{$pre}float-none { float: none; }
 
 /*--------------------------------------------------
   Width and Height
 --------------------------------------------------*/
 
-.width-25 { width: 25%; }
-.width-50 { width: 50%; }
-.width-75 { width: 75%; }
-.width-100 { width: 100%; }
+.#{$pre}width-25 { width: 25%; }
+.#{$pre}width-50 { width: 50%; }
+.#{$pre}width-75 { width: 75%; }
+.#{$pre}width-100 { width: 100%; }
 
-.height-25 { height: 25%; }
-.height-50 { height: 50%; }
-.height-75 { height: 75%; }
-.height-100 { height: 100%; }
+.#{$pre}height-25 { height: 25%; }
+.#{$pre}height-50 { height: 50%; }
+.#{$pre}height-75 { height: 75%; }
+.#{$pre}height-100 { height: 100%; }
 
 /*--------------------------------------------------
   Padding
 --------------------------------------------------*/
 
 @each $padding in $gap {
-  .pa-#{$padding} { padding: #{#{$padding}px}; }
-  .pt-#{$padding} { padding-top: #{#{$padding}px}; }
-  .pr-#{$padding} { padding-right: #{#{$padding}px}; }
-  .pb-#{$padding} { padding-bottom: #{#{$padding}px}; }
-  .pl-#{$padding} { padding-left: #{#{$padding}px}; }
+  .#{$pre}pa-#{$padding} { padding: #{#{$padding}px}; }
+  .#{$pre}pt-#{$padding} { padding-top: #{#{$padding}px}; }
+  .#{$pre}pr-#{$padding} { padding-right: #{#{$padding}px}; }
+  .#{$pre}pb-#{$padding} { padding-bottom: #{#{$padding}px}; }
+  .#{$pre}pl-#{$padding} { padding-left: #{#{$padding}px}; }
 }
 
 @each $breakpoint in map-keys($breakpoints) {
   @include media-breakpoint-min($breakpoint) {
     @each $padding in $gap {
-      .pa-#{$breakpoint}-#{$padding} { padding: #{#{$padding}px}; }
-      .pt-#{$breakpoint}-#{$padding} { padding-top: #{#{$padding}px}; }
-      .pr-#{$breakpoint}-#{$padding} { padding-right: #{#{$padding}px}; }
-      .pb-#{$breakpoint}-#{$padding} { padding-bottom: #{#{$padding}px}; }
-      .pl-#{$breakpoint}-#{$padding} { padding-left: #{#{$padding}px}; }
+      .#{$pre}pa-#{$breakpoint}-#{$padding} { padding: #{#{$padding}px}; }
+      .#{$pre}pt-#{$breakpoint}-#{$padding} { padding-top: #{#{$padding}px}; }
+      .#{$pre}pr-#{$breakpoint}-#{$padding} { padding-right: #{#{$padding}px}; }
+      .#{$pre}pb-#{$breakpoint}-#{$padding} { padding-bottom: #{#{$padding}px}; }
+      .#{$pre}pl-#{$breakpoint}-#{$padding} { padding-left: #{#{$padding}px}; }
     }
   }
 }
@@ -123,21 +123,21 @@
 --------------------------------------------------*/
 
 @each $margin in $gap {
-  .ma-#{$margin} { margin: #{#{$margin}px}; }
-  .mt-#{$margin} { margin-top: #{#{$margin}px}; }
-  .mr-#{$margin} { margin-right: #{#{$margin}px}; }
-  .mb-#{$margin} { margin-bottom: #{#{$margin}px}; }
-  .ml-#{$margin} { margin-left: #{#{$margin}px}; }
+  .#{$pre}ma-#{$margin} { margin: #{#{$margin}px}; }
+  .#{$pre}mt-#{$margin} { margin-top: #{#{$margin}px}; }
+  .#{$pre}mr-#{$margin} { margin-right: #{#{$margin}px}; }
+  .#{$pre}mb-#{$margin} { margin-bottom: #{#{$margin}px}; }
+  .#{$pre}ml-#{$margin} { margin-left: #{#{$margin}px}; }
 }
 
 @each $breakpoint in map-keys($breakpoints) {
   @include media-breakpoint-min($breakpoint) {
     @each $margin in $gap {
-      .ma-#{$breakpoint}-#{$margin} { margin: #{#{$margin}px}; }
-      .mt-#{$breakpoint}-#{$margin} { margin-top: #{#{$margin}px}; }
-      .mr-#{$breakpoint}-#{$margin} { margin-right: #{#{$margin}px}; }
-      .mb-#{$breakpoint}-#{$margin} { margin-bottom: #{#{$margin}px}; }
-      .ml-#{$breakpoint}-#{$margin} { margin-left: #{#{$margin}px}; }
+      .#{$pre}ma-#{$breakpoint}-#{$margin} { margin: #{#{$margin}px}; }
+      .#{$pre}mt-#{$breakpoint}-#{$margin} { margin-top: #{#{$margin}px}; }
+      .#{$pre}mr-#{$breakpoint}-#{$margin} { margin-right: #{#{$margin}px}; }
+      .#{$pre}mb-#{$breakpoint}-#{$margin} { margin-bottom: #{#{$margin}px}; }
+      .#{$pre}ml-#{$breakpoint}-#{$margin} { margin-left: #{#{$margin}px}; }
     }
   }
 }
@@ -147,15 +147,15 @@
 --------------------------------------------------*/
 
 @each $color, $value in $theme-colors {
-  .color-#{$color} { color: #{$value}; }
+  .#{$pre}color-#{$color} { color: #{$value}; }
 }
 
 @each $color, $value in $colors {
-  .color-#{$color} { color: #{$value}; }
+  .#{$pre}color-#{$color} { color: #{$value}; }
 }
 
 @each $shade, $value in $greys {
-  .color-grey-#{$shade} { color: #{$value}; }
+  .#{$pre}color-grey-#{$shade} { color: #{$value}; }
 }
 
 /*--------------------------------------------------
@@ -163,39 +163,32 @@
 --------------------------------------------------*/
 
 @each $color, $value in $theme-colors {
-  .bg-#{$color} { background-color: #{$value}; }
+  .#{$pre}bg-#{$color} { background-color: #{$value}; }
 }
 
 @each $color, $value in $colors {
-  .bg-#{$color} { background-color: #{$value}; }
+  .#{$pre}bg-#{$color} { background-color: #{$value}; }
 }
 
 @each $shade, $value in $greys {
-  .bg-grey-#{$shade} { background-color: #{$value}; }
+  .#{$pre}bg-grey-#{$shade} { background-color: #{$value}; }
 }
 
 /*--------------------------------------------------
   Overflow
 --------------------------------------------------*/
 
-.overflow-auto { overflow: auto; }
-.overflow-hidden { overflow: hidden; }
-.overflow-scroll { overflow: scroll; }
-.overflow-visible { overflow: visible; }
+.#{$pre}overflow-auto { overflow: auto; }
+.#{$pre}overflow-hidden { overflow: hidden; }
+.#{$pre}overflow-scroll { overflow: scroll; }
+.#{$pre}overflow-visible { overflow: visible; }
 
-.overflow-x-auto { overflow-x: auto; }
-.overflow-x-hidden { overflow-x: hidden; }
-.overflow-x-scroll { overflow-x: scroll; }
-.overflow-x-visible { overflow-x: visible; }
+.#{$pre}overflow-x-auto { overflow-x: auto; }
+.#{$pre}overflow-x-hidden { overflow-x: hidden; }
+.#{$pre}overflow-x-scroll { overflow-x: scroll; }
+.#{$pre}overflow-x-visible { overflow-x: visible; }
 
-.overflow-y-auto { overflow-y: auto; }
-.overflow-y-hidden { overflow-y: hidden; }
-.overflow-y-scroll { overflow-y: scroll; }
-.overflow-y-visible { overflow-y: visible; }
-
-/*--------------------------------------------------
-  Image
---------------------------------------------------*/
-
-.img-fluid { max-width: 100%; height: auto; }
-.img-crispt { @include img-render-crisp(); }
+.#{$pre}overflow-y-auto { overflow-y: auto; }
+.#{$pre}overflow-y-hidden { overflow-y: hidden; }
+.#{$pre}overflow-y-scroll { overflow-y: scroll; }
+.#{$pre}overflow-y-visible { overflow-y: visible; }

@@ -1,4 +1,5 @@
 import React from 'react';
+import { pre } from '../prefixConfig';
 import { UtilityProps } from './ComponentTypes';
 import '../styles/Utility.scss';
 
@@ -30,26 +31,26 @@ export const Utility: React.FC<UtilityProps> = ({
   const classNames = `
     ${className}
     ${display}
-    ${sreenReader ? 'sr-only' : ''}
-    ${padding ? 'pa-' + padding : ''}
-    ${paddingTop ? 'pt-' + paddingTop : ''}
-    ${paddingRight ? 'pr-' + paddingRight : ''}
-    ${paddingBottom ? 'pb-' + paddingBottom : ''}
-    ${paddingLeft ? 'pl-' + paddingLeft : ''}
-    ${margin ? 'ma-' + margin : ''}
-    ${marginTop ? 'mt-' + marginTop : ''}
-    ${marginRight ? 'mr-' + marginRight : ''}
-    ${marginBottom ? 'mb-' + marginBottom : ''}
-    ${marginLeft ? 'ml-' + marginLeft : ''}
-    ${color ? 'color-' + color : ''}
-    ${width ? 'width-' + width : ''}
-    ${height ? 'height-' + height : ''}
-    ${overflow ? 'overflow-' + overflow : ''}
-    ${overflowX ? 'overflow-x-' + overflowX : ''}
-    ${overflowY ? 'overflow-y-' + overflowY : ''}
-    ${backgroundColor ? 'bg-' + backgroundColor : ''}
-    ${hiddenMin ? 'hidden-' + hiddenMin + '-min' : ''}
-    ${hiddenMax ? 'hidden-' + hiddenMax + '-max' : ''}
+    ${sreenReader ? `${pre}sr-only` : ''}
+    ${padding ? `${pre}pa-` + padding : ''}
+    ${paddingTop ? `${pre}pt-` + paddingTop : ''}
+    ${paddingRight ? `${pre}pr-` + paddingRight : ''}
+    ${paddingBottom ? `${pre}pb-` + paddingBottom : ''}
+    ${paddingLeft ? `${pre}pl-` + paddingLeft : ''}
+    ${margin ? `${pre}ma-` + margin : ''}
+    ${marginTop ? `${pre}mt-` + marginTop : ''}
+    ${marginRight ? `${pre}mr-` + marginRight : ''}
+    ${marginBottom ? `${pre}mb-` + marginBottom : ''}
+    ${marginLeft ? `${pre}ml-` + marginLeft : ''}
+    ${color ? `${pre}color-` + color : ''}
+    ${width ? `${pre}width-` + width : ''}
+    ${height ? `${pre}height-` + height : ''}
+    ${overflow ? `${pre}overflow-` + overflow : ''}
+    ${overflowX ? `${pre}overflow-x-` + overflowX : ''}
+    ${overflowY ? `${pre}overflow-y-` + overflowY : ''}
+    ${backgroundColor ? `${pre}bg-` + backgroundColor : ''}
+    ${hiddenMin ? `${pre}hidden-` + hiddenMin + '-min' : ''}
+    ${hiddenMax ? `${pre}hidden-` + hiddenMax + '-max' : ''}
   `.replace(/\s+/g, ' ').trim();
 
   return <div className={classNames}>{children}</div>;

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { pre } from '../prefixConfig';
 import { FormProps } from './ComponentTypes';
 import { Button } from './Button';
 import '../styles/Form.scss';
@@ -6,7 +7,7 @@ import '../styles/Form.scss';
 export const Form: React.FC<FormProps> = ({
   className, onSubmit, inputs, textAreas = [], submitButtonLabel = 'Submit'
 }) => {
-  const classNames = className ? `form ${className}` : 'form';
+  const classNames = className ? `${pre}form ${className}` : `${pre}form`;
   const [formData, setFormData] = useState<{ [key: string]: string }>({});
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();

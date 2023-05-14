@@ -11,7 +11,7 @@
   Site Header
 --------------------------------------------------*/
 
-.header {
+.#{$pre}header {
   position: fixed;
   width: 100%;
   height: $header-height_m;
@@ -29,7 +29,7 @@
   Site Main
 --------------------------------------------------*/
 
-.main {
+.#{$pre}main {
   min-height: 100vh;
   background-color: $grey-200;
   padding-top: $header-height_m;
@@ -43,7 +43,7 @@
   Site Sider
 --------------------------------------------------*/
 
-.aside {
+.#{$pre}aside {
   min-height: 100%;
   background-color: $grey-300;
   z-index: 1;
@@ -53,7 +53,7 @@
   Site Footer
 --------------------------------------------------*/
 
-.footer {
+.#{$pre}footer {
   position: relative;
   background-color: $grey-700;
   z-index: 1;
@@ -62,8 +62,8 @@
 /*--------------------------------------------------
   Site Layout
 --------------------------------------------------*/
-.layout-container {
-  .layout-content {
+.#{$pre}layout-container {
+  .#{$pre}layout-content {
     display: flex;
     flex-wrap: wrap;
 

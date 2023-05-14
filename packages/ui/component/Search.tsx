@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
+import { pre } from '../prefixConfig';
 import { SearchProps } from './ComponentTypes';
 import '../styles/Search.scss';
 
 export const Search: React.FC<SearchProps> = ({
   onSearch, className = '', placeholder = 'Enter Keyword...'
 }) => {
-  const classNames = className ? `search ${className}` : 'search';
+  const classNames = className ? `${pre}search ${className}` : `${pre}search`;
   const [searchTerm, setSearchTerm] = useState('');
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {

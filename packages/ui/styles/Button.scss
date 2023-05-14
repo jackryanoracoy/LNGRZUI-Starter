@@ -11,10 +11,10 @@
   Button
 --------------------------------------------------*/
 
-.button {
+.#{$pre}button {
   width: auto;
   margin: 2px 0;
-  padding: 0 20px;
+  padding: 0 $title-gutter;
   font-size: $font-nm;
   text-align: center;
   text-decoration: none;
@@ -36,32 +36,32 @@
   }
 
   &:disabled,
-  &.is_disabled {
+  &.#{$mpre}disabled {
     opacity: 0.75;
     background-color: $grey-700 !important;
     pointer-events: none;
   }
 
-  &.is_block {
+  &.#{$mpre}block {
     display: block;
     width: 100%;
   }
 
-  &.is_inline_block { display: inline-block; }
+  &.#{$mpre}inline_block { display: inline-block; }
 
-  &.is_small {
+  &.#{$mpre}small {
     min-width: $button-height-sm;
     line-height: $button-height-sm;
     border-radius: $button-height-sm / 2;
   }
 
-  &.is_medium {
+  &.#{$mpre}medium {
     min-width: $button-height-md;
     line-height: $button-height-md;
     border-radius: $button-height-md / 2;
   }
 
-  &.is_large {
+  &.#{$mpre}large {
     min-width: $button-height-lg;
     line-height: $button-height-lg;
     border-radius: $button-height-lg / 2;
@@ -70,7 +70,7 @@
   &%button-text { color: $white; }
 
   @each $color, $value in $theme-colors {
-    &.is_#{$color} {
+    &.#{$mpre}#{$color} {
       @extend %button-text;
       background-color: #{$value};
     }

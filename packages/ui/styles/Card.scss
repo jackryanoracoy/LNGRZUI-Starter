@@ -11,7 +11,7 @@
   Card
 --------------------------------------------------*/
 
-.card {
+.#{$pre}card {
   color: $dark !important;
   background-color: $white;
   border-radius: $border-radius;
@@ -19,9 +19,9 @@
   height: 100%;
 
   &-header {
-    padding: 20px;
+    padding: $title-gutter;
     border-bottom: 1px solid $grey-200;
   }
 
-  &-content { padding: 20px; }
+  &-content { padding: $content-gutter; }
 }

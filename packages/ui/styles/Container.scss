@@ -11,13 +11,13 @@
   Container
 --------------------------------------------------*/
 
-.container {
+.#{$pre}container {
   position: relative;
   width: 100%;
   margin-right: auto;
   margin-left: auto;
 
-  &.is_fluid { max-width: 100% !important; }
+  &.#{$mpre}fluid { max-width: 100% !important; }
 
   @include media-breakpoint-min(xs) {
     max-width: $container-xs;

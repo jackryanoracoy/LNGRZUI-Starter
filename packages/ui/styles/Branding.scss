@@ -11,7 +11,7 @@
   Branding
 --------------------------------------------------*/
 
-.branding {
+.#{$pre}branding {
   height: $header-height_m;
   color: $white !important;
   font-family: $font-primary;

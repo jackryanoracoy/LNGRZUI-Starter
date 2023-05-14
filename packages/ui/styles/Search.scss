@@ -11,27 +11,26 @@
   Search
 --------------------------------------------------*/
 
-.search {
+.#{$pre}search {
   position: relative;
 
   & input {
     width: 100%;
     height: $input-height;
-    padding: 0 20px;
+    padding: 0 $title-gutter;
     color: inherit;
     font-size: $font-md;
     font-family: inherit;
     font-weight: inherit;
     line-height: $line-height-nm;
-    background-color: $grey-200;
-    border: 1px solid $grey-200;
+    background-color: $input-background;
+    border: $border;
     border-radius: $input-height / 2;
     box-shadow: none;
     transition: $transition;
 
     &:focus {
       background-color: $grey-50;
-      border: 1px solid $grey-200;
       border-radius: $border-radius;
       box-shadow: $z-depth-1;
     }

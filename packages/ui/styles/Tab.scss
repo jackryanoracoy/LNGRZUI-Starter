@@ -10,14 +10,14 @@
 /*--------------------------------------------------
   Tab
 --------------------------------------------------*/
-.tab {
+.#{$pre}tab {
   &-link {
     display: flex;
     margin: 0px;
     padding: 0px;
     list-style: none;
 
-    &.is_sticky {
+    &.#{$mpre}sticky {
       position: sticky;
       top: $header-height_m;
 
@@ -28,7 +28,7 @@
 
     &-item {
       display: inline-block;
-      padding: 10px 15px;
+      padding: $title-gutter;
       color: inherit;
       font-size: $font-md;
       background-color: $grey-50;
@@ -39,7 +39,7 @@
 
     &-item:hover { opacity: 0.75; }
 
-    &-item.is_active {
+    &-item.#{$mpre}active {
       color: $dark;
       border-radius: $border-radius $border-radius 0 0;
       box-shadow: $z-depth-2;
@@ -51,7 +51,7 @@
   &-content {
     color: $dark;
     position: relative;
-    padding: 15px;
+    padding: $content-gutter;
     background-color: $grey-50;
     border-radius: 0 0 $border-radius $border-radius;
     box-shadow: $z-depth-1;
