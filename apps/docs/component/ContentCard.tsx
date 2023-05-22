@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslation } from 'next-i18next';
 import { Container, Row, Col, Content, Code, Paper, Card, Text, Utility } from 'ui';
 
-export default function SectionCard() {
+export default function ContentCard() {
   const { t } = useTranslation('card');
   return (
     <>

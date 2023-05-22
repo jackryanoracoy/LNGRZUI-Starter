@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { MetaDataProps } from './ComponentTypes';
 
-export default function ContentMeta({
+export default function Meta({
   title, description, keywords, themecolor
 }: MetaDataProps) {
   return (

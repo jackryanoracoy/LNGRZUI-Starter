@@ -5,14 +5,14 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Loading from '../component/Loading';
 import pagesData from '../public/pages-data.json';
 
-const ContentMeta = dynamic(() => import('../component/ContentMeta'), { loading: () => <Loading /> });
+const Meta = dynamic(() => import('../component/Meta'), { loading: () => <Loading /> });
 const ContentError = dynamic(() => import('../component/ContentError'), { loading: () => <Loading /> });
 
 export default function PageNotFound({ statusCode }) {
   const { t } = useTranslation('404');
   return (
     <>
-      <ContentMeta
+      <Meta
         title={t('meta.title')}
         keywords={t('meta.keyword')}
         description={t('meta.description')}
@@ -30,6 +30,6 @@ export async function getStaticProps({ locale }) {
       ...(await serverSideTranslations(locale, ['common', '404'])),
       statusCode: 404,
     },
-  };
+  }
 }
 

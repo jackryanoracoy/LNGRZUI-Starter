@@ -19,5 +19,5 @@ export const Code: React.FC<CodeProps> = ({
     <div className={classNames}>
       <pre><code ref={codeEl} className={language}>{children}</code></pre>
     </div>
-  )
-}
+  );
+};

@@ -1,0 +1,36 @@
+{
+  "title": "Typography",
+  "description": "Learn about the typography styles and options available.",
+  "meta": {
+    "title": "LNGRZUI | Typography Documentation",
+    "description": "Learn about the typography styles and options available.",
+    "keywords": "component library, reusable components, documentation, application development, UI toolkit",
+    "themecolor": "#C51162"
+  },
+  "content": {
+    "overview-title": "Overview",
+    "overview-desc": "The Typography page showcases the Typography component, which provides pre-defined text styles and typography options.",
+    "how-to-title": "How to Use",
+    "how-to-desc": "Import the Typography component, and apply the desired typography styles to your text using the provided props.",
+    "example-title": "Example",
+    "code-title": "Code",
+    "props-title": "Props",
+    "props-title-properties": "Properties",
+    "props-title-type": "Type",
+    "props-title-default": "Default",
+    "props-desc-properties-one": "XXX",
+    "props-desc-type-one": "XXX",
+    "props-desc-default-one": "",
+    "props-desc-properties-two": "XXX",
+    "props-desc-type-two": "XXX",
+    "props-desc-default-two": "",
+    "props-desc-properties-three": "XXX",
+    "props-desc-type-three": "XXX",
+    "props-desc-default-three": "",
+    "title-one": "XXX",
+    "title-two": "XXX",
+    "content-one": "XXX",
+    "content-two": "XXX",
+    "sample-code": "import React from 'react';\nimport { Row, Col, Card } from 'ui';\n\nexport default function App() {\n  return (\n    XXX\n  )\n}"
+  }
+}

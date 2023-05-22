@@ -4,7 +4,7 @@ import { useTranslation } from 'next-i18next';
 import { Container, Row, Col, Content, Code, Paper, Card, Text, Search, Utility } from 'ui';
 import { PagesDataProps } from './ComponentTypes';
 
-export default function SectionSearch({ pagesData }: PagesDataProps) {
+export default function ContentSearch({ pagesData }: PagesDataProps) {
   const { t, i18n } = useTranslation('search');
   const [searchResults, setSearchResults] = useState([]);
   const language = i18n.language;

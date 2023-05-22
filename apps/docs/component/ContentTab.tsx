@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslation } from 'next-i18next';
 import { Container, Row, Col, Content, Tab, TabPanel, Code, Paper, Text, Utility } from 'ui';
 
-export default function SectionTab() {
+export default function ContentTab() {
   const { t } = useTranslation('tab');
   return (
     <>
