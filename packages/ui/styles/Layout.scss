@@ -63,7 +63,7 @@
   Site Layout
 --------------------------------------------------*/
 .#{$pre}layout-container {
-  .#{$pre}layout-content {
+  & .#{$pre}layout-content {
     display: flex;
     flex-wrap: wrap;
 

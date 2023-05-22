@@ -4,14 +4,14 @@ import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Loading from '../component/Loading';
 
-const ContentMeta = dynamic(() => import('../component/ContentMeta'), { loading: () => <Loading /> });
+const Meta = dynamic(() => import('../component/Meta'), { loading: () => <Loading /> });
 const ContentForm = dynamic(() => import('../component/ContentForm'), { loading: () => <Loading /> });
 
 export default function Form() {
   const { t } = useTranslation('form');
   return (
     <>
-      <ContentMeta
+      <Meta
         title={t('meta.title')}
         keywords={t('meta.keyword')}
         description={t('meta.description')}

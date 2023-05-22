@@ -1,0 +1,36 @@
+{
+  "title": "レイアウト",
+  "description": "アプリケーションのさまざまなレイアウト オプションを検討してください。",
+  "meta": {
+    "title": "LNGRZUI | レイアウト コンポーネント",
+    "description": "アプリケーションのさまざまなレイアウト オプションを検討してください。",
+    "keywords": "コンポーネント ライブラリ、再利用可能なコンポーネント、ドキュメント、アプリケーション開発、UI ツールキット",
+    "themecolor": "#C51162"
+  },
+  "content": {
+    "overview-title": "OVERVIEW | 概要",
+    "overview-desc": "「レイアウト」ページでは、アプリケーションに柔軟でカスタマイズ可能なレイアウト システムを提供するレイアウト コンポーネントを示します。",
+    "how-to-title": "HOW TO USE | 使い方",
+    "how-to-desc": "Layout コンポーネントをインポートし、アプリケーションのコンテンツをそれでラップします。 提供されたプロップを使用してレイアウトをカスタマイズします。",
+    "example-title": "EXAMPLE | 例",
+    "code-title": "CODE | コード",
+    "props-title": "PROPS | 小道具",
+    "props-title-properties": "プロパティ",
+    "props-title-type": "タイプ",
+    "props-title-default": "デフォルト",
+    "props-desc-properties-one": "XXX",
+    "props-desc-type-one": "XXX",
+    "props-desc-default-one": "",
+    "props-desc-properties-two": "XXX",
+    "props-desc-type-two": "XXX",
+    "props-desc-default-two": "",
+    "props-desc-properties-three": "XXX",
+    "props-desc-type-three": "XXX",
+    "props-desc-default-three": "",
+    "title-one": "XXX",
+    "title-two": "XXX",
+    "content-one": "XXX",
+    "content-two": "XXX",
+    "sample-code": "import React from 'react';\nimport { Row, Col, Card } from 'ui';\n\nexport default function App() {\n  return (\n    XXX\n  )\n}"
+  }
+}

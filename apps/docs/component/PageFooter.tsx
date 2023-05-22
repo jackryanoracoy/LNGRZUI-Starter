@@ -17,13 +17,12 @@ export default function PageFooter() {
         <Col md={12}>
           <Text weight='bold' variant='light'>{t('brand-name')}</Text>
           <Text size='small' variant='light'>
-            {t('footer.docs-version')} {docsVersion.version} - {t('footer.ui-version')} {uiVersion.version}
+            {t('footer.docs-version')}{docsVersion.version} - {t('footer.ui-version')}{uiVersion.version}
           </Text>
         </Col>
         <Col md='auto' omd='auto'>
           <Text size='small' variant='light'>
-            {`${t('footer.language')}: `}
-            <Link href={''} locale="en">EN</Link> | <Link href={''} locale="ja">JA</Link>
+            {t('footer.language')}: <Link href={''} locale="en">EN</Link> | <Link href={''} locale="ja">JA</Link>
           </Text>
         </Col>
       </Row>

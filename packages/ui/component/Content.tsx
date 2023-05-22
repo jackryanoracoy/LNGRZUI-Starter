@@ -16,6 +16,6 @@ export const Content: React.FC<ContentProps> = ({
       {title ? <Text type={type === 'section' ? 'section' : 'article'} transform='uppercase'>{title}</Text> : ''}
       {children}
     </Tag>
-  )
+  );
 };
 

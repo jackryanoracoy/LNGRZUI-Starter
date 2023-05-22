@@ -5,14 +5,14 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Loading from '../component/Loading';
 import pagesData from '../public/pages-data.json';
 
-const ContentMeta = dynamic(() => import('../component/ContentMeta'), { loading: () => <Loading /> });
+const Meta = dynamic(() => import('../component/Meta'), { loading: () => <Loading /> });
 const ContentSearch = dynamic(() => import('../component/ContentSearch'), { loading: () => <Loading /> });
 
-export default function Index() {
+export default function Search() {
   const { t } = useTranslation('search');
   return (
     <>
-      <ContentMeta
+      <Meta
         title={t('meta.title')}
         keywords={t('meta.keyword')}
         description={t('meta.description')}

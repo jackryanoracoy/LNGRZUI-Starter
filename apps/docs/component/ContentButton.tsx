@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { useTranslation } from 'next-i18next';
 import { Container, Row, Col, Content, Button, Code, Paper, Text, Utility } from 'ui';
 
-export default function SectionButton() {
+export default function ContentButton() {
   const { t } = useTranslation('button');
   const handleClick = () => alert(t('content.button-clicked'));
 

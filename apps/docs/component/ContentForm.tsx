@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslation } from 'next-i18next';
 import { Container, Row, Col, Content, Code, Paper, Text, Utility, Form } from 'ui';
 
-export default function SectionForm() {
+export default function ContentForm() {
   const { t } = useTranslation('form');
   const handleSubmit = (formData: {[key: string]: string}) => {
     console.log('Form submitted with data:', formData);

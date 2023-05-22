@@ -3,13 +3,12 @@ import dynamic from 'next/dynamic';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Loading from '../component/Loading';
-import pagesData from '../public/pages-data.json';
 
 const Meta = dynamic(() => import('../component/Meta'), { loading: () => <Loading /> });
-const ContentError = dynamic(() => import('../component/ContentError'), { loading: () => <Loading /> });
+const ContentCode = dynamic(() => import('../component/ContentCode'), { loading: () => <Loading /> });
 
-export default function InternalServerError({ statusCode }) {
-  const { t } = useTranslation('500');
+export default function Layout() {
+  const { t } = useTranslation('code');
   return (
     <>
       <Meta
@@ -19,17 +18,13 @@ export default function InternalServerError({ statusCode }) {
         themecolor={t('meta.themecolor')}
       />
 
-      <ContentError pagesData={pagesData} statusCode={statusCode} />
+      <ContentCode />
     </>
   )
 }
 
 export async function getStaticProps({ locale }) {
   return {
-    props: {
-      ...(await serverSideTranslations(locale, ['common', '500'])),
-      statusCode: 500,
-    },
+    props: {...(await serverSideTranslations(locale, ['common', 'code']))},
   }
 }
-

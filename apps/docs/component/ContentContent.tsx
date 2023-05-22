@@ -2,8 +2,8 @@ import React from 'react';
 import { useTranslation } from 'next-i18next';
 import { Container, Row, Col, Content, Code, Paper, Text, Utility } from 'ui';
 
-export default function ContentPaper() {
-  const { t } = useTranslation('paper');
+export default function ContentContent() {
+  const { t } = useTranslation('content');
   return (
     <>
       <Utility backgroundColor='grey-100'>
