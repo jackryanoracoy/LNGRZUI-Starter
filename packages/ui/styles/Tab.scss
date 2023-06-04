@@ -28,13 +28,18 @@
 
     &-item {
       display: inline-block;
-      padding: $title-gutter;
+      padding: $title-gutter / 2;
       color: inherit;
       font-size: $font-md;
       background-color: $grey-50;
       opacity: 0.5;
       transition: $transition;
       cursor: pointer;
+
+      @include media-breakpoint-min(md) {
+        padding-right: $title-gutter;
+        padding-left: $title-gutter;
+      }
     }
 
     &-item:hover { opacity: 0.75; }

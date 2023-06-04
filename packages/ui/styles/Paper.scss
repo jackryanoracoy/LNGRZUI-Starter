@@ -17,9 +17,13 @@
   border-radius: $border-radius;
 
   &-header {
-    padding: $title-gutter;
+    padding: $title-gutter / 2;
     background-color: $grey-50;
     border-bottom: 1px solid $grey-200;
+
+    @include media-breakpoint-min(md) {
+      padding: $title-gutter;
+    }
 
     &.#{$mpre}sticky {
       position: sticky;
@@ -31,5 +35,11 @@
     }
   }
 
-  &-content { padding: $content-gutter; }
+  &-content {
+    padding: $content-gutter / 2;
+
+    @include media-breakpoint-min(md) {
+      padding: $content-gutter;
+    }
+  }
 }
