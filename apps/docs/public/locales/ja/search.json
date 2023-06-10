@@ -1,0 +1,33 @@
+{
+  "title": "検索",
+  "description": "アプリケーションに検索機能を実装する方法を学びます。",
+  "meta": {
+    "title": "LNGRZUI | ドキュメントの検索",
+    "description": "アプリケーションに検索機能を実装する方法を学びます。",
+    "keywords": "コンポーネント ライブラリ、再利用可能なコンポーネント、ドキュメント、アプリケーション開発、UI ツールキット",
+    "themecolor": "#424242"
+  },
+  "content": {
+    "overview-title": "OVERVIEW | 概要",
+    "overview-desc": "「検索」ページには、アプリケーションに使いやすい検索機能を提供する検索コンポーネントが表示されます。",
+    "how-to-title": "HOW TO USE | 使い方",
+    "how-to-desc": "検索コンポーネントをインポートし、ページまたはコンポーネントに含めます。 提供されたプロパティを使用して、検索機能と外観をカスタマイズします。",
+    "example-title": "EXAMPLE | 例",
+    "code-title": "CODE | コード",
+    "props-title": "PROPS | 小道具",
+    "props-title-properties": "プロパティ",
+    "props-title-type": "タイプ",
+    "props-title-default": "デフォルト",
+    "props-desc-properties-one": "onSearch",
+    "props-desc-type-one": "(value: string) => void;",
+    "props-desc-default-one": "",
+    "props-desc-properties-two": "className",
+    "props-desc-type-two": "string",
+    "props-desc-default-two": "",
+    "props-desc-properties-three": "placeholder",
+    "props-desc-type-three": "string",
+    "props-desc-default-three": "Enter Keyword...",
+    "title-one": "検索用のプレースホルダー",
+    "sample-code": "import React, { useState } from 'react';\nimport { Row, Col, Search, Paper, Card, Text } from 'ui';\n\ninterface PagesDataProps {\n  pagesData: {\n    id: number;\n    slug: string;\n    data: {\n      title: string;\n      content: string;\n    };\n  }[];\n}\n\nexport default function App({ pagesData }: PagesDataProps) {\n  const [searchResults, setSearchResults] = useState([]);\n\n  const handleSearch = (searchTerm: string) => {\n    const results = searchPages(searchTerm);\n    setSearchResults(results);\n  };\n\n  const searchPages = (term: string) => {\n    const results = pagesData.filter((page) => {\n      const { title, content } = page.data;\n      const lowerCaseTerm = term.toLowerCase();\n      return (\n        title.toLowerCase().includes(lowerCaseTerm) ||\n        content.toLowerCase().includes(lowerCaseTerm)\n      );\n    });\n    return results.map((result) => result.data);\n  };\n\n  return (\n    <Paper\n      sticky\n      header={ <Search onSearch={handleSearch} placeholder='Placeholder for Search' /> }\n    >\n      {searchResults.length > 0 ? (\n        <Row gap={10} align='stretch'>\n          {searchResults.map((result) => (\n            <Col sm={12} md={8} lg={6} key={result.id}>\n              <Card header={<Text type='title'>{result.title}</Text>}>\n                <Text type='paragraph' size='medium'>{result.content}</Text>\n              </Card>\n            </Col>\n          ))}\n        </Row>\n      ) : (\n        <Text type='paragraph' align='center'>No Data</Text>\n      )}\n    </Paper>\n  )\n}"
+  }
+}

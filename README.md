@@ -60,13 +60,13 @@ pnpm dev
 npm run dev
 ```
 
-6. You can also start the Next.js front-end independently by running the following command in the `front` directory:
+5. You can also start the Next.js front-end independently by running the following command in the `front` directory:
 
 ```
 npm run dev
 ```
 
-7. Open your web browser and go to `http://localhost:3000`, `http://localhost:3001` to view the application.
+6. Open your web browser and go to `http://localhost:3000`, `http://localhost:3001` to view the application.
 
 ## Documentation
 

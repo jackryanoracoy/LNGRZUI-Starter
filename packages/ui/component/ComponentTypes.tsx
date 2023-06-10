@@ -26,6 +26,12 @@ type TextAreaProps = {
   onChange?: (event: React.ChangeEvent<HTMLTextAreaElement>) => void;
 };
 
+interface ListItem {
+  id: number;
+  text?: string;
+  link?: any
+}
+
 export type ChildrenProps = {
   children: React.ReactNode;
 };
@@ -175,4 +181,11 @@ export type PaperProps = {
   header?: React.ReactNode;
   className?: string;
   sticky?: boolean;
+}
+
+export interface ListProps {
+  className?: string;
+  type?: 'none' | 'disc' | 'circle' | 'lower-alpha' | 'upper-alpha' | 'lower-roman' | 'upper-roman' | 'decimal' | 'decimal-leading-zero';
+  position?: 'inside' | 'outside';
+  items: ListItem[];
 }

@@ -41,21 +41,21 @@ export default function ContentSearch({ pagesData }: PagesDataProps) {
           <Content type='article' title={t('content.example-title')}>
             <Paper
               sticky
-              header={ <Search onSearch={handleSearch} placeholder={t('content.search-placeholder')} /> }
+              header={ <Search onSearch={handleSearch} placeholder={t('content.title-one')} /> }
             >
               {searchResults.length > 0 ? (
-              <Row gap={10} align='stretch'>
-                {searchResults.map((result) => (
-                  <Col sm={12} md={8} lg={6} key={result.id}>
-                    <Card header={<Text type='title'><Link href={result.slug}>{result[language].title}</Link></Text>}>
-                      <Text type='paragraph' size='medium'>{result[language].content}</Text>
-                    </Card>
-                  </Col>
-                ))}
-              </Row>
-            ) : (
-              <Text type='paragraph' align='center'>{t('content.no-data')}</Text>
-            )}
+                <Row gap={10} align='stretch'>
+                  {searchResults.map((result) => (
+                    <Col sm={12} md={8} lg={6} key={result.id}>
+                      <Card header={<Text type='title'><Link href={result.slug}>{result[language].title}</Link></Text>}>
+                        <Text type='paragraph' size='medium'>{result[language].content}</Text>
+                      </Card>
+                    </Col>
+                  ))}
+                </Row>
+              ) : (
+                <Text type='paragraph' align='center'>{t('content.no-data')}</Text>
+              )}
             </Paper>
           </Content>
         </Content>
@@ -95,6 +95,12 @@ export default function ContentSearch({ pagesData }: PagesDataProps) {
                 <Col xs={24} md={4}><Text type='paragraph' size='small' weight='bold'>{t('content.props-desc-properties-two')}</Text></Col>
                 <Col xs={24} md={14}><Text type='code' size='small' variant='secondary'>{t('content.props-desc-type-two')}</Text></Col>
                 <Col xs={24} md={6}><Text type='paragraph' size='small'>{t('content.props-desc-default-two')}</Text></Col>
+              </Row>
+
+              <Row align='center'>
+                <Col xs={24} md={4}><Text type='paragraph' size='small' weight='bold'>{t('content.props-desc-properties-three')}</Text></Col>
+                <Col xs={24} md={14}><Text type='code' size='small' variant='secondary'>{t('content.props-desc-type-three')}</Text></Col>
+                <Col xs={24} md={6}><Text type='paragraph' size='small'>{t('content.props-desc-default-three')}</Text></Col>
               </Row>
             </Paper>
           </Content>

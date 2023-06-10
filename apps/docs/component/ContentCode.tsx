@@ -19,7 +19,9 @@ export default function ContentCode() {
           <Text type='paragraph'>{t('content.overview-desc')}</Text>
 
           <Content type='article' title={t('content.example-title')}>
-            <Paper sticky header={<Text type='title'>{t('content.title-one')}</Text>}>{t('content.content-one')}</Paper>
+            <Paper>
+              <Code language='html'>{t('content.content-one')}</Code>
+            </Paper>
           </Content>
         </Content>
       </Container>
@@ -57,14 +59,8 @@ export default function ContentCode() {
               <hr />
               <Row align='center'>
                 <Col xs={24} md={4}><Text type='paragraph' size='small' weight='bold'>{t('content.props-desc-properties-three')}</Text></Col>
-                <Col xs={24} md={14}><Text type='code' size='small' variant='warning'>{t('content.props-desc-type-three')}</Text></Col>
+                <Col xs={24} md={14}><Text type='code' size='small' variant='secondary'>{t('content.props-desc-type-three')}</Text></Col>
                 <Col xs={24} md={6}><Text type='paragraph' size='small'>{t('content.props-desc-default-three')}</Text></Col>
-              </Row>
-              <hr />
-              <Row align='center'>
-                <Col xs={24} md={4}><Text type='paragraph' size='small' weight='bold'>{t('content.props-desc-properties-four')}</Text></Col>
-                <Col xs={24} md={14}><Text type='code' size='small' variant='secondary'>{t('content.props-desc-type-four')}</Text></Col>
-                <Col xs={24} md={6}><Text type='paragraph' size='small'>{t('content.props-desc-default-four')}</Text></Col>
               </Row>
             </Paper>
           </Content>
