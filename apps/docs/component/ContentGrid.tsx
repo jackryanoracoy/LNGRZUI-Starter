@@ -21,17 +21,17 @@ export default function ContentGrid() {
           <Content type='article' title={t('content.example-title')}>
             <Paper>
               <Row>
-                <Col span={12}><Utility backgroundColor='primary' padding={40}>{t('content.content-one')}</Utility></Col>
-                <Col span={12}><Utility backgroundColor='secondary' padding={40}>{t('content.content-two')}</Utility></Col>
+                <Col span={12}><Utility backgroundColor='primary' padding={40}><Text variant='light'>{t('content.content-one')}</Text></Utility></Col>
+                <Col span={12}><Utility backgroundColor='secondary' padding={40}><Text variant='light'>{t('content.content-two')}</Text></Utility></Col>
               </Row>
               <br />
               <Row justify='center'>
-                <Col xs={24} sm={12} md={8} lg={6} xl={4}><Utility backgroundColor='red' padding={40}>{t('content.content-one')}</Utility></Col>
-                <Col xs={24} sm={12} md={8} lg={6} xl={4}><Utility backgroundColor='blue' padding={40}>{t('content.content-two')}</Utility></Col>
-                <Col xs={24} sm={12} md={8} lg={6} xl={4}><Utility backgroundColor='green' padding={40}>{t('content.content-three')}</Utility></Col>
-                <Col xs={24} sm={12} md={8} lg={6} xl={4}><Utility backgroundColor='yellow' padding={40}>{t('content.content-four')}</Utility></Col>
-                <Col xs={12} sm={12} md={8} lg={6} xl={4}><Utility backgroundColor='purple' padding={40}>{t('content.content-five')}</Utility></Col>
-                <Col xs={12} sm={12} md={8} lg={6} xl={4}><Utility backgroundColor='orange' padding={40}>{t('content.content-six')}</Utility></Col>
+                <Col xs={24} sm={12} md={8} lg={6} xl={4}><Utility backgroundColor='red' padding={40}><Text variant='light'>{t('content.content-one')}</Text></Utility></Col>
+                <Col xs={24} sm={12} md={8} lg={6} xl={4}><Utility backgroundColor='blue' padding={40}><Text variant='light'>{t('content.content-two')}</Text></Utility></Col>
+                <Col xs={24} sm={12} md={8} lg={6} xl={4}><Utility backgroundColor='green' padding={40}><Text variant='light'>{t('content.content-three')}</Text></Utility></Col>
+                <Col xs={24} sm={12} md={8} lg={6} xl={4}><Utility backgroundColor='yellow' padding={40}><Text variant='dark'>{t('content.content-four')}</Text></Utility></Col>
+                <Col xs={12} sm={12} md={8} lg={6} xl={4}><Utility backgroundColor='purple' padding={40}><Text variant='light'>{t('content.content-five')}</Text></Utility></Col>
+                <Col xs={12} sm={12} md={8} lg={6} xl={4}><Utility backgroundColor='orange' padding={40}><Text variant='dark'>{t('content.content-six')}</Text></Utility></Col>
               </Row>
               <br />
               <Row align='stretch' gap={10}>

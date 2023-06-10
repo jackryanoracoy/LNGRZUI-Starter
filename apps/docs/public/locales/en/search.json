@@ -1,0 +1,33 @@
+{
+  "title": "Search",
+  "description": "Learn how to implement search functionality in your application.",
+  "meta": {
+    "title": "LNGRZUI | Search Documentation",
+    "description": "Learn how to implement search functionality in your application.",
+    "keywords": "component library, reusable components, documentation, application development, UI toolkit",
+    "themecolor": "#424242"
+  },
+  "content": {
+    "overview-title": "Overview",
+    "overview-desc": "The Search page presents the Search component, which provides a user-friendly search functionality for your application.",
+    "how-to-title": "How to Use",
+    "how-to-desc": "Import the Search component, and include it in your page or component. Customize the search functionality and appearance using the provided props.",
+    "example-title": "Example",
+    "code-title": "Code",
+    "props-title": "Props",
+    "props-title-properties": "Properties",
+    "props-title-type": "Type",
+    "props-title-default": "Default",
+    "props-desc-properties-one": "onSearch",
+    "props-desc-type-one": "(value: string) => void;",
+    "props-desc-default-one": "",
+    "props-desc-properties-two": "className",
+    "props-desc-type-two": "string",
+    "props-desc-default-two": "",
+    "props-desc-properties-three": "placeholder",
+    "props-desc-type-three": "string",
+    "props-desc-default-three": "Enter Keyword...",
+    "title-one": "Placeholder for Search",
+    "sample-code": "import React, { useState } from 'react';\nimport { Row, Col, Search, Paper, Card, Text } from 'ui';\n\ninterface PagesDataProps {\n  pagesData: {\n    id: number;\n    slug: string;\n    data: {\n      title: string;\n      content: string;\n    };\n  }[];\n}\n\nexport default function App({ pagesData }: PagesDataProps) {\n  const [searchResults, setSearchResults] = useState([]);\n\n  const handleSearch = (searchTerm: string) => {\n    const results = searchPages(searchTerm);\n    setSearchResults(results);\n  };\n\n  const searchPages = (term: string) => {\n    const results = pagesData.filter((page) => {\n      const { title, content } = page.data;\n      const lowerCaseTerm = term.toLowerCase();\n      return (\n        title.toLowerCase().includes(lowerCaseTerm) ||\n        content.toLowerCase().includes(lowerCaseTerm)\n      );\n    });\n    return results.map((result) => result.data);\n  };\n\n  return (\n    <Paper\n      sticky\n      header={ <Search onSearch={handleSearch} placeholder='Placeholder for Search' /> }\n    >\n      {searchResults.length > 0 ? (\n        <Row gap={10} align='stretch'>\n          {searchResults.map((result) => (\n            <Col sm={12} md={8} lg={6} key={result.id}>\n              <Card header={<Text type='title'>{result.title}</Text>}>\n                <Text type='paragraph' size='medium'>{result.content}</Text>\n              </Card>\n            </Col>\n          ))}\n        </Row>\n      ) : (\n        <Text type='paragraph' align='center'>No Data</Text>\n      )}\n    </Paper>\n  )\n}"
+  }
+}

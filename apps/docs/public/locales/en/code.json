@@ -5,7 +5,7 @@
     "title": "LNGRZUI | Code Documentation",
     "description": "Discover how to display and highlight code snippets.",
     "keywords": "component library, reusable components, documentation, application development, UI toolkit",
-    "themecolor": "#C51162"
+    "themecolor": "#424242"
   },
   "content": {
     "overview-title": "Overview",
@@ -18,19 +18,16 @@
     "props-title-properties": "Properties",
     "props-title-type": "Type",
     "props-title-default": "Default",
-    "props-desc-properties-one": "XXX",
-    "props-desc-type-one": "XXX",
+    "props-desc-properties-one": "children",
+    "props-desc-type-one": "React.ReactNode",
     "props-desc-default-one": "",
-    "props-desc-properties-two": "XXX",
-    "props-desc-type-two": "XXX",
+    "props-desc-properties-two": "className",
+    "props-desc-type-two": "string",
     "props-desc-default-two": "",
-    "props-desc-properties-three": "XXX",
-    "props-desc-type-three": "XXX",
+    "props-desc-properties-three": "language",
+    "props-desc-type-three": "string",
     "props-desc-default-three": "",
-    "title-one": "XXX",
-    "title-two": "XXX",
-    "content-one": "XXX",
-    "content-two": "XXX",
-    "sample-code": "import React from 'react';\nimport { Row, Col, Card } from 'ui';\n\nexport default function App() {\n  return (\n    XXX\n  )\n}"
+    "content-one": "<p>This is a sample paragraph code using <strong>html</strong> language</p>",
+    "sample-code": "import React from 'react';\nimport { Code } from 'ui';\n\nexport default function App() {\n  return (\n    <Code>\n      <p>This is a sample paragraph code using <strong>html</strong> language</p>\n    </Code>\n  )\n}"
   }
 }

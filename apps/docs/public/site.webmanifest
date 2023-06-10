@@ -50,7 +50,7 @@
   ],
   "lang": "en-US",
   "start_url": "/",
-  "background_color": "#C51162",
+  "background_color": "#424242",
   "display": "standalone",
-  "theme_color": "#C51162"
+  "theme_color": "#424242"
 }
