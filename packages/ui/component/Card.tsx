@@ -10,12 +10,12 @@ export const Card: React.FC<CardProps> = ({
   return (
     <div className={classNames}>
       {header ? <div className={`${pre}card-header`}>{header}</div> : ''}
-      <PaperContent>{children}</PaperContent>
+      <CardContent>{children}</CardContent>
     </div>
   );
 };
 
-const PaperContent: React.FC<ChildrenProps> = ({
+const CardContent: React.FC<ChildrenProps> = ({
   children
 }) => {
   return <div className={`${pre}card-content`}>{children}</div>

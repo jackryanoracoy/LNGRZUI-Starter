@@ -1,3 +1,3 @@
 // ClassName Prefix
-export const pre = 'lngrzui-';
-export const mpre = 'is_';
+export const pre = 'lngrzui-';  // Prefix
+export const mpre = 'is_';      // Modifier Prefix
