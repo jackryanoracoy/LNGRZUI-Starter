@@ -82,7 +82,7 @@ html {
 body {
   min-width: inherit;
   color: inherit;
-  font-size: $font-md;
+  font-size: $font-nm;
   font-family: inherit;
 
   & ::-webkit-scrollbar {
@@ -93,10 +93,6 @@ body {
 
   & ::-webkit-scrollbar-thumb {
     background-color: $grey-400;
-  }
-
-  @include media-breakpoint-min(md) {
-    font-size: $font-nm;
   }
 
   @media print { font-family: inherit; width: 100%; }

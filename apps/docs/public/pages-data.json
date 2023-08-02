@@ -1,17 +1,5 @@
 [
   {
-    "id": 1,
-    "slug": "start",
-    "en": {
-      "title": "Getting Started",
-      "content": "Learn how to get started with the components library."
-    },
-    "ja": {
-      "title": "はじめに",
-      "content": "コンポーネントライブラリの使い方について学びます。"
-    }
-  },
-  {
     "id": 2,
     "slug": "container",
     "en": {
