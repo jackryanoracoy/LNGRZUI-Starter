@@ -1,7 +1,7 @@
-import { CommonProps } from './ComponentTypes';
-import { Layout, Header, Main, Sider, Footer } from 'ui';
-import PageHeader from '../component/PageHeader';
-import PageFooter from '../component/PageFooter';
+import { CommonProps } from '../contents/ContentTypes';
+import { Layout, Header, Main, Footer } from 'ui';
+import PageHeader from './Header';
+import PageFooter from './Footer';
 
 export default function PageLayout({ children }: CommonProps) {
   return (

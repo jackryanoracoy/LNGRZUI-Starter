@@ -9,13 +9,6 @@ export interface CommonProps {
   children?: React.ReactNode;
 }
 
-export interface MetaDataProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  themecolor?: string;
-}
-
 export interface PagesDataProps {
   pagesData: {
     id: number;

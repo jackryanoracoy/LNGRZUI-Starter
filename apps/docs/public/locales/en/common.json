@@ -8,6 +8,9 @@
     "keywords": "component library, reusable components, documentation, application development, UI toolkit",
     "themecolor": "#424242"
   },
+  "content": {
+    "loading-label": "Loading, please wait..."
+  },
   "footer": {
     "docs-version": "APP v",
     "ui-version": "UI v",

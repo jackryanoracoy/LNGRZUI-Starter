@@ -7,6 +7,11 @@ type Variant = 'primary' | 'secondary' | 'light' | 'dark' | 'success' | 'warning
 type BreakPoint = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 type Overflow = 'auto' | 'hidden' | 'scroll' | 'visible';
 
+export type LoadingProps = {
+  className?: string;
+  label?: string;
+}
+
 type InputProps = {
   name: string;
   label: string;

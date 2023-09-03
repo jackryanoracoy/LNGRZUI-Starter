@@ -1,21 +1,22 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
+import Meta from '../components/Meta';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import Loading from '../component/Loading';
+import { Loading } from 'ui';
 
-const Meta = dynamic(() => import('../component/Meta'), { loading: () => <Loading /> });
-const ContentCode = dynamic(() => import('../component/ContentCode'), { loading: () => <Loading /> });
+export default function Code() {
+  const { t } = useTranslation(['common', 'code']);
+  const LoadingComponent = () => <Loading label={t('content.loading-label')} />;
+  const ContentCode = dynamic(() => import('../contents/Code'), { loading: LoadingComponent });
 
-export default function Layout() {
-  const { t } = useTranslation('code');
   return (
     <>
       <Meta
-        title={t('meta.title')}
-        keywords={t('meta.keyword')}
-        description={t('meta.description')}
-        themecolor={t('meta.themecolor')}
+        title={t('code:meta.title')}
+        keywords={t('code:meta.keyword')}
+        description={t('code:meta.description')}
+        themecolor={t('code:meta.themecolor')}
       />
 
       <ContentCode />

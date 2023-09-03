@@ -14,14 +14,14 @@ export default function PageHeader() {
   };
 
   const titleNamespace = home ? 'home' : router.pathname.replace('/', '');
-  const titleKey = 'title';
+  const titleKey = 'meta.title';
   const titleTranslation = t(`${titleNamespace}:${titleKey}`);
 
   return (
     <Utility paddingLeft={10} paddingRight={10}>
       <Row align='center' wrap='nowrap'>
         <Col xs={14} md='auto'>
-          <Branding index={home} title={<Link href='/'>{t('brand-name')} - {titleTranslation}</Link>} />
+          <Branding index={home} title={<Link href='/'>{home ? t('brand-name') : titleTranslation}</Link>} />
         </Col>
         <Col xs='auto' oxs='auto'>
           <Button onClick={handleClick} variant='secondary'>{t('language-button')}</Button>

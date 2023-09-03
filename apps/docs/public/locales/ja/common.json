@@ -8,6 +8,9 @@
     "keywords": "コンポーネント ライブラリ、再利用可能なコンポーネント、ドキュメント、アプリケーション開発、UI ツールキット",
     "themecolor": "#424242"
   },
+  "content": {
+    "loading-label": "読み込み中。。。待って下さい。"
+  },
   "footer": {
     "docs-version": "APP v",
     "ui-version": "UI v",

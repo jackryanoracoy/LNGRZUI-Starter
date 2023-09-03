@@ -1,21 +1,22 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
+import Meta from '../components/Meta';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import Loading from '../component/Loading';
+import { Loading } from 'ui';
 
-const Meta = dynamic(() => import('../component/Meta'), { loading: () => <Loading /> });
-const ContentTypography = dynamic(() => import('../component/ContentTypography'), { loading: () => <Loading /> });
+export default function Typography() {
+  const { t } = useTranslation(['common', 'typography']);
+  const LoadingComponent = () => <Loading label={t('content.loading-label')} />;
+  const ContentTypography = dynamic(() => import('../contents/Typography'), { loading: LoadingComponent });
 
-export default function Layout() {
-  const { t } = useTranslation('typography');
   return (
     <>
       <Meta
-        title={t('meta.title')}
-        keywords={t('meta.keyword')}
-        description={t('meta.description')}
-        themecolor={t('meta.themecolor')}
+        title={t('typography:meta.title')}
+        keywords={t('typography:meta.keyword')}
+        description={t('typography:meta.description')}
+        themecolor={t('typography:meta.themecolor')}
       />
 
       <ContentTypography />
