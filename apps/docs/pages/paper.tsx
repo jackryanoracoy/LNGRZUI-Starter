@@ -1,21 +1,22 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
+import Meta from '../components/Meta';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import Loading from '../component/Loading';
-
-const Meta = dynamic(() => import('../component/Meta'), { loading: () => <Loading /> });
-const ContentPaper = dynamic(() => import('../component/ContentPaper'), { loading: () => <Loading /> });
+import { Loading } from 'ui';
 
 export default function Paper() {
-  const { t } = useTranslation('paper');
+  const { t } = useTranslation(['common', 'paper']);
+  const LoadingComponent = () => <Loading label={t('content.loading-label')} />;
+  const ContentPaper = dynamic(() => import('../contents/Paper'), { loading: LoadingComponent });
+
   return (
     <>
       <Meta
-        title={t('meta.title')}
-        keywords={t('meta.keyword')}
-        description={t('meta.description')}
-        themecolor={t('meta.themecolor')}
+        title={t('paper:meta.title')}
+        keywords={t('paper:meta.keyword')}
+        description={t('paper:meta.description')}
+        themecolor={t('paper:meta.themecolor')}
       />
 
       <ContentPaper />

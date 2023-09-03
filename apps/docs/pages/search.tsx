@@ -1,22 +1,23 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
+import Meta from '../components/Meta';
+import pagesData from '../public/pages-data.json';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import Loading from '../component/Loading';
-import pagesData from '../public/pages-data.json';
-
-const Meta = dynamic(() => import('../component/Meta'), { loading: () => <Loading /> });
-const ContentSearch = dynamic(() => import('../component/ContentSearch'), { loading: () => <Loading /> });
+import { Loading } from 'ui';
 
 export default function Search() {
-  const { t } = useTranslation('search');
+  const { t } = useTranslation(['common', 'search']);
+  const LoadingComponent = () => <Loading label={t('content.loading-label')} />;
+  const ContentSearch = dynamic(() => import('../contents/Search'), { loading: LoadingComponent });
+
   return (
     <>
       <Meta
-        title={t('meta.title')}
-        keywords={t('meta.keyword')}
-        description={t('meta.description')}
-        themecolor={t('meta.themecolor')}
+        title={t('search:meta.title')}
+        keywords={t('search:meta.keyword')}
+        description={t('search:meta.description')}
+        themecolor={t('search:meta.themecolor')}
       />
 
       <ContentSearch pagesData={pagesData} />

@@ -1,21 +1,22 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
+import Meta from '../components/Meta';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import Loading from '../component/Loading';
-
-const Meta = dynamic(() => import('../component/Meta'), { loading: () => <Loading /> });
-const ContentForm = dynamic(() => import('../component/ContentForm'), { loading: () => <Loading /> });
+import { Loading } from 'ui';
 
 export default function Form() {
-  const { t } = useTranslation('form');
+  const { t } = useTranslation(['common', 'form']);
+  const LoadingComponent = () => <Loading label={t('content.loading-label')} />;
+  const ContentForm = dynamic(() => import('../contents/Form'), { loading: LoadingComponent });
+
   return (
     <>
       <Meta
-        title={t('meta.title')}
-        keywords={t('meta.keyword')}
-        description={t('meta.description')}
-        themecolor={t('meta.themecolor')}
+        title={t('form:meta.title')}
+        keywords={t('form:meta.keyword')}
+        description={t('form:meta.description')}
+        themecolor={t('form:meta.themecolor')}
       />
 
       <ContentForm />

@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import type { AppProps } from 'next/app';
 import { appWithTranslation } from 'next-i18next';
-import PageLayout from '../component/PageLayout';
+import PageLayout from '../components/Layout';
 
 function App({ Component, pageProps }: AppProps) {
   useEffect(() => {

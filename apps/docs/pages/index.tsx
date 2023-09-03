@@ -1,22 +1,23 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
+import Meta from '../components/Meta';
+import pagesData from '../public/pages-data.json';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import Loading from '../component/Loading';
-import pagesData from '../public/pages-data.json';
-
-const Meta = dynamic(() => import('../component/Meta'), { loading: () => <Loading /> });
-const ContentHome = dynamic(() => import('../component/ContentHome'), { loading: () => <Loading /> });
+import { Loading } from 'ui';
 
 export default function Index() {
-  const { t } = useTranslation('home');
+  const { t } = useTranslation(['common', 'home']);
+  const LoadingComponent = () => <Loading label={t('content.loading-label')} />;
+  const ContentHome = dynamic(() => import('../contents/Home'), { loading: LoadingComponent });
+
   return (
     <>
       <Meta
-        title={t('meta.title')}
-        keywords={t('meta.keyword')}
-        description={t('meta.description')}
-        themecolor={t('meta.themecolor')}
+        title={t('home:meta.title')}
+        keywords={t('home:meta.keyword')}
+        description={t('home:meta.description')}
+        themecolor={t('home:meta.themecolor')}
       />
 
       <ContentHome pagesData={pagesData} />

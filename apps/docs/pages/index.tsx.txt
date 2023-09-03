@@ -1,0 +1,101 @@
+import React from "react";
+import {
+  Layout,
+  Header,
+  Main,
+  Footer,
+  Branding,
+  Container,
+  Button,
+  Row,
+  Col,
+  Card,
+  ContactForm,
+  ContactInput,
+  ContactText,
+  Tab,
+  TabPanel,
+  Text,
+  Carousel,
+  Content
+} from "ui";
+import "ui/src/styles/Global.scss";
+
+const images = [
+  'https://example.com/image1.jpg',
+  'https://example.com/image2.jpg',
+  'https://example.com/image3.jpg',
+];
+
+export default function Index() {
+
+  const handleSubmit = (data) => {
+    alert("This is the form data!");
+    console.log(data);
+  };
+  return (
+    <>
+    <Layout>
+      <Header><Branding home={true}>Header content here</Branding></Header>
+      <Main>Main content here</Main>
+      <Footer>Footer content here</Footer>
+    </Layout>
+    <Container>
+      <h1>Docs</h1>
+      <Button>Click me</Button>
+      <Button variant="light" size="large">Click me too</Button>
+
+      <br /><br />
+
+      <Row align="flex-end" gap={20}>
+        <Col span={6}>
+          <Card>Content 1</Card>
+        </Col>
+        <Col span={6}>
+          <Card>Content 2</Card>
+        </Col>
+        <Col span={12}>
+          <Card>Content 3</Card>
+        </Col>
+      </Row>
+      <Row>
+        <Col span={12}>Column 4</Col>
+        <Col span={12} >Column 5</Col>
+      </Row>
+
+      <ContactForm onSubmit={handleSubmit}>
+        <ContactInput name="firstName" label="First Name" required />
+        <ContactInput name="lastName" label="Last Name" required />
+        <ContactInput name="email" type="email" label="Email" required />
+        <ContactInput name="number" type="tel" label="Number" required />
+        <ContactText name="message" label="Message" />
+        <Button type="submit">Submit</Button>
+      </ContactForm>
+
+      <Tab>
+        <TabPanel label="TEST">TEST1</TabPanel>
+        <TabPanel label="TEST2">TES</TabPanel>
+        <TabPanel label="TEST3">TEST1213123<br/>TEST1213123TEST1213123TEST1213123</TabPanel>
+      </Tab>
+
+      <Text type='hero' variant="secondary">Hero Heading</Text>
+      <Text type='article' className="TEST">Article Heading</Text>
+      <Text type='section'>Section Heading</Text>
+      <Text type='paragraph'>Lorem ipsum dolor sit amet <Text type='link' href='https://www.example.com' target='_blank'>Link to example.com</Text></Text>
+      <Text type='link' href='https://www.example.com' target='_blank'>Link to example.com</Text>
+
+      <Carousel autoplay={false} images={images} />
+
+      <Content type="section" title="This is a content">
+        <Content type="article">This is a content</Content>
+      </Content>
+
+      {/* <select onChange={handleLanguageChange}>
+        <option value="en">English</option>
+        <option value="es">Spanish</option>
+      </select> */}
+
+    </Container>
+    </>
+  );
+}
