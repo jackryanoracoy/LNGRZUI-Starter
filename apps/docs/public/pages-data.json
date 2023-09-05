@@ -1,6 +1,6 @@
 [
   {
-    "id": 2,
+    "id": 1,
     "slug": "container",
     "en": {
       "title": "Container",
@@ -12,7 +12,7 @@
     }
   },
   {
-    "id": 3,
+    "id": 2,
     "slug": "layout",
     "en": {
       "title": "Layout",
@@ -24,7 +24,7 @@
     }
   },
   {
-    "id": 4,
+    "id": 3,
     "slug": "grid",
     "en": {
       "title": "Grid",
@@ -36,7 +36,7 @@
     }
   },
   {
-    "id": 5,
+    "id": 4,
     "slug": "typography",
     "en": {
       "title": "Typography",
@@ -48,7 +48,7 @@
     }
   },
   {
-    "id": 6,
+    "id": 5,
     "slug": "content",
     "en": {
       "title": "Content",
@@ -57,6 +57,18 @@
     "ja": {
       "title": "コンテンツ",
       "content": "構造化されたコンテンツセクションの作成方法を理解します。"
+    }
+  },
+  {
+    "id": 6,
+    "slug": "loading",
+    "en": {
+      "title": "Loading",
+      "content": "Learn about the loading/loader styles available."
+    },
+    "ja": {
+      "title": "読み込み中",
+      "content": "使用可能な読み込みスタイルについて説明します。"
     }
   },
   {

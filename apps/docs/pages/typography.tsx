@@ -5,7 +5,7 @@ import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { Loading } from 'ui';
 
-export default function Typography() {
+export default function PageTypography() {
   const { t } = useTranslation(['common', 'typography']);
   const LoadingComponent = () => <Loading label={t('content.loading-label')} />;
   const ContentTypography = dynamic(() => import('../contents/Typography'), { loading: LoadingComponent });

@@ -5,7 +5,7 @@ import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { Loading } from 'ui';
 
-export default function Container() {
+export default function PageContainer() {
   const { t } = useTranslation(['common', 'container']);
   const LoadingComponent = () => <Loading label={t('content.loading-label')} />;
   const ContentContainer = dynamic(() => import('../contents/Container'), { loading: LoadingComponent });

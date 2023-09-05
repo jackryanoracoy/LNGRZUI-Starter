@@ -9,6 +9,7 @@ type Overflow = 'auto' | 'hidden' | 'scroll' | 'visible';
 
 export type LoadingProps = {
   className?: string;
+  type?: 'ring' | 'ellipsis' | 'bar' | 'ripple';
   label?: string;
 }
 

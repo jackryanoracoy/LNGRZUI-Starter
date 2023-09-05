@@ -6,7 +6,7 @@ import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { Loading } from 'ui';
 
-export default function Search() {
+export default function PageSearch() {
   const { t } = useTranslation(['common', 'search']);
   const LoadingComponent = () => <Loading label={t('content.loading-label')} />;
   const ContentSearch = dynamic(() => import('../contents/Search'), { loading: LoadingComponent });

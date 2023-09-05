@@ -5,7 +5,7 @@ import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { Loading } from 'ui';
 
-export default function Carousel() {
+export default function PageCarousel() {
   const { t } = useTranslation(['common', 'carousel']);
   const LoadingComponent = () => <Loading label={t('content.loading-label')} />;
   const ContentCarousel = dynamic(() => import('../contents/Carousel'), { loading: LoadingComponent });
