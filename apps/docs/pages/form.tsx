@@ -5,7 +5,7 @@ import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { Loading } from 'ui';
 
-export default function Form() {
+export default function PageForm() {
   const { t } = useTranslation(['common', 'form']);
   const LoadingComponent = () => <Loading label={t('content.loading-label')} />;
   const ContentForm = dynamic(() => import('../contents/Form'), { loading: LoadingComponent });

@@ -5,7 +5,7 @@ import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { Loading } from 'ui';
 
-export default function Grid() {
+export default function PageGrid() {
   const { t } = useTranslation(['common', 'grid']);
   const LoadingComponent = () => <Loading label={t('content.loading-label')} />;
   const ContentGrid = dynamic(() => import('../contents/Grid'), { loading: LoadingComponent });

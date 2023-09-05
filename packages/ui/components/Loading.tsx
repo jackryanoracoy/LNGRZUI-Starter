@@ -4,13 +4,13 @@ import { LoadingProps } from './ComponentTypes';
 import '../styles/Loading.scss';
 
 export const Loading: React.FC<LoadingProps> = ({
-  className = '', label = 'Loading...'
+  className = '', type = 'ring', label = ''
 }) => {
   const classNames = className ? `${pre}loading ${className}` : `${pre}loading`;
   return (
     <div className={classNames}>
-      <div className="ring"><div></div><div></div><div></div><div></div></div>
-      <span>{label}</span>
+      <div className={pre + type}><div></div><div></div><div></div><div></div></div>
+      {label ? <span>{label}</span> : ''}
     </div>
   );
 };

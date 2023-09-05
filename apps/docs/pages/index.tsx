@@ -6,7 +6,7 @@ import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { Loading } from 'ui';
 
-export default function Index() {
+export default function PageIndex() {
   const { t } = useTranslation(['common', 'home']);
   const LoadingComponent = () => <Loading label={t('content.loading-label')} />;
   const ContentHome = dynamic(() => import('../contents/Home'), { loading: LoadingComponent });
