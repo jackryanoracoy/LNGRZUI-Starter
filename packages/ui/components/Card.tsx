@@ -1,6 +1,6 @@
 import React from 'react';
 import { pre } from '../prefixConfig';
-import { CardProps, ChildrenProps } from './ComponentTypes';
+import { CardProps, ChildrenProps } from '../components/ComponentTypes';
 import '../styles/Card.scss';
 
 export const Card: React.FC<CardProps> = ({

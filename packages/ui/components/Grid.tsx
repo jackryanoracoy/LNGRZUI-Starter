@@ -1,6 +1,6 @@
 import React from 'react';
 import { pre, mpre } from '../prefixConfig';
-import { RowProps, ColProps } from './ComponentTypes';
+import { RowProps, ColProps } from '../components/ComponentTypes';
 import '../styles/Grid.scss';
 
 export const Row: React.FC<RowProps> = ({
@@ -19,8 +19,8 @@ export const Col: React.FC<ColProps> = ({
   const responsiveItem = `${pre}flex-item-xs-${xs} ${pre}flex-item-sm-${sm} ${pre}flex-item-md-${md} ${pre}flex-item-lg-${lg} ${pre}flex-item-xl-${xl}`;
   const responsiveOffset = `${pre}offset-xs-${oxs} ${pre}offset-sm-${osm} ${pre}offset-md-${omd} ${pre}offset-lg-${olg} ${pre}offset-xl-${oxl}`;
   const classNames = span
-  ? `${pre}flex-item-${span} ${pre}offset-${offset}`
-  : `${responsiveItem} ${responsiveOffset}`
+    ? `${pre}flex-item-${span} ${pre}offset-${offset}`
+    : `${responsiveItem} ${responsiveOffset}`
   return (
     <div className={classNames}>
       {children}

@@ -1,6 +1,6 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
-import Meta from '../components/Meta';
+import Meta from 'components/Meta';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { Loading } from 'ui';
@@ -8,7 +8,7 @@ import { Loading } from 'ui';
 export default function PageCode() {
   const { t } = useTranslation(['common', 'code']);
   const LoadingComponent = () => <Loading label={t('content.loading-label')} />;
-  const ContentCode = dynamic(() => import('../contents/Code'), { loading: LoadingComponent });
+  const ContentCode = dynamic(() => import('contents/Code'), { loading: LoadingComponent });
 
   return (
     <>

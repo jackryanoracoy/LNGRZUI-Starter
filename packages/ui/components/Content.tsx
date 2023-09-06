@@ -1,6 +1,6 @@
 import React from 'react';
 import { pre, mpre } from '../prefixConfig';
-import { ContentProps } from './ComponentTypes';
+import { ContentProps } from '../components/ComponentTypes';
 import { Text } from './Typography';
 import '../styles/Content.scss';
 

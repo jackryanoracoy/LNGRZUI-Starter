@@ -1,7 +1,7 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
-import Meta from '../components/Meta';
-import pagesData from '../public/pages-data.json';
+import Meta from 'components/Meta';
+import pagesData from 'public/pages-data.json';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { Loading } from 'ui';
@@ -9,7 +9,7 @@ import { Loading } from 'ui';
 export default function PageNotFound({ statusCode }) {
   const { t } = useTranslation(['common', '404']);
   const LoadingComponent = () => <Loading label={t('content.loading-label')} />;
-  const ContentError = dynamic(() => import('../contents/Error'), { loading: LoadingComponent });
+  const ContentError = dynamic(() => import('contents/Error'), { loading: LoadingComponent });
 
   return (
     <>

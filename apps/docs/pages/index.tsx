@@ -1,7 +1,7 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
-import Meta from '../components/Meta';
-import pagesData from '../public/pages-data.json';
+import Meta from 'components/Meta';
+import pagesData from 'public/pages-data.json';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { Loading } from 'ui';
@@ -9,7 +9,7 @@ import { Loading } from 'ui';
 export default function PageIndex() {
   const { t } = useTranslation(['common', 'home']);
   const LoadingComponent = () => <Loading label={t('content.loading-label')} />;
-  const ContentHome = dynamic(() => import('../contents/Home'), { loading: LoadingComponent });
+  const ContentHome = dynamic(() => import('contents/Home'), { loading: LoadingComponent });
 
   return (
     <>

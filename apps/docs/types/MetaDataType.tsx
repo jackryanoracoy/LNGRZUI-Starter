@@ -1,4 +1,4 @@
-export interface MetaDataProps {
+export interface MetaDataType {
   title?: string;
   description?: string;
   keywords?: string;

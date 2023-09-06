@@ -1,6 +1,6 @@
 import React from 'react';
 import { pre, mpre } from '../prefixConfig';
-import { ButtonProps } from './ComponentTypes';
+import { ButtonProps } from '../components/ComponentTypes';
 import '../styles/Button.scss';
 
 export const Button: React.FC<ButtonProps> = ({

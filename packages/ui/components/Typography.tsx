@@ -1,6 +1,6 @@
 import React from 'react';
 import { pre, mpre } from '../prefixConfig';
-import { TypographyProps } from './ComponentTypes';
+import { TypographyProps } from '../components/ComponentTypes';
 import '../styles/Typography.scss';
 
 export const Text: React.FC<TypographyProps> = ({

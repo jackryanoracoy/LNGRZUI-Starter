@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { pre } from '../prefixConfig';
-import { SearchProps } from './ComponentTypes';
+import { SearchProps } from '../components/ComponentTypes';
 import '../styles/Search.scss';
 
 export const Search: React.FC<SearchProps> = ({
@@ -19,7 +19,6 @@ export const Search: React.FC<SearchProps> = ({
     event.preventDefault();
     onSearch(searchTerm);
   };
-
   return (
     <form className={classNames} onSubmit={handleSubmit}>
       <input type='text' value={searchTerm} onChange={handleChange} placeholder={placeholder} />

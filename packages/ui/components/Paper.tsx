@@ -1,6 +1,6 @@
 import React from 'react';
 import { pre, mpre } from '../prefixConfig';
-import { PaperProps, ChildrenProps } from './ComponentTypes';
+import { PaperProps, ChildrenProps } from '../components/ComponentTypes';
 import '../styles/Paper.scss';
 
 export const Paper: React.FC<PaperProps> = ({

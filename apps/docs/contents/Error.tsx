@@ -1,9 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useTranslation } from 'next-i18next';
+import { PagesDataType } from 'types/PageDataType';
 import { Container, Content, Row, Col, Paper, Card, Search, Text, Utility } from 'ui';
 
-export default function ContentError({ pagesData, statusCode }) {
+type Props = {
+  pagesData: PagesDataType[];
+  statusCode: number;
+}
+
+export default function ContentError({ pagesData, statusCode }: Props) {
   const { t, i18n } = useTranslation('404');
   const [searchResults, setSearchResults] = useState([]);
   const language = i18n.language;

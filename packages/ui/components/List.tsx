@@ -1,6 +1,6 @@
 import React from 'react';
 import { pre, mpre } from '../prefixConfig';
-import { ListProps } from './ComponentTypes';
+import { ListProps } from '../components/ComponentTypes';
 import '../styles/List.scss';
 
 export const List: React.FC<ListProps> = ({

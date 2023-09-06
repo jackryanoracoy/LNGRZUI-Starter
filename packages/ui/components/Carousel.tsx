@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { pre, mpre } from '../prefixConfig';
-import { CarouselProps } from './ComponentTypes';
+import { CarouselProps } from '../components/ComponentTypes';
 
 export const Carousel: React.FC<CarouselProps> = ({ className = '', images, autoplay, interval }) => {
   const [index, setIndex] = useState(0);
@@ -16,7 +16,6 @@ export const Carousel: React.FC<CarouselProps> = ({ className = '', images, auto
       return () => clearInterval(timerId);
     }
   }, [next, interval, autoplay]);
-
   return (
     <div className={classNames}>
       <img className={`${pre}carousel-image`} src={images[index]} alt={`Image ${index}`} />

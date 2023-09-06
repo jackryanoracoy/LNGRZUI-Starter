@@ -1,6 +1,6 @@
 import React from 'react';
 import { pre } from '../prefixConfig';
-import { LoadingProps } from './ComponentTypes';
+import { LoadingProps } from '../components/ComponentTypes';
 import '../styles/Loading.scss';
 
 export const Loading: React.FC<LoadingProps> = ({

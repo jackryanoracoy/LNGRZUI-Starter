@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { pre } from '../prefixConfig';
-import { FormProps } from './ComponentTypes';
+import { FormProps } from '../components/ComponentTypes';
 import { Button } from './Button';
 import '../styles/Form.scss';
 
