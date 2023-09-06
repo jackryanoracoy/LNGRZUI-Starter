@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { pre, mpre } from '../prefixConfig';
-import { TabProps, TabPanelProps } from './ComponentTypes';
+import { TabProps, TabPanelProps } from '../components/ComponentTypes';
 import '../styles/Tab.scss';
 
 export const Tab: React.FC<TabProps> = ({
@@ -12,7 +12,6 @@ export const Tab: React.FC<TabProps> = ({
   const handleTabClick = (index: number) => {
     setActiveTab(index);
   };
-
   return (
     <div className={classNames}>
       <ul className={`${pre}tab-link`}>

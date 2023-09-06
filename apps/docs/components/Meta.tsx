@@ -1,9 +1,9 @@
 import Head from 'next/head';
-import { MetaDataProps } from './ComponentTypes';
+import { MetaDataType } from 'types/MetaDataType';
 
 export default function Meta({
   title, description, keywords, themecolor
-}: MetaDataProps) {
+}: MetaDataType) {
   return (
     <Head>
       <meta charSet="utf-8" />

@@ -1,9 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { PagesDataType } from 'types/PageDataType';
 import { useTranslation } from 'next-i18next';
 import { Container, Content, Row, Col, Paper, Card, Search, Code, Text, List, Utility } from 'ui';
 
-export default function ContentStart({ pagesData }) {
+type Props = {
+  pagesData: PagesDataType[];
+}
+
+export default function ContentStart({ pagesData }: Props) {
   const { t, i18n } = useTranslation('home');
   const [searchResults, setSearchResults] = useState([]);
   const language = i18n.language;

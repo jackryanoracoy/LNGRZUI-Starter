@@ -1,6 +1,6 @@
 import React from 'react';
 import { pre } from '../prefixConfig';
-import { BrandingProps } from './ComponentTypes';
+import { BrandingProps } from '../components/ComponentTypes';
 import '../styles/Branding.scss';
 
 export const Branding: React.FC<BrandingProps> = ({

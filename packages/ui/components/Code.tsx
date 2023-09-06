@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { pre } from '../prefixConfig';
-import { CodeProps } from './ComponentTypes';
+import { CodeProps } from '../components/ComponentTypes';
 import hljs from 'highlight.js';
 import 'highlight.js/styles/lioshi.css';
 import '../styles/Code.scss';
@@ -14,7 +14,6 @@ export const Code: React.FC<CodeProps> = ({
   useEffect(() => {
     if (codeEl.current) hljs.highlightElement(codeEl.current)
   }, [codeEl, language, children]);
-
   return (
     <div className={classNames}>
       <pre><code ref={codeEl} className={language}>{children}</code></pre>

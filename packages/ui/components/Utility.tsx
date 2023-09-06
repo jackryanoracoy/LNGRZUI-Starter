@@ -1,6 +1,6 @@
 import React from 'react';
 import { pre } from '../prefixConfig';
-import { UtilityProps } from './ComponentTypes';
+import { UtilityProps } from '../components/ComponentTypes';
 import '../styles/Utility.scss';
 
 export const Utility: React.FC<UtilityProps> = ({
@@ -52,6 +52,5 @@ export const Utility: React.FC<UtilityProps> = ({
     ${hiddenMin ? `${pre}hidden-` + hiddenMin + '-min' : ''}
     ${hiddenMax ? `${pre}hidden-` + hiddenMax + '-max' : ''}
   `.replace(/\s+/g, ' ').trim();
-
   return <div className={classNames}>{children}</div>;
 };

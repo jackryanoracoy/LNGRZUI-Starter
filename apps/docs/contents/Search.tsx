@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useTranslation } from 'next-i18next';
+import { PagesDataType } from 'types/PageDataType';
 import { Container, Row, Col, Content, Code, Paper, Card, Text, Search, Utility } from 'ui';
-import { PagesDataProps } from './ContentTypes';
 
-export default function ContentSearch({ pagesData }: PagesDataProps) {
+type Props = {
+  pagesData: PagesDataType[];
+}
+
+export default function ContentSearch({ pagesData }: Props) {
   const { t, i18n } = useTranslation('search');
   const [searchResults, setSearchResults] = useState([]);
   const language = i18n.language;

@@ -1,8 +1,8 @@
 import Link from 'next/link';
+import docsVersion from 'package.json';
+import uiVersion from 'ui/package.json';
 import { useTranslation } from 'next-i18next';
 import { Row, Col, Text, Utility } from 'ui';
-import docsVersion from '../package.json';
-import uiVersion from 'ui/package.json';
 
 export default function PageFooter() {
   const { t } = useTranslation();

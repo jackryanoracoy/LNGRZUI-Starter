@@ -1,6 +1,6 @@
 import React from 'react';
 import { pre, mpre } from '../prefixConfig';
-import { ContainerProps } from './ComponentTypes';
+import { ContainerProps } from '../components/ComponentTypes';
 import '../styles/Container.scss';
 
 export const Container: React.FC<ContainerProps> = ({

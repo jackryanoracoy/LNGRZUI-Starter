@@ -1,6 +1,6 @@
 import React from 'react';
 import { pre } from '../prefixConfig';
-import { CommonProps } from './ComponentTypes';
+import { CommonProps } from '../components/ComponentTypes';
 import '../styles/Global.scss';
 import '../styles/Layout.scss';
 
