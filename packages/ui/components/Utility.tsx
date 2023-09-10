@@ -1,7 +1,38 @@
 import React from 'react';
 import { pre } from '../prefixConfig';
-import { UtilityProps } from '../components/ComponentTypes';
 import '../styles/Utility.scss';
+
+type Padding = 0 | 5 | 10 | 15 | 20 | 25 | 30 | 35 | 40 | 45 | 50;
+
+type BreakPoint = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+
+type Overflow = 'auto' | 'hidden' | 'scroll' | 'visible';
+
+type UtilityProps = {
+  children: React.ReactNode;
+  className?: string;
+  sreenReader?: boolean;
+  backgroundColor?: string;
+  color?: string;
+  padding?: Padding;
+  paddingTop?: Padding;
+  paddingRight?: Padding;
+  paddingBottom?: Padding;
+  paddingLeft?: Padding;
+  margin?: Padding;
+  marginTop?: Padding;
+  marginRight?: Padding;
+  marginBottom?: Padding;
+  marginLeft?: Padding;
+  hiddenMin?: BreakPoint;
+  hiddenMax?: BreakPoint;
+  overflow?: Overflow;
+  overflowX?: Overflow;
+  overflowY?: Overflow;
+  width?: 25 | 50 | 75 | 100;
+  height?: 25 | 50 | 75 | 100;
+  display?: 'block' | 'inline-block' | 'inline';
+};
 
 export const Utility: React.FC<UtilityProps> = ({
   children,

@@ -1,7 +1,12 @@
 import React from 'react';
 import { pre, mpre } from '../prefixConfig';
-import { ContainerProps } from '../components/ComponentTypes';
 import '../styles/Container.scss';
+
+type ContainerProps = {
+  children: React.ReactNode;
+  className?: string;
+  fluid?: boolean;
+};
 
 export const Container: React.FC<ContainerProps> = ({
   children, className = '', fluid,

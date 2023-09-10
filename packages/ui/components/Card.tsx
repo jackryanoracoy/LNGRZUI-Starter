@@ -1,7 +1,16 @@
 import React from 'react';
 import { pre } from '../prefixConfig';
-import { CardProps, ChildrenProps } from '../components/ComponentTypes';
 import '../styles/Card.scss';
+
+type ChildrenProps = {
+  children: React.ReactNode;
+};
+
+type CardProps = {
+  children: React.ReactNode;
+  header?: React.ReactNode;
+  className?: string;
+}
 
 export const Card: React.FC<CardProps> = ({
   children, className = '', header

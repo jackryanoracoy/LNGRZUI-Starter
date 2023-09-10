@@ -1,8 +1,12 @@
 import React from 'react';
 import { pre } from '../prefixConfig';
-import { CommonProps } from '../components/ComponentTypes';
 import '../styles/Global.scss';
 import '../styles/Layout.scss';
+
+type CommonProps = {
+  children: React.ReactNode;
+  className?: string;
+};
 
 export const Layout: React.FC<CommonProps> = ({ children }) => {
   const hasChildLayout = React.Children.toArray(children).some(

@@ -1,9 +1,14 @@
 import React, { useEffect, useRef } from 'react';
 import { pre } from '../prefixConfig';
-import { CodeProps } from '../components/ComponentTypes';
 import hljs from 'highlight.js';
 import 'highlight.js/styles/lioshi.css';
 import '../styles/Code.scss';
+
+type CodeProps = {
+  children?: React.ReactNode;
+  className?: string;
+  language?: string;
+}
 
 export const Code: React.FC<CodeProps> = ({
   children, className = '', language

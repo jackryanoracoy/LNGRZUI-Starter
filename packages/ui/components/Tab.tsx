@@ -1,7 +1,16 @@
 import React, { useState } from 'react';
 import { pre, mpre } from '../prefixConfig';
-import { TabProps, TabPanelProps } from '../components/ComponentTypes';
 import '../styles/Tab.scss';
+
+type TabProps = {
+  children: React.ReactNode;
+  className?: string;
+};
+
+type TabPanelProps = {
+  children?: React.ReactNode;
+  label?: string;
+}
 
 export const Tab: React.FC<TabProps> = ({
   children, className = '',

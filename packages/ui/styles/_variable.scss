@@ -198,8 +198,8 @@ $monospace:             SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mon
 $font-primary:          $noto-sans-jp         !default;
 $font-secondary:        $open-sans-condensed  !default;
 
-// Prefix
+// Prefix (For component prefixes please see prefixConfig.ts)
 $pre:                   'lngrzui-'            !default;
 
-// Modifier Prefix
+// Modifier Prefix (For component prefixes please see prefixConfig.ts)
 $mpre:                  'is_'                 !default;

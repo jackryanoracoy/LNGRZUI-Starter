@@ -1,8 +1,34 @@
 import React, { useState } from 'react';
 import { pre } from '../prefixConfig';
-import { FormProps } from '../components/ComponentTypes';
 import { Button } from './Button';
 import '../styles/Form.scss';
+
+type InputProps = {
+  name: string;
+  label: string;
+  type: string;
+  placeholder: string;
+  value: string;
+  required?: boolean;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+};
+
+type TextAreaProps = {
+  name: string;
+  label: string;
+  placeholder: string;
+  value: string;
+  required?: boolean;
+  onChange?: (event: React.ChangeEvent<HTMLTextAreaElement>) => void;
+};
+
+type FormProps = {
+  className?: string;
+  onSubmit: (data: { [key: string]: string }) => void;
+  inputs: InputProps[];
+  textAreas?: TextAreaProps[];
+  submitButtonLabel: string;
+};
 
 export const Form: React.FC<FormProps> = ({
   className, onSubmit, inputs, textAreas = [], submitButtonLabel = 'Submit'

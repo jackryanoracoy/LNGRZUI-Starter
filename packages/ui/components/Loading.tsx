@@ -1,7 +1,12 @@
 import React from 'react';
 import { pre } from '../prefixConfig';
-import { LoadingProps } from '../components/ComponentTypes';
 import '../styles/Loading.scss';
+
+type LoadingProps = {
+  className?: string;
+  type?: 'ring' | 'ellipsis' | 'bar' | 'ripple';
+  label?: string;
+}
 
 export const Loading: React.FC<LoadingProps> = ({
   className = '', type = 'ring', label = ''
