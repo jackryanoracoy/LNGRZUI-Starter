@@ -1,7 +1,14 @@
-import React from 'react';
+import React, { ButtonHTMLAttributes } from 'react';
 import { pre, mpre } from '../prefixConfig';
-import { ButtonProps } from '../components/ComponentTypes';
 import '../styles/Button.scss';
+
+type Variant = 'primary' | 'secondary' | 'light' | 'dark' | 'success' | 'warning' | 'danger' | 'info';
+
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: Variant;
+  display?: 'inline-block' | 'block';
+  size?: 'small' | 'medium' | 'large';
+}
 
 export const Button: React.FC<ButtonProps> = ({
   children, className = '', display = 'inline-block', size = 'small', variant = 'primary', ...rest

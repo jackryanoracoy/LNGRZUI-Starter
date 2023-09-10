@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
 import { pre } from '../prefixConfig';
-import { SearchProps } from '../components/ComponentTypes';
 import '../styles/Search.scss';
+
+type SearchProps = {
+  onSearch: (value: string) => void;
+  className?: string;
+  placeholder?: string;
+};
 
 export const Search: React.FC<SearchProps> = ({
   onSearch, className = '', placeholder = 'Enter Keyword...'

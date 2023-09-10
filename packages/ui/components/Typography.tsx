@@ -1,7 +1,22 @@
 import React from 'react';
 import { pre, mpre } from '../prefixConfig';
-import { TypographyProps } from '../components/ComponentTypes';
 import '../styles/Typography.scss';
+
+type Variant = 'primary' | 'secondary' | 'light' | 'dark' | 'success' | 'warning' | 'danger' | 'info';
+
+type TypographyProps = {
+  children: React.ReactNode;
+  index?: boolean;
+  className?: string;
+  href?: string;
+  target?: string;
+  variant?: Variant;
+  transform?: 'capitalize' | 'uppercase' | 'lowercase',
+  type?: 'hero' | 'article' | 'section' | 'title' | 'sr-only' | 'paragraph' | 'code' | 'link';
+  size?: 'small' | 'medium' | 'large' | 'extra-large' | 'super-large' | 'mega-large';
+  weight?: 'normal' | 'bold' | 'bolder' | 'lighter';
+  align?: 'center' | 'justify' | 'right' | 'left';
+};
 
 export const Text: React.FC<TypographyProps> = ({
   children, index, className = '', href, target, type = '', variant = '', size = '', weight = '', transform = '', align = '',

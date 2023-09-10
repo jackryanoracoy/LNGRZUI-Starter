@@ -1,7 +1,36 @@
 import React from 'react';
 import { pre, mpre } from '../prefixConfig';
-import { RowProps, ColProps } from '../components/ComponentTypes';
 import '../styles/Grid.scss';
+
+type ColWidth = 'auto' | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24;
+
+type GapWidth =  5 | 10 | 15 | 20 | 25 | 30 | 35 | 40 | 45 | 50 | 55 | 60 | 65 | 70 | 75 | 80 | 85 | 90 | 95 | 100;
+
+type RowProps = {
+  children: React.ReactNode;
+  className?: string;
+  gap?: GapWidth;
+  wrap?: 'nowrap' | 'wrap' | 'wrap-reverse';
+  align?: 'flex-start' | 'flex-end' | 'center' | 'baseline' | 'stretch';
+  justify?: 'flex-start' | 'flex-end' | 'center' | 'space-between' | 'space-around' | 'space-evenly';
+  direction?: 'row' | 'row-reverse' | 'column' | 'column-reverse';
+};
+
+type ColProps = {
+  children: React.ReactNode;
+  offset?: ColWidth;
+  span?: ColWidth;
+  xs?: ColWidth;
+  sm?: ColWidth;
+  md?: ColWidth;
+  lg?: ColWidth;
+  xl?: ColWidth;
+  oxs?: ColWidth;
+  osm?: ColWidth;
+  omd?: ColWidth;
+  olg?: ColWidth;
+  oxl?: ColWidth;
+};
 
 export const Row: React.FC<RowProps> = ({
   children, className = '', align = 'flex-start', justify = 'flex-start', wrap = 'wrap', direction = 'row', gap = 0,

@@ -1,7 +1,19 @@
 import React from 'react';
 import { pre, mpre } from '../prefixConfig';
-import { ListProps } from '../components/ComponentTypes';
 import '../styles/List.scss';
+
+type ListItem = {
+  id: number;
+  text?: string;
+  link?: any
+}
+
+type ListProps = {
+  className?: string;
+  type?: 'none' | 'disc' | 'circle' | 'lower-alpha' | 'upper-alpha' | 'lower-roman' | 'upper-roman' | 'decimal' | 'decimal-leading-zero';
+  position?: 'inside' | 'outside';
+  items: ListItem[];
+}
 
 export const List: React.FC<ListProps> = ({
   className = '', items, type = '', position = 'inside'

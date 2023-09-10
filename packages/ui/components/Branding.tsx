@@ -1,7 +1,12 @@
 import React from 'react';
 import { pre } from '../prefixConfig';
-import { BrandingProps } from '../components/ComponentTypes';
 import '../styles/Branding.scss';
+
+type BrandingProps = {
+  className?: string;
+  index?: boolean;
+  title?: any;
+};
 
 export const Branding: React.FC<BrandingProps> = ({
   index, className = '', title

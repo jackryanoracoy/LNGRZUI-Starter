@@ -1,7 +1,17 @@
 import React from 'react';
 import { pre, mpre } from '../prefixConfig';
-import { PaperProps, ChildrenProps } from '../components/ComponentTypes';
 import '../styles/Paper.scss';
+
+type ChildrenProps = {
+  children: React.ReactNode;
+};
+
+type PaperProps = {
+  children: React.ReactNode;
+  header?: React.ReactNode;
+  className?: string;
+  sticky?: boolean;
+}
 
 export const Paper: React.FC<PaperProps> = ({
   children, className = '', header, sticky
