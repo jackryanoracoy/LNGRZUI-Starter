@@ -5,7 +5,7 @@ import '../styles/List.scss';
 type ListItem = {
   id: number;
   text?: string;
-  link?: any
+  link?: React.ReactNode;
 }
 
 type ListProps = {

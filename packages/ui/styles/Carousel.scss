@@ -1,0 +1,93 @@
+/*
+ * Title       :   Carousel Component
+ * Author      :   Jack Ryan Oracoy
+ * Description :   Style for the carousel component
+ */
+
+@import 'variable';
+@import 'mixin';
+
+/*--------------------------------------------------
+  Card
+--------------------------------------------------*/
+
+.#{$pre}carousel {
+  position: relative;
+
+  &-item {
+    max-width: 100%;
+    background-color: rgba($color: $black, $alpha: 0.2);
+    overflow: hidden;
+
+    & img {
+      display: block;
+      max-width: inherit;
+      object-fit: cover;
+    }
+  }
+
+  &-buttons {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 500ms linear 100ms;
+
+    &:hover { opacity: 1; }
+  }
+
+  &-prev-button,
+  &-next-button {
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    padding: 0 $title-gutter;
+    color: rgba($color: $light, $alpha: 0.5);
+    font-size: $font-lg;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 50px;
+    white-space: nowrap;
+    background-color: rgba($color: $light, $alpha: 0.5);
+    border: none;
+    border-radius: 50%;
+    transform: translate(0, -50%);
+    transition: all 500ms linear 100ms;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 1;
+      color: $light;
+      background-color: rgba($color: $light, $alpha: 0.75);
+      box-shadow: $z-depth-1;
+    }
+  }
+
+  &-prev-button { left: 20px; }
+  &-next-button { right: 20px; }
+
+  &-dots {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  &-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 5px;
+    background-color: rgba($color: $light, $alpha: 0.2);
+    border-radius: 50%;
+
+    &.#{$mpre}active { background-color: rgba($color: $light, $alpha: 0.4); }
+  }
+
+}
