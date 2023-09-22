@@ -1,4 +1,5 @@
 import React from 'react';
+import PageHeading from 'components/Heading';
 import { useTranslation } from 'next-i18next';
 import { Container, Row, Col, Content, Code, Paper, Text, Utility } from 'ui';
 
@@ -6,14 +7,10 @@ export default function ContentPaper() {
   const { t } = useTranslation('paper');
   return (
     <>
-      <Utility backgroundColor='grey-100'>
-        <Container>
-          <Content type='section'>
-            <Text type='hero' variant='primary' transform='uppercase'>{t('title')}</Text>
-            <Text type='paragraph'>{t('description')}</Text>
-          </Content>
-        </Container>
-      </Utility>
+      <PageHeading>
+        <Text type='hero' variant='primary' transform='uppercase'>{t('title')}</Text>
+        <Text type='paragraph'>{t('description')}</Text>
+      </PageHeading>
       <Container>
         <Content type='section' title={t('content.overview-title')}>
           <Text type='paragraph'>{t('content.overview-desc')}</Text>

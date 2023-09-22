@@ -1,25 +1,31 @@
 import React from 'react';
+import Image from 'next/image';
+import PageHeading from 'components/Heading';
 import { useTranslation } from 'next-i18next';
-import { Container, Row, Col, Content, Code, Paper, Text, Utility } from 'ui';
+import { Container, Row, Col, Content, Code, Paper, Text, Carousel, Utility } from 'ui';
 
 export default function ContentCarousel() {
   const { t } = useTranslation('carousel');
+  const carouselItem = [
+    <Image width={1500} height={500} src='/images/dawnbreak-large.jpg' alt={t('content-image-one')} />,
+    <Image width={1500} height={500} src='/images/sunshine-large.jpg' alt={t('content-image-two')} />,
+    <Image width={1500} height={500} src='/images/twilightbloom-large.jpg' alt={t('content-image-three')} />,
+  ];
+
   return (
     <>
-      <Utility backgroundColor='grey-100'>
-        <Container>
-          <Content type='section'>
-            <Text type='hero' variant='primary' transform='uppercase'>{t('title')}</Text>
-            <Text type='paragraph'>{t('description')}</Text>
-          </Content>
-        </Container>
-      </Utility>
+      <PageHeading>
+        <Text type='hero' variant='primary' transform='uppercase'>{t('title')}</Text>
+        <Text type='paragraph'>{t('description')}</Text>
+      </PageHeading>
       <Container>
         <Content type='section' title={t('content.overview-title')}>
           <Text type='paragraph'>{t('content.overview-desc')}</Text>
 
           <Content type='article' title={t('content.example-title')}>
-            <Paper sticky header={<Text type='title'>{t('content.title-one')}</Text>}>{t('content.content-one')}</Paper>
+            <Paper sticky header={<Text type='title'>{t('content.title-one')}</Text>}>
+              <Carousel autoplay={true} interval={4000} items={carouselItem} />
+            </Paper>
           </Content>
         </Content>
       </Container>

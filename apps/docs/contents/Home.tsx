@@ -51,6 +51,7 @@ export default function ContentStart({ pagesData }: Props) {
   ];
 
   useEffect(() => handleSearch(''), []);
+
   return (
     <Container>
       <Content type='section' title={t('content.intro-title')}>

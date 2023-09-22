@@ -1,0 +1,36 @@
+{
+  "title": "読み込み中 コンポーネント",
+  "description": "コンテンツを構造化するためのコンテナ コンポーネントについて学びます。",
+  "meta": {
+    "title": "LNGRZUI - 読み込み中 コンポーネントのドキュメント",
+    "description": "コンポーネントに追加できる読み込みスタイルについて学びます。",
+    "keywords": "コンポーネント ライブラリ、再利用可能なコンポーネント、ドキュメント、アプリケーション開発、UI ツールキット",
+    "themecolor": "#424242"
+  },
+  "content": {
+    "overview-title": "OVERVIEW | 概要",
+    "overview-desc": "Loading ページには、コンポーネントに Loading 要素を提供できる Loading スタイルが表示されます。",
+    "how-to-title": "HOW TO USE | 使い方",
+    "how-to-desc": "Container コンポーネントをインポートし、表示する子コンポーネントを Container 内に配置します。",
+    "example-title": "EXAMPLE | 例",
+    "code-title": "CODE | コード",
+    "props-title": "PROPS | 小道具",
+    "props-title-properties": "プロパティ",
+    "props-title-type": "タイプ",
+    "props-title-default": "デフォルト",
+    "props-desc-properties-one": "XXX",
+    "props-desc-type-one": "XXX",
+    "props-desc-default-one": "",
+    "props-desc-properties-two": "XXX",
+    "props-desc-type-two": "XXX",
+    "props-desc-default-two": "",
+    "props-desc-properties-three": "XXX",
+    "props-desc-type-three": "XXX",
+    "props-desc-default-three": "",
+    "title-one": "XXX",
+    "title-two": "XXX",
+    "content-one": "XXX",
+    "content-two": "XXX",
+    "sample-code": "import React from 'react';\nimport { Row, Col, Card } from 'ui';\n\nexport default function App() {\n  return (\n    XXX\n  )\n}"
+  }
+}

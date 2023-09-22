@@ -1,8 +1,8 @@
 {
-  "title": "Button",
+  "title": "Button Component",
   "description": "Discover how to create and customize buttons with different styles and functionalities.",
   "meta": {
-    "title": "LNGRZUI - Button Documentation",
+    "title": "LNGRZUI - Button Component Documentation",
     "description": "Discover how to create and customize buttons with different styles and functionalities.",
     "keywords": "component library, reusable components, documentation, application development, UI toolkit",
     "themecolor": "#424242"

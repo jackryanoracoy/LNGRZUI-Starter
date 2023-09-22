@@ -25,7 +25,7 @@ export default function Meta({
       <link rel="icon" type="image/png" sizes="194x194" href="/app-icon/favicon-194x194.png" />
       <link rel="icon" type="image/png" sizes="192x192" href="/app-icon/android-chrome-192x192.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/app-icon/favicon-16x16.png" />
-      <link rel="shortcut icon" href="/app-icon/favicon.ico" />
+      <link rel="shortcut icon" href="/favicon.ico" />
       <link rel="manifest" href="/site.webmanifest" />
       <meta name="msapplication-config" content="/browserconfig.xml" />
     </Head>
