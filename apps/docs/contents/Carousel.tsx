@@ -24,7 +24,7 @@ export default function ContentCarousel() {
 
           <Content type='article' title={t('content.example-title')}>
             <Paper sticky header={<Text type='title'>{t('content.title-one')}</Text>}>
-              <Carousel autoplay={true} interval={4000} items={carouselItem} />
+              <Carousel autoplay={true} interval={5000} items={carouselItem} />
             </Paper>
           </Content>
         </Content>
