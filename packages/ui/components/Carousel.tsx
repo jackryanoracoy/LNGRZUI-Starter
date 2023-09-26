@@ -10,23 +10,45 @@ type CarouselProps = {
 };
 
 export const Carousel: React.FC<CarouselProps> = ({ className = '', items, autoplay, interval }) => {
-  const [index, setIndex] = useState(0);
-  const next = () => setIndex((index + 1) % items.length);
-  const prev = () => setIndex((index - 1 + items.length) % items.length);
-  const dots = (index: number) => setIndex(index);
   const classNames = className ? `${pre}carousel ${className}` : `${pre}carousel`;
+  const [index, setIndex] = useState<number>(0);
+  const [animationClass, setAnimationClass] = useState<string>('');
+
+  const next = () => {
+    setIndex((index + 1) % items.length);
+    setAnimationClass(`${mpre}next`);
+  };
+
+  const prev = () => {
+    setIndex((index - 1 + items.length) % items.length);
+    setAnimationClass(`${mpre}prev`);
+  };
+
+  const dots = (dotIndex: number) => {
+    setIndex(dotIndex);
+    setAnimationClass('');
+  };
 
   useEffect(() => {
     if (autoplay) {
       const timeout = interval || 5000;
-      const timerId = setInterval(() => next(), timeout);
+      const timerId = setInterval(next, timeout);
       return () => clearInterval(timerId);
     }
   }, [next, interval, autoplay]);
 
   return (
     <div className={classNames}>
-      <div className={`${pre}carousel-item ${mpre}item-${index}`} key={index}>{items[index]}</div>
+      <div className={animationClass ? `${pre}carousel-items ${animationClass}` : `${pre}carousel-items`}>
+        {items.map((item: any, itemIndex: number) => (
+          <div
+            key={itemIndex}
+            className={itemIndex === index ? `${pre}carousel-item ${mpre}active` : `${pre}carousel-item`}
+          >
+            {item}
+          </div>
+        ))}
+      </div>
       <div className={`${pre}carousel-buttons`}>
         <button className={`${pre}carousel-prev-button`} onClick={prev}>&#8249;</button>
         <button className={`${pre}carousel-next-button`} onClick={next}>&#8250;</button>
