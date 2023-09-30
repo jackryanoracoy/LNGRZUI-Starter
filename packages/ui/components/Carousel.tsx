@@ -15,7 +15,7 @@ export const Carousel: React.FC<CarouselProps> = ({ className = '', items, autop
   const next = () => setIndex((index + 1) % items.length);
   const prev = () => setIndex((index - 1 + items.length) % items.length);
   const dots = (dotIndex: number) => setIndex(dotIndex);
-
+  
   useEffect(() => {
     if (autoplay) {
       const timeout = interval || 5000;
@@ -23,7 +23,6 @@ export const Carousel: React.FC<CarouselProps> = ({ className = '', items, autop
       return () => clearInterval(timerId);
     }
   }, [next, interval, autoplay]);
-
   return (
     <div className={classNames}>
       <div className={`${pre}carousel-items`}>

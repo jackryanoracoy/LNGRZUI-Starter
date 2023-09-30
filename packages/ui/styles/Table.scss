@@ -1,0 +1,16 @@
+/*
+ * Title       :   Table Component
+ * Author      :   Jack Ryan Oracoy
+ * Description :   Style for the table component
+ */
+
+@import 'variable';
+@import 'mixin';
+
+/*--------------------------------------------------
+  Table
+--------------------------------------------------*/
+
+.#{$pre}table {
+  position: relative;
+}
