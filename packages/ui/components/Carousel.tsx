@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { pre, mpre } from '../prefixConfig';
 import '../styles/Carousel.scss';
 
@@ -12,10 +12,10 @@ type CarouselProps = {
 export const Carousel: React.FC<CarouselProps> = ({ className = '', items, autoplay, interval }) => {
   const classNames = className ? `${pre}carousel ${className}` : `${pre}carousel`;
   const [index, setIndex] = useState<number>(0);
-  const next = () => setIndex((index + 1) % items.length);
-  const prev = () => setIndex((index - 1 + items.length) % items.length);
+  const next = useCallback(() => setIndex((prevIndex) => (prevIndex + 1) % items.length), [items]);
+  const prev = useCallback(() => setIndex((index - 1 + items.length) % items.length), [index, items]);
   const dots = (dotIndex: number) => setIndex(dotIndex);
-  
+
   useEffect(() => {
     if (autoplay) {
       const timeout = interval || 5000;
