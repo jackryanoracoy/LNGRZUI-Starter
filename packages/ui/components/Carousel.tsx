@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { pre, mpre } from '../prefixConfig';
 import '../styles/Carousel.scss';
 
@@ -12,22 +12,9 @@ type CarouselProps = {
 export const Carousel: React.FC<CarouselProps> = ({ className = '', items, autoplay, interval }) => {
   const classNames = className ? `${pre}carousel ${className}` : `${pre}carousel`;
   const [index, setIndex] = useState<number>(0);
-  const [animationClass, setAnimationClass] = useState<string>('');
-
-  const next = () => {
-    setIndex((index + 1) % items.length);
-    setAnimationClass(`${mpre}next`);
-  };
-
-  const prev = () => {
-    setIndex((index - 1 + items.length) % items.length);
-    setAnimationClass(`${mpre}prev`);
-  };
-
-  const dots = (dotIndex: number) => {
-    setIndex(dotIndex);
-    setAnimationClass('');
-  };
+  const next = useCallback(() => setIndex((prevIndex) => (prevIndex + 1) % items.length), [items]);
+  const prev = useCallback(() => setIndex((index - 1 + items.length) % items.length), [index, items]);
+  const dots = (dotIndex: number) => setIndex(dotIndex);
 
   useEffect(() => {
     if (autoplay) {
@@ -36,10 +23,9 @@ export const Carousel: React.FC<CarouselProps> = ({ className = '', items, autop
       return () => clearInterval(timerId);
     }
   }, [next, interval, autoplay]);
-
   return (
     <div className={classNames}>
-      <div className={animationClass ? `${pre}carousel-items ${animationClass}` : `${pre}carousel-items`}>
+      <div className={`${pre}carousel-items`}>
         {items.map((item: any, itemIndex: number) => (
           <div
             key={itemIndex}
