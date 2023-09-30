@@ -13,7 +13,7 @@
     "turbo": "latest"
   },
   "packageManager": "pnpm@7.15.0",
-  "name": "turborepo-strapi",
+  "name": "lngrzui",
   "dependencies": {
     "next-i18next": "^13.2.2",
     "sass": "^1.62.1"

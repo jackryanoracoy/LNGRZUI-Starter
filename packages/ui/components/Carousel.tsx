@@ -12,22 +12,9 @@ type CarouselProps = {
 export const Carousel: React.FC<CarouselProps> = ({ className = '', items, autoplay, interval }) => {
   const classNames = className ? `${pre}carousel ${className}` : `${pre}carousel`;
   const [index, setIndex] = useState<number>(0);
-  const [animationClass, setAnimationClass] = useState<string>('');
-
-  const next = () => {
-    setIndex((index + 1) % items.length);
-    setAnimationClass(`${mpre}next`);
-  };
-
-  const prev = () => {
-    setIndex((index - 1 + items.length) % items.length);
-    setAnimationClass(`${mpre}prev`);
-  };
-
-  const dots = (dotIndex: number) => {
-    setIndex(dotIndex);
-    setAnimationClass('');
-  };
+  const next = () => setIndex((index + 1) % items.length);
+  const prev = () => setIndex((index - 1 + items.length) % items.length);
+  const dots = (dotIndex: number) => setIndex(dotIndex);
 
   useEffect(() => {
     if (autoplay) {
@@ -39,7 +26,7 @@ export const Carousel: React.FC<CarouselProps> = ({ className = '', items, autop
 
   return (
     <div className={classNames}>
-      <div className={animationClass ? `${pre}carousel-items ${animationClass}` : `${pre}carousel-items`}>
+      <div className={`${pre}carousel-items`}>
         {items.map((item: any, itemIndex: number) => (
           <div
             key={itemIndex}
