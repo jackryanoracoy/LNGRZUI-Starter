@@ -9,6 +9,7 @@ export * from "./components/Paper";
 export * from "./components/Code";
 export * from "./components/Button";
 export * from "./components/Tab";
+export * from "./components/Table";
 export * from "./components/Carousel";
 export * from "./components/Form";
 export * from "./components/List";
